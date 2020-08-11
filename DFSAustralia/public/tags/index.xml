@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Daily Fantasy Sports Australia</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Daily Fantasy Sports Australia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 11 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AFL</title>
+      <link>/tags/afl/</link>
+      <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/afl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Draftstars</title>
+      <link>/tags/draftstars/</link>
+      <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/draftstars/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

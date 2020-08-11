@@ -1,0 +1,417 @@
+---
+title: "Defining Draftstars Player Value"
+banner: img/banners/money.jpg
+author: "Morts"
+date: 2020-08-11
+categories: ["Draftstars"]
+tags: ["Draftstars", "AFL"]
+---
+
+
+
+<div id="what-is-value" class="section level1">
+<h1>What is Value?</h1>
+<p>A popular way to try normalise player performance in the Fantasy Sports community is to define it in terms of a mutiple of their salary. For example, if Tom Mitchell is priced at $15,000 and scores 105 fantasy points then he’s returned 7.00x his salary, e.g. (105 / 15,000) * 1000 = 7.00.</p>
+<p>This common strategy gives coaches the ability to compare players with different salaries and make a decision on who is the best value play for their lineup. Value play? How many times have you been reading an article or scrolling Twitter and seen some version of “Player A returned value tonight” or “Player B is expected to hit value based on a juicy matchup”, etc? What is a players underlying value in terms of fantasy points?</p>
+<p>In terms of multiples of a player’s salary you’d want more than 35 (7.00x) fantasy points from a $5,000 player but you’d be happy to take 105 (7.00x) from Tom Mitchell at $15,000. Here in lies the conundrum, what is the underlying measure that defines value for an individual player?</p>
+</div>
+<div id="historical-performance" class="section level1">
+<h1>Historical Performance</h1>
+<p>To try and quantify this we collated historical player scores and plotted them against each player’s historical Draftstars salary. Subsequent to that we ran a linear regression on the data to return the line of best fit. This line of best fit is what we will refer to as <b>Salary Based Expectation</b>.</p>
+<p><img src="/blog/Defining-Draftstars-Player-Value_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div id="salary-based-expectation" class="section level1">
+<h1>Salary Based Expectation</h1>
+<p>Simply put, Salary Based Expectation is the average score that a player of a given salary has historically scored which effectively becomes the underlying measure of whether a player has outperformed or not. So when we talk in terms of multiples of salary, how does this look? Well at first glance we can see straight away that cheaper players are going to be a higher multiple of their salary than more expensive players. In fact a $5,000 player needs to score 41 fantasy points (8.20x) to reach value whereas someone priced at $15,000 needs only return a multiple of 6.67x (100.1 fantasy points) to be classed as returning value.</p>
+<p>The following table presents this in tabular form for ease of future reference.</p>
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:center;">
+Draftstars.Salary
+</th>
+<th style="text-align:center;">
+Salary.Based.Expectation
+</th>
+<th style="text-align:center;">
+Multiple.of.Salary
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+5000
+</td>
+<td style="text-align:center;">
+41.0
+</td>
+<td style="text-align:center;">
+8.20
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+6000
+</td>
+<td style="text-align:center;">
+46.9
+</td>
+<td style="text-align:center;">
+7.82
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+7000
+</td>
+<td style="text-align:center;">
+52.8
+</td>
+<td style="text-align:center;">
+7.54
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+8000
+</td>
+<td style="text-align:center;">
+58.7
+</td>
+<td style="text-align:center;">
+7.34
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+9000
+</td>
+<td style="text-align:center;">
+64.6
+</td>
+<td style="text-align:center;">
+7.18
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+10000
+</td>
+<td style="text-align:center;">
+70.6
+</td>
+<td style="text-align:center;">
+7.06
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+11000
+</td>
+<td style="text-align:center;">
+76.5
+</td>
+<td style="text-align:center;">
+6.95
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+12000
+</td>
+<td style="text-align:center;">
+82.4
+</td>
+<td style="text-align:center;">
+6.87
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+13000
+</td>
+<td style="text-align:center;">
+88.3
+</td>
+<td style="text-align:center;">
+6.79
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+14000
+</td>
+<td style="text-align:center;">
+94.2
+</td>
+<td style="text-align:center;">
+6.73
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+15000
+</td>
+<td style="text-align:center;">
+100.1
+</td>
+<td style="text-align:center;">
+6.67
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+16000
+</td>
+<td style="text-align:center;">
+106.0
+</td>
+<td style="text-align:center;">
+6.62
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+17000
+</td>
+<td style="text-align:center;">
+111.9
+</td>
+<td style="text-align:center;">
+6.58
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+18000
+</td>
+<td style="text-align:center;">
+117.8
+</td>
+<td style="text-align:center;">
+6.54
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+19000
+</td>
+<td style="text-align:center;">
+123.7
+</td>
+<td style="text-align:center;">
+6.51
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+20000
+</td>
+<td style="text-align:center;">
+129.6
+</td>
+<td style="text-align:center;">
+6.48
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="salary-based-expectation---covid-affected" class="section level1">
+<h1>Salary Based Expectation - COVID Affected</h1>
+<p>Obviously these values need to be adjusted for the current landscape (Season 2020) where we are dealing with reduced quarters. To help with that we’ve collated data for this season between rounds 2 and 10 and re-run the analysis, refer to the table below.</p>
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:center;">
+Draftstars.Salary
+</th>
+<th style="text-align:center;">
+Salary.Based.Expectation
+</th>
+<th style="text-align:center;">
+Multiple.of.Salary
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+5000
+</td>
+<td style="text-align:center;">
+33.1
+</td>
+<td style="text-align:center;">
+6.62
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+6000
+</td>
+<td style="text-align:center;">
+37.6
+</td>
+<td style="text-align:center;">
+6.27
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+7000
+</td>
+<td style="text-align:center;">
+42.1
+</td>
+<td style="text-align:center;">
+6.01
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+8000
+</td>
+<td style="text-align:center;">
+46.6
+</td>
+<td style="text-align:center;">
+5.83
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+9000
+</td>
+<td style="text-align:center;">
+51.2
+</td>
+<td style="text-align:center;">
+5.69
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+10000
+</td>
+<td style="text-align:center;">
+55.7
+</td>
+<td style="text-align:center;">
+5.57
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+11000
+</td>
+<td style="text-align:center;">
+60.2
+</td>
+<td style="text-align:center;">
+5.47
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+12000
+</td>
+<td style="text-align:center;">
+64.7
+</td>
+<td style="text-align:center;">
+5.39
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+13000
+</td>
+<td style="text-align:center;">
+69.2
+</td>
+<td style="text-align:center;">
+5.32
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+14000
+</td>
+<td style="text-align:center;">
+73.8
+</td>
+<td style="text-align:center;">
+5.27
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+15000
+</td>
+<td style="text-align:center;">
+78.3
+</td>
+<td style="text-align:center;">
+5.22
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+16000
+</td>
+<td style="text-align:center;">
+82.8
+</td>
+<td style="text-align:center;">
+5.17
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+17000
+</td>
+<td style="text-align:center;">
+87.3
+</td>
+<td style="text-align:center;">
+5.14
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+18000
+</td>
+<td style="text-align:center;">
+91.8
+</td>
+<td style="text-align:center;">
+5.10
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+19000
+</td>
+<td style="text-align:center;">
+96.4
+</td>
+<td style="text-align:center;">
+5.07
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+20000
+</td>
+<td style="text-align:center;">
+100.9
+</td>
+<td style="text-align:center;">
+5.04
+</td>
+</tr>
+</tbody>
+</table>
+</div>

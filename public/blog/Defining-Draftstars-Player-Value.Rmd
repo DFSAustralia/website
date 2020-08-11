@@ -1,0 +1,56 @@
+---
+title: "Defining Draftstars Player Value"
+banner: img/banners/money.jpg
+author: "Morts"
+date: 2020-08-11
+categories: ["Draftstars"]
+tags: ["Draftstars", "AFL"]
+---
+
+```{r setup, include=FALSE}
+library(ggplot2); library(formattable); library(knitr)
+```
+
+# What is Value?
+
+A popular way to try normalise player performance in the Fantasy Sports community is to define it in terms of a mutiple of their salary. For example, if Tom Mitchell is priced at $15,000 and scores 105 fantasy points then he's returned 7.00x his salary, e.g. (105 / 15,000) * 1000 = 7.00. 
+
+This common strategy gives coaches the ability to compare players with different salaries and make a decision on who is the best value play for their lineup. Value play? How many times have you been reading an article or scrolling Twitter and seen some version of "Player A returned value tonight" or "Player B is expected to hit value based on a juicy matchup", etc? What is a players underlying value in terms of fantasy points?
+
+In terms of multiples of a player's salary you'd want more than 35 (7.00x) fantasy points from a $5,000 player but you'd be happy to take 105 (7.00x) from Tom Mitchell at $15,000. Here in lies the conundrum, what is the underlying measure that defines value for an individual player?
+
+# Historical Performance
+
+To try and quantify this we collated historical player scores and plotted them against each player's historical Draftstars salary. Subsequent to that we ran a linear regression on the data to return the line of best fit. This line of best fit is what we will refer to as <b>Salary Based Expectation</b>.
+
+```{r, echo=FALSE, message=FALSE}
+scoring <- read.csv("../../static/data/blog - Defining Draftstars Player Value/blog - Draftstars Historical Pricing & Scoring.csv")
+scoring <- scoring[scoring$round %in% c(1:23),]
+plot <- ggplot(scoring, aes(x=DSSal_Hist, y=dreamTeamPoints)) + geom_point(color = "grey") + geom_smooth(method='lm', color = "forestgreen") + theme_minimal() + labs(title="Historical Fantasy Score vs Draftstars Salary ", subtitle = "Season 2019, Rounds 1-23", x ="Player Salary", y = "Fantasy Points")
+plot
+```
+
+# Salary Based Expectation
+
+Simply put, Salary Based Expectation is the average score that a player of a given salary has historically scored which effectively becomes the underlying measure of whether a player has outperformed or not. So when we talk in terms of multiples of salary, how does this look? Well at first glance we can see straight away that cheaper players are going to be a higher multiple of their salary than more expensive players. In fact a $5,000 player needs to score 41 fantasy points (8.20x) to reach value whereas someone priced at $15,000 needs only return a multiple of 6.67x (100.1 fantasy points) to be classed as returning value. 
+
+The following table presents this in tabular form for ease of future reference. 
+
+```{r, echo=FALSE, message=FALSE, results = 'asis'}
+scoring.fit <- lm(dreamTeamPoints ~ DSSal_Hist, data=scoring)
+intercept <- scoring.fit$coefficients[1]
+slope <- scoring.fit$coefficients[2]
+Salary <- seq(5000,20000,by = 1000) 
+SBE <- round(intercept + slope * Salary,1)
+Salx <- round(SBE * 1000 / Salary,2)
+formattable(data.frame('Draftstars Salary' = Salary, 'Salary Based Expectation' = SBE, 'Multiple of Salary' = Salx), align = c("c"))
+```
+
+# Salary Based Expectation - COVID Affected
+
+Obviously these values need to be adjusted for the current landscape (Season 2020) where we are dealing with reduced quarters. To help with that we've collated data for this season between rounds 2 and 10 and re-run the analysis, refer to the table below. 
+
+```{r, echo=FALSE, message=FALSE, results = 'asis'}
+COVID_SBE <- read.csv("../../static/data/blog - Defining Draftstars Player Value/blog - COVID Draftstars Salary Based Expectation.csv")
+formattable(COVID_SBE, align = c("c"))
+```
