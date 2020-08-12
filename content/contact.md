@@ -3,8 +3,7 @@ id: contact
 title: Contact
 ---
 
-# We are here to help you
+# Get in Touch with Daily Fantasy Sports Australia
 
-Are you curious about something? Do you have some kind of problem with our products? As am hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but built gay party world. Of so am he remember although required. Bachelor unpacked be advanced at. Confined in declared marianne is vicinity.
+If you want to get in touch, the best way is to contact us on Twitter at @DFSAustralia.
 
-Please feel free to contact us, our customer service center is working for you 24/7.

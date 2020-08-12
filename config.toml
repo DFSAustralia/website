@@ -54,11 +54,11 @@ paginate = 10
     url = "https://twitter.com/DFSAustralia"
     pre = "<i class='fab fa-2x fa-twitter'></i>"
 
-[[menu.topbar]]
-    weight = 3
-    name = "Email"
-    url = "mailto:dailyfantasysportsaustralia@gmail.com"
-    pre = "<i class='fas fa-2x fa-envelope'></i>"
+#[[menu.topbar]]
+    #weight = 3
+    #name = "Email"
+    #url = "mailto:dailyfantasysportsaustralia@gmail.com"
+    #pre = "<i class='fas fa-2x fa-envelope'></i>"
 
 [params]
     viewMorePostLink = "/blog/"
@@ -95,7 +95,7 @@ paginate = 10
     # - you're done. Happy mailing!
     #
     # Enable the contact form by entering your Formspree.io email
-    email = ""
+    email = "dailyfantasysportsaustralia@gmail.com"
     contact_form_ajax = false
 
     about_us = "<p>Daily Fantasy Sports Australia (DFSAustralia) have been providing data driven insights to the Australian DFS Community since 2016.</p>"
@@ -144,15 +144,15 @@ paginate = 10
     # at 'exampleSite/data/testimonials'.
     # For more informtion take a look at the README.
     title = "Testimonials"
-    subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
+    subtitle = ""
 
 [params.see_more]
     enable = true
     icon = "fas fa-tools"
     title = "Do you want DFS tools?"
     subtitle = "Come check out our AFL DFS Tools powered by RShiny."
-    link_url = "http://128.199.156.76:3838/trial-app/"
-    link_text = "DFS Tools"
+    link_url = ""
+    link_text = "COMING SOON"
 
 [params.clients]
     enable = true
