@@ -62,10 +62,11 @@ paginate = 10
 
 [params]
     viewMorePostLink = "/blog/"
-    author = "DevCows"
-    defaultKeywords = ["devows", "hugo", "go"]
-    mainSections = ["blog"]
-    defaultDescription = "Site template made by devcows using hugo"
+    author = "Morts"
+    defaultKeywords = ["AFL", "Fantasy Sports", "Daily Fantasy Sports","DFS","AFLDFS","DFSAustralia",
+    "Draftstars","Lineup Cruncher","Moneyball","AFL Fantasy","Draftkings","DreamTeam","Fantasy Points"]
+    mainSections = ["blog","data tools"]
+    defaultDescription = "Daily Fantasy Sports Analytics and Data Applications"
 
     # Social media
     facebook_site = "DFSAustralia" # the Facebook handle of your site ('https://www.facebook.com/HANDLE')
