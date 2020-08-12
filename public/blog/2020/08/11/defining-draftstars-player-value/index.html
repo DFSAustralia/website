@@ -201,18 +201,20 @@
 
 <div id="what-is-value" class="section level1">
 <h1>What is Value?</h1>
-<p>A popular way to try normalise player performance in the Fantasy Sports community is to define it in terms of a mutiple of their salary. For example, if Tom Mitchell is priced at $15,000 and scores 105 fantasy points then he’s returned 7.00x his salary, e.g. (105 / 15,000) * 1000 = 7.00.</p>
-<p>This common strategy gives coaches the ability to compare players with different salaries and make a decision on who is the best value play for their lineup. Value play? How many times have you been reading an article or scrolling Twitter and seen some version of “Player A returned value tonight” or “Player B is expected to hit value based on a juicy matchup”, etc? What is a players underlying value in terms of fantasy points?</p>
-<p>In terms of multiples of a player’s salary you’d want more than 35 (7.00x) fantasy points from a $5,000 player but you’d be happy to take 105 (7.00x) from Tom Mitchell at $15,000. Here in lies the conundrum, what is the underlying measure that defines value for an individual player?</p>
-</div>
-<div id="historical-performance" class="section level1">
-<h1>Historical Performance</h1>
-<p>To try and quantify this we collated historical player scores and plotted them against each player’s historical Draftstars salary. Subsequent to that we ran a linear regression on the data to return the line of best fit. This line of best fit is what we will refer to as <b>Salary Based Expectation</b>.</p>
-<p><img src="/blog/Defining-Draftstars-Player-Value_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>A popular way to try normalise player performance in the Fantasy Sports community is to define it in terms of a multiple of their salary. For example, if Tom Mitchell is priced at $15,000 and scores 105 fantasy points then he’s deemed to have returned 7.00x his salary, e.g. (105 / 15,000) * 1000 = 7.00x.</p>
+<p>This common strategy gives coaches the ability to compare players across a range of salaries and make a decision on who they think is the best value play for their lineup. Value play? How many times have you been reading an article or scrolling Twitter and seen some version of “Player A returned value tonight” or “Player B is expected to hit value”, etc? What is a players underlying value in terms of fantasy points?</p>
+<p>In terms of multiples of a player’s salary using one figure across all salaries is fraught with danger. For example, you’d be happy to take 105 (7.00x) from Tom Mitchell at $15,000 but you’d definitely want more than 35 (7.00x) fantasy points from a $5,000 player. Here in lies the conundrum, what is the underlying measure that defines value for an individual player?</p>
 </div>
 <div id="salary-based-expectation" class="section level1">
 <h1>Salary Based Expectation</h1>
-<p>Simply put, Salary Based Expectation is the average score that a player of a given salary has historically scored which effectively becomes the underlying measure of whether a player has outperformed or not. So when we talk in terms of multiples of salary, how does this look? Well at first glance we can see straight away that cheaper players are going to be a higher multiple of their salary than more expensive players. In fact a $5,000 player needs to score 41 fantasy points (8.20x) to reach value whereas someone priced at $15,000 needs only return a multiple of 6.67x (100.1 fantasy points).</p>
+<p>Here at DFSAustralia we’ve historical relied on a measure that we refer to as <b>Salary Based Expectation</b>. Simply put, Salary Based Expectation is the historical score that a player of a given salary has delivered. Any score above this means that a player has exceeded value, anything less and they have underperformed against what you could reasonably expect based on historical average.</p>
+</div>
+<div id="historical-performance" class="section level1">
+<h1>Historical Performance</h1>
+<p>To calculate what the Salary Based Expectation for a given salary is we collated historical player scores from 2019 and plotted them against each player’s historical Draftstars salary. Subsequent to that we ran a linear regression on the data to return the line of best fit. This line of best fit reflects the Salary Based Expectation.</p>
+<p><i>We used a linear regression here which is a simple model however note that regressions of higher orders resulted in similar results so to keep things simple we stayed with the linear model. Also note that all though we only used data from 2019 adding older data would only have a minor effect on the overall end result.</i></p>
+<p><img src="/blog/Defining-Draftstars-Player-Value_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>From the plot above we can straight away see that cheaper players have historically delivered a higher multiple of their salary than more expensive players adding credence to the fact that we shouldn’t be using a single value. The data indicates that a $5,000 player needs to score 41 fantasy points (8.20x) to reach their Salary Based Expectaition whereas someone priced at $15,000 needs only return a multiple of 6.67x (100.1 fantasy points).</p>
 <p>The following table presents this in tabular form for ease of future reference.</p>
 <table class="table table-condensed">
 <thead>
@@ -739,19 +741,6 @@ Multiple.of.Salary
         </div>
         
 
-        
-        <div class="col-md-4 col-sm-6">
-
-          <h4>Contact</h4>
-
-            
-
-            <a href="/contact" class="btn btn-small btn-template-main">Go to contact page</a>
-
-            <hr class="hidden-md hidden-lg hidden-sm">
-
-        </div>
-        
         
 
     </div>

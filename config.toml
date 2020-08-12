@@ -95,8 +95,8 @@ paginate = 10
     # - you're done. Happy mailing!
     #
     # Enable the contact form by entering your Formspree.io email
-    email = "dailyfantasysportsaustralia@gmail.com"
-    contact_form_ajax = false
+    #email = "dailyfantasysportsaustralia@gmail.com"
+    #contact_form_ajax = false
 
     about_us = "<p>Daily Fantasy Sports Australia (DFSAustralia) have been providing data driven insights to the Australian DFS Community since 2016.</p>"
     copyright = "Copyright (c) 2016 - 2020, Daily Fantasy Sports Australia; all rights reserved."
@@ -106,7 +106,7 @@ paginate = 10
 
     logo = "img/stadium.png"
     logo_small = "img/stadium.png"
-    address = ""
+    #address = ""
 
 [Permalinks]
     blog = "/blog/:year/:month/:day/:filename/"
