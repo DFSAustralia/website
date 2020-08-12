@@ -1,4 +1,4 @@
-baseurl = "https://www.dfsaustralia.com/"
+baseurl = "https://jovial-wescoff-0f47d6.netlify.app/"
 title = "Daily Fantasy Sports Australia"
 theme = "hugo-universal-theme"
 languageCode = "en-us"
