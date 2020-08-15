@@ -1,4 +1,4 @@
-baseurl = "https://jovial-wescoff-0f47d6.netlify.app/"
+baseurl = "https://dfsaustralia.com/"
 title = "Daily Fantasy Sports Australia"
 theme = "hugo-universal-theme"
 languageCode = "en-us"
@@ -147,13 +147,17 @@ paginate = 10
     title = "Testimonials"
     subtitle = ""
 
-[params.see_more]
+[params.see_more] # This is where to add more buttons for more applications
     enable = true
     icon = "fas fa-tools"
-    title = "Do you want DFS tools?"
-    subtitle = "Come check out our AFL DFS Tools powered by RShiny."
+    title = "Do you want AFL DFS tools?"
+    subtitle = "Come check out our AFL DFS Applications powered by RShiny."
     link_url = ""
-    link_text = "COMING SOON"
+    link_text = "Player and Team Stats"
+    link_url2 = "http://www.dfsaustralia-apps.com/shiny/draftstars-profit-tracker"
+    link_text2 = "Draftstars Profit Tracker"
+    link_url3 = ""
+    link_text3 = "More Coming Soon"
 
 [params.clients]
     enable = true

@@ -20,6 +20,28 @@
                     </a>
                     {{ end }}
                 </p>
+                <p class="text-center">
+                    {{ with .Site.Params.see_more.link_url2 }}
+                    <a href="{{ . }}" class="btn btn-template-transparent-black btn-lg">
+                    {{ end }}
+                        {{ with .Site.Params.see_more.link_text2 }}
+                        {{ . | markdownify }}
+                        {{ end }}
+                    {{ with .Site.Params.see_more.link_url2 }}
+                    </a>
+                    {{ end }}
+                </p>
+                               <p class="text-center">
+                    {{ with .Site.Params.see_more.link_url3 }}
+                    <a href="{{ . }}" class="btn btn-template-transparent-black btn-lg">
+                    {{ end }}
+                        {{ with .Site.Params.see_more.link_text3 }}
+                        {{ . | markdownify }}
+                        {{ end }}
+                    {{ with .Site.Params.see_more.link_url3 }}
+                    </a>
+                    {{ end }}
+                </p>
             </div>
         </div>
     </div>
