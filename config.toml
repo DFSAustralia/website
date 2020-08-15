@@ -1,4 +1,4 @@
-baseurl = "https://www.dfsaustralia.com/"
+baseurl = "https://dfsaustralia.com/"
 title = "Daily Fantasy Sports Australia"
 theme = "hugo-universal-theme"
 languageCode = "en-us"
