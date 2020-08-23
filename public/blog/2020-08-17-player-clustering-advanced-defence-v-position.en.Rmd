@@ -1,0 +1,348 @@
+---
+title: 'Player Clustering - Advanced Defence v Position'
+banner: img/banners/player-clustering.png
+author: "Morts"
+date: 2020-08-23
+categories: []
+tags:
+  - AFL
+---
+
+```{r setup, include=FALSE}
+library(ggplot2); library(formattable); library(knitr); library(dplyr); library(BBmisc); library(factoextra); library(tidyr)
+library(reactable)
+
+```
+
+# Defence v Position
+
+Defence vs Position (or DVP) is a common tool used throughout the Fantasy Sports Industry. The tool has varying levels of importance depending on which sport you are playing. Sports like NBA or NFL lend themselves very well to DVP as there are specific one-on-one matchups that are predictable from one game to the next and player's roles are highly consistent. These sports also have a wealth of statistical data made public which ensures accuracy of models.
+
+AFL is different, players rotate through a variety of different positions in a single game, especially midfielders who may play forward to differing degrees from game-to-game. The AFL also have a habit of keeping the more interesting stats behind lock-and-key ensuring the general public only have the base stats to work with. Because of this, service providers in Australia have typically worked with positional categories supplied by the fantasy platforms themselves when developing their DVP tools. Here at DFSAustralia we've historically reverted to the official AFL Player Rating Positions (manually adjusted from time to time) to try to be as accurate as possible. However what if there was a better way?
+
+# Not All Defenders Are Built Equal
+
+Grouping players of the same position based purely on their positional classification is easy to do but isn't optimal. A rebounding defender like Jayden Short or Bachar Houli is going to receive a different DVP boost than a less attacking defender like Noah Balta in the same game purely because of their playing styles and how the opposition play. Knowing this, we attempted to generate custom positions via means of machine learning based on the publicly available data.
+
+# Custom Positional Grouping
+
+We extracted all the player stats between the start of the 2019 season up until the completion of 2020 round 11 and removed players who had averaged less than 65 fantasy points over that time. There was two main reasons for this (1) to decrease the number of data points as this type of analysis can take quite some time to run and (2) to focus on the players more likely to be selected in your fantasy sides. We then further filtered the data to consider only the last 20 games of each player and removed any players who had played less than 10 games over that time.
+
+With our player game logs selected, we then selected the individual player stats to be considered in this analysis. I was particulary keen on including stats like rebound 50s, marks inside 50, centre clearances, etc, stats that point to a location on the field at a set time as opposed to straight disposals, etc which can occur anywhere. In the end, the stats that I included in the grouping exercise were as follows (in alphabetical order):
+
+* bounces
+* contested marks
+* contested possessions
+* goal assists
+* handballs
+* inside 50s
+* intercepts
+* kicks
+* marks
+* marks inside 50
+* metresGained
+* rebounds 50s
+* shots at goal
+* tackles
+* tackles inside 50
+* uncontested possessions
+* centre clearances
+* stoppage clearances
+* ruck contests
+* centre bounce attendances
+
+Once the stats were organised and normalized we ran these through what is called a k-means clustering algorithm, which put simply, groups the players based on similarities across their statistical categories. The output of this type of machine learning is a cluster diagram included below.
+
+```{r, echo=FALSE, message=FALSE, warning = FALSE, results = 'asis'}
+last_games <- 20
+min_games <- 10
+min_FP_avg <- 65
+tog_removal <- 50
+no_clusters <- 6
+
+categories <- c("bounces","contestedMarks","contestedPossessions","goalAssists",
+                "handballs","inside50s","intercepts","kicks","marks","marksInside50","metresGained",
+                "rebounds50s","shotsAtGoal","tackles","tacklesInside50","uncontestedPossessions",
+                "centreClearances","stoppageClearances","ruckContests","CBA")
+
+mainStats<-read.csv("~/Dropbox/Github-DFSAustralia-website/database/afl-database.csv")
+mainStats <- mainStats[order(-mainStats$year,-mainStats$round),]
+mainStats[is.na(mainStats)] <- 0 
+mainStats <- rbind(mainStats[mainStats$year %in% 2020 & mainStats$round <= 11,],
+                   mainStats[mainStats$year %in% 2019,])
+mainStats <- mainStats[mainStats$timeOnGroundPercentage >= tog_removal,]
+
+playerNames <- mainStats %>%
+    group_by(player_id) %>%
+    summarise(player_name = tail(player_name,1))
+
+mainStats <- mainStats[,colnames(mainStats) %in% c('player_id','dreamTeamPoints',categories)]
+
+
+playerStats <- mainStats %>% 
+    group_by(player_id) %>%
+    do(head(., last_games)) %>%
+    summarise(Gms = n(),
+              across(everything(),mean))
+
+playerStats <- playerStats[playerStats$dreamTeamPoints >= min_FP_avg,]
+playerStats <- playerStats[playerStats$Gms >= min_games,]
+
+playerStats$Gms <- playerStats$dreamTeamPoints <- NULL
+
+stats <- normalize(playerStats, method= "standardize") 
+stats$player_id <- NULL
+stats <- stats[,colnames(stats) %in% categories]
+
+playerStats <- left_join(playerStats,playerNames)
+row.names(stats) <- playerStats$player_name
+
+km.res <- kmeans(stats,no_clusters, nstart = 25)
+
+fviz_cluster(km.res, stats, ellipse = TRUE, ellipse.alpha= 0.1,
+             palette = "jco",repel = TRUE, ggtheme = theme_minimal(base_size = .2), 
+             main= FALSE, xlab= FALSE, ylab = FALSE, labelsize = 6) +
+  theme(legend.position="none")
+
+```
+
+In this case the analysis identified 6 separate clusters of players, I've described these as follows:
+
+* Ruck - this one is fairly simple and is really no different to existing classifications. These are the players who attend ruck contests. Easy.
+* Forward - this group consists of your classic tall forward types in Ben Brown, Tom Hawkins aswell as players like Isaac Heeney & Brad Ebert who play predominantly forward although these two are on the boundary between this category and the next.
+* Forward / Midfielder - players who play both forward and midfield or players who push forward more as opposed to defensive running from stoppage. Players like Robbie Gray, Brandan Parfitt and Darcy Parish typify this group.
+* Inside Midfielder - this is your typical centre bounce attendance, contested ball beast or high possession getting midfielder. Players of the ilk of Patrick Dangerfield, Taylor Adams and Tom Mitchell.
+* Outside Midfielder - contains your midfielders who tend to do their damage with uncontested possessions instead of on the inside. Isaac Smith, Ed Langdon, Karl Amon, etc. Note that this section also includes those running half backs that typically get up the ground and get plenty of pill themselves, eg Brodie Smith, Bachar Houli, Jack Crisp, etc
+* Attacking Defender - just as the title says, players who predominantly stay down back and get the majority of their ball in the defensive half.
+
+<i>Note that for this exercise we didn't give any extra weighting for more recent games and all games were treated equally. Because of this, players who have recently had a role change will over time move from one category to the next once their older games move out of the data pool.</i>
+
+# Defence v Custom Positional Grouping
+
+Once we identified the classifications we summarised up the performance of these player groups against each opponent over that time frame. Below is the breakdown of the results in terms of plus/minus. We here at DFSAustralia prefer to use plus/minus when refering to DVP instead of total points scored against, it's a much better metric (I'll leave the explaination as to why for another day). Simply put, plus/minus is the difference between how many points a player has scored vs their season average (for example, if someone scores 90 and their season average is 80 then they have scored +10). A positive plus/minus means that team has allowed players to outperform and vice-versa.
+
+```{r, echo=FALSE, message=FALSE, warning = FALSE, results = 'asis'}
+
+mainStats<-read.csv("~/Dropbox/Github-DFSAustralia-website/database/afl-database.csv")
+mainStats <- mainStats[order(-mainStats$year,-mainStats$round),]
+mainStats[is.na(mainStats)] <- 0 
+mainStats <- rbind(mainStats[mainStats$year %in% 2020 & mainStats$round <= 11,],
+                   mainStats[mainStats$year %in% 2019,])
+mainStats <- mainStats[mainStats$timeOnGroundPercentage >= tog_removal,]
+
+clusters <- data.frame(sort(km.res$cluster))
+clusters$player_name <- rownames(clusters)
+colnames(clusters)[1] <- c("cluster")
+playerNames <- left_join(clusters,playerNames)
+mainStats <- left_join(mainStats,playerNames)
+mainStats <- mainStats[!is.na(mainStats$cluster),]
+
+mainStats <- mainStats %>% 
+    group_by(player_id) %>%
+    do(head(., last_games))
+
+playerAvg <- mainStats %>%
+  group_by(player_id) %>%
+  summarise(AvgSel = mean(dreamTeamPoints))
+
+mainStats <- left_join(mainStats,playerAvg)
+
+DVP <- mainStats %>%
+  group_by(opponent,cluster) %>%
+  summarise(Gms = n(),
+            DVP = round(mean(dreamTeamPoints - AvgSel),1))
+
+cluster_names <- clusters[clusters$player_name %in% c("Lance Franklin","Lachie Hunter","Tom Stewart","Jack Macrae","Cameron Guthrie","Brodie Grundy"),]
+
+cluster_fix <- function(x){
+  case_when(
+    x == 'Lance Franklin' ~ 'Forward',
+        x == 'Lachie Hunter' ~ 'Outside Midfielder',
+        x == 'Tom Stewart' ~ 'Attacking Defender',
+    x == 'Jack Macrae' ~ 'Inside Midfielder',
+    x == 'Cameron Guthrie' ~ 'Forward / Midfielder',
+    x == 'Brodie Grundy' ~ 'Ruck',
+    TRUE ~ as.character(x)
+  )
+}
+
+cluster_names$player_name <- cluster_fix(cluster_names$player_name)
+
+DVP <- left_join(DVP, cluster_names)
+
+DVP <- DVP %>%
+  select(opponent, DVP, player_name) %>%
+  spread(opponent,DVP)
+
+reactable(DVP,
+          wrap = FALSE,
+          defaultColDef = colDef(minWidth = 40),
+  style = list(fontSize = "9px"),
+          columns = list(
+  ADE  = colDef(
+    cell = function(value) {
+      if (value >= 0) paste0("+", value) else value
+    },
+    style = function(value) {color <- if (value > 0) {"#008000"} else if (value < 0) {
+        "#e00000"}
+      list(fontWeight = 600, color = color)
+    }
+  ),
+    BRL  = colDef(
+    cell = function(value) {
+      if (value >= 0) paste0("+", value) else value
+    },
+    style = function(value) {color <- if (value > 0) {"#008000"} else if (value < 0) {
+        "#e00000"}
+      list(fontWeight = 600, color = color)
+    }
+  ),
+    CAR  = colDef(
+    cell = function(value) {
+      if (value >= 0) paste0("+", value) else value
+    },
+    style = function(value) {color <- if (value > 0) {"#008000"} else if (value < 0) {
+        "#e00000"}
+      list(fontWeight = 600, color = color)
+    }
+  ),
+    COL  = colDef(
+    cell = function(value) {
+      if (value >= 0) paste0("+", value) else value
+    },
+    style = function(value) {color <- if (value > 0) {"#008000"} else if (value < 0) {
+        "#e00000"}
+      list(fontWeight = 600, color = color)
+    }
+  ),
+    ESS  = colDef(
+    cell = function(value) {
+      if (value >= 0) paste0("+", value) else value
+    },
+    style = function(value) {color <- if (value > 0) {"#008000"} else if (value < 0) {
+        "#e00000"}
+      list(fontWeight = 600, color = color)
+    }
+  ),
+    FRE  = colDef(
+    cell = function(value) {
+      if (value >= 0) paste0("+", value) else value
+    },
+    style = function(value) {color <- if (value > 0) {"#008000"} else if (value < 0) {
+        "#e00000"}
+      list(fontWeight = 600, color = color)
+    }
+  ),
+    GCS  = colDef(
+    cell = function(value) {
+      if (value >= 0) paste0("+", value) else value
+    },
+    style = function(value) {color <- if (value > 0) {"#008000"} else if (value < 0) {
+        "#e00000"}
+      list(fontWeight = 600, color = color)
+    }
+  ),
+    GWS  = colDef(
+    cell = function(value) {
+      if (value >= 0) paste0("+", value) else value
+    },
+    style = function(value) {color <- if (value > 0) {"#008000"} else if (value < 0) {
+        "#e00000"}
+      list(fontWeight = 600, color = color)
+    }
+  ),
+    GEE  = colDef(
+    cell = function(value) {
+      if (value >= 0) paste0("+", value) else value
+    },
+    style = function(value) {color <- if (value > 0) {"#008000"} else if (value < 0) {
+        "#e00000"}
+      list(fontWeight = 600, color = color)
+    }
+  ),
+    HAW  = colDef(
+    cell = function(value) {
+      if (value >= 0) paste0("+", value) else value
+    },
+    style = function(value) {color <- if (value > 0) {"#008000"} else if (value < 0) {
+        "#e00000"}
+      list(fontWeight = 600, color = color)
+    }
+  ),
+    MEL  = colDef(
+    cell = function(value) {
+      if (value >= 0) paste0("+", value) else value
+    },
+    style = function(value) {color <- if (value > 0) {"#008000"} else if (value < 0) {
+        "#e00000"}
+      list(fontWeight = 600, color = color)
+    }
+  ),
+    NTH  = colDef(
+    cell = function(value) {
+      if (value >= 0) paste0("+", value) else value
+    },
+    style = function(value) {color <- if (value > 0) {"#008000"} else if (value < 0) {
+        "#e00000"}
+      list(fontWeight = 600, color = color)
+    }
+  ),
+    PTA  = colDef(
+    cell = function(value) {
+      if (value >= 0) paste0("+", value) else value
+    },
+    style = function(value) {color <- if (value > 0) {"#008000"} else if (value < 0) {
+        "#e00000"}
+      list(fontWeight = 600, color = color)
+    }
+  ),
+    RIC  = colDef(
+    cell = function(value) {
+      if (value >= 0) paste0("+", value) else value
+    },
+    style = function(value) {color <- if (value > 0) {"#008000"} else if (value < 0) {
+        "#e00000"}
+      list(fontWeight = 600, color = color)
+    }
+  ),
+    STK  = colDef(
+    cell = function(value) {
+      if (value >= 0) paste0("+", value) else value
+    },
+    style = function(value) {color <- if (value > 0) {"#008000"} else if (value < 0) {
+        "#e00000"}
+      list(fontWeight = 600, color = color)
+    }
+  ),
+    SYD  = colDef(
+    cell = function(value) {
+      if (value >= 0) paste0("+", value) else value
+    },
+    style = function(value) {color <- if (value > 0) {"#008000"} else if (value < 0) {
+        "#e00000"}
+      list(fontWeight = 600, color = color)
+    }
+  ),
+    WBD  = colDef(
+    cell = function(value) {
+      if (value >= 0) paste0("+", value) else value
+    },
+    style = function(value) {color <- if (value > 0) {"#008000"} else if (value < 0) {
+        "#e00000"}
+      list(fontWeight = 600, color = color)
+    }
+  ),
+    WCE  = colDef(
+    cell = function(value) {
+      if (value >= 0) paste0("+", value) else value
+    },
+    style = function(value) {color <- if (value > 0) {"#008000"} else if (value < 0) {
+        "#e00000"}
+      list(fontWeight = 600, color = color)
+    }
+  ),
+  player_name = colDef(name = "Position", minWidth = 80)
+)
+)
+
+```

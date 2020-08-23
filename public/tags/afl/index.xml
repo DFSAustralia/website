@@ -6,10 +6,19 @@
     <description>Recent content in AFL on Daily Fantasy Sports Australia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/afl/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Player Clustering - Advanced Defence v Position</title>
+      <link>/blog/2020/08/23/2020-08-17-player-clustering-advanced-defence-v-position/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2020/08/23/2020-08-17-player-clustering-advanced-defence-v-position/</guid>
+      <description>Defence v Position Defence vs Position (or DVP) is a common tool used throughout the Fantasy Sports Industry. The tool has varying levels of importance depending on which sport you are playing. Sports like NBA or NFL lend themselves very well to DVP as there are specific one-on-one matchups that are predictable from one game to the next and player’s roles are highly consistent.</description>
+    </item>
     
     <item>
       <title>Defining Draftstars Player Value</title>
