@@ -28,11 +28,11 @@ paginate = 10
     url  = "/blog/"
     weight = 2
 
-#[[menu.main]]
-#    identifier = "data"
-#    name = "Tools"
- #   url  = "/data/"
-#    weight = 3
+[[menu.main]]
+    identifier = "tools"
+    name = "Tools"
+    url  = "/tools/"
+    weight = 3
 
 #[[menu.main]]
 #    identifier = "about"

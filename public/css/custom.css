@@ -8,3 +8,10 @@
 .box-simple {
   min-height: 230px;
 }
+
+ .imgTools img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
