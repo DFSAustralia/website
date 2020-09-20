@@ -156,8 +156,14 @@ paginate = 10
     link_text = "Player and Team Stats"
     link_url2 = "https://www.dfsaustralia-apps.com/shiny/draftstars-profit-tracker"
     link_text2 = "Draftstars Profit Tracker"
-    link_url3 = ""
-    link_text3 = "More Coming Soon"
+    link_url3 = "https://www.dfsaustralia-apps.com/shiny/draftstars-ownership-research"
+    link_text3 = "Draftstars Ownership Research"
+    link_url4 = "https://dfsaustralia-apps.com/shiny/draftstars-slate-builder/"
+    link_text4 = "Draftstars Slate Builder"
+    link_url5 = "https://dfsaustralia-apps.com/shiny/draftstars-tournament-history/"
+    link_text5 = "Draftstars Tournament History"
+    link_url6 = ""
+    link_text6 = "More Coming Soon"
 
 [params.clients]
     enable = true
