@@ -9,15 +9,15 @@ title: Tools
 
 Detailed Player and Team Stats, including:
 
- * Player Game Logs
- * Player Splits
- * Team Fantasy Scores For/Against
- * Advanced Player Tables including Centre Bounce Attendances
- * Player Performance With/Without Team Mates
- * Points Conceded by Position
- * Detailed Ruck Analysis including Ruck Contests Attended
- * Match-Up History
- * Stats from 2016 to Present
+* Player Game Logs
+* Player Splits
+* Team Fantasy Scores For/Against
+* Advanced Player Tables including Centre Bounce Attendances
+* Player Performance With/Without Team Mates
+* Points Conceded by Position
+* Detailed Ruck Analysis including Ruck Contests Attended
+* Match-Up History
+* Stats from 2016 to Present
 
 ## [AFL - DRAFTSTARS SLATE BUILDER](https://dfsaustralia-apps.com/shiny/draftstars-slate-builder/)
 
