@@ -8,6 +8,7 @@ title: Tools
 ## [AFL - DETAILED PLAYER AND TEAM STATS](https://www.dfsaustralia-apps.com/shiny/player-team-stats/)
 
 Detailed Player and Team Stats, including:
+
  * Player Game Logs
  * Player Splits
  * Team Fantasy Scores For/Against
