@@ -3,7 +3,6 @@ description: Tools
 title: Tools
 ---
 
-
 {{< figure src="/img/tools-afl.png" class="imgTools">}}
 
 ## [AFL - DETAILED PLAYER AND TEAM STATS](https://www.dfsaustralia-apps.com/shiny/player-team-stats/)
