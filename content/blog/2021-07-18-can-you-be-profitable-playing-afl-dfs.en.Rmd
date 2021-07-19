@@ -1,8 +1,8 @@
 ---
-title: Can You Be Profitable Playing AFL DFS?
-banner: img/banners/profit.jpeg
+title: 'Can You Be Profitable Playing AFL DFS?'
+#banner: img/banners/profit.jpeg
 author: 'Morts'
-date: '2021-07-18'
+date: 2021-07-18
 slug: can-you-be-profitable-playing-afl-dfs
 categories:
   - Draftstars
