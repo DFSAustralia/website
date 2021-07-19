@@ -1,0 +1,238 @@
+---
+title: Can You Be Profitable Playing AFL DFS?
+banner: img/banners/profit.jpeg
+author: 'Morts'
+date: '2021-07-18'
+slug: can-you-be-profitable-playing-afl-dfs
+categories:
+  - Draftstars
+tags:
+  - AFL
+  - Draftstars
+---
+
+```{r setup, include=FALSE}
+library(ggplot2); library(knitr); library(dplyr); library(tidyr); library(reactable)
+```
+
+I'm confident in saying that 99% of people who read this blog post have at some point dreamt of turning their AFL DFS hobby into a full time income stream. How practical though is that dream in the current landscape? Draftkings and Fanduel offer up eye-watering prizes for those playing US sports but AFL tournaments on Draftstars rarely offer up more than $75,000 prize pools with first place usually taking home less than $10,000. Although the popular AFL Fantasy Season Long competition attracts more than 100,000 entrants each year, the DFS community constitutes only a small proportion of this. 
+
+Here at DFSAustralia we've taken the time to analyse the results from all Draftstars tournaments from round 1 to round 18 to see just how easy (or hard) it is to be profitable in AFL DFS.
+
+# TOURNAMENT & ENTRANT OVERVIEW
+
+Between rounds 1 and 18 there have been a total of 2,687 tournaments (inclusive of GPP's, Single Game Slates, High Roller, 6 Man Contests, etc but excluding Head-to-Heads, Double/Triple-Ups, Ticket & Free Contests, etc) with a total of 9,338 Unique Entrants.
+
+This 9,388 Unique Entrants number constitutes all users that have entered a contest (whether they have played once or on every slate), for the purposes of this post I've opted to include a subset of this group also which constitutes entrants that have played at least 50% of the rounds. I've dubbed these Regular Entrants and there are a total of 3,532.
+
+```{r, echo=FALSE, message=FALSE, warning = FALSE, results = 'asis'}
+
+sportType <- "AFL"
+setwd("~/Dropbox/Daily Fantasy Sports/AFL/2021 Code/Download Draftstars Tournament Results & Prizes")
+AFLrounds <- read.csv("afl_rounds.csv")
+tournaments <- read.csv("DS_Tournaments.csv") %>% left_join(AFLrounds) %>% select(id, payout_type, round) %>% rename(contest = id)
+temp <- list.files(pattern=paste0(sportType, "_DS_Results_Month"))
+draftstarsData <- do.call(rbind,lapply(temp,read.csv)) %>% left_join(tournaments) %>% filter(fee != 0)
+unique_entrants_no <- length(unique(draftstarsData$user))
+user_rounds_played <- draftstarsData %>%
+  group_by(user) %>%
+  summarise(rounds = length(unique(round)))
+regular_entrants <- user_rounds_played %>% filter(rounds >= 9) # This needs to be updated
+regular_entrants_no <- nrow(regular_entrants)
+
+entrant_data <- data.frame(users = c("Unique", "Regular"), total = c(unique_entrants_no, regular_entrants_no))
+
+ggplot(entrant_data, aes(x = users, y = total, fill = users)) + 
+  geom_bar(stat = "identity") +
+  theme_classic() + 
+  theme(legend.position="none") + 
+  labs(
+    title = "Breakdown of 2021 AFL Draftstars Entrants Up To & Including Round 18",
+    caption = "Regular Entrants are those who have entered a team in at least 50% of the rounds",
+    x = "",
+    y = "No of Entrants"
+  ) + 
+  geom_text(aes(label = total), position = position_dodge(width=0.9), vjust=-0.25)
+
+```
+
+Breaking down these Unique Entrants into individual rounds we can see that there were an increased number of entrants in the early rounds which began to tail off after round 3 up until round 10. Since round 10 we've seen an increase in unique users each weekend although this is a little misleading as this is most likely down to the fact that Thursday night football was re-introduced and as such the number of slates increased.
+
+The number of Regular Entrants has been fairly consistent throughout the year but seems to be ever so slightly tailing off as the year progresses.
+
+```{r, echo=FALSE, message=FALSE, warning = FALSE, results = 'asis'}
+
+unique_per_round <- draftstarsData %>%
+  group_by(round) %>%
+  summarise(Unique = length(unique(user)))
+
+regular_per_round <- draftstarsData %>%
+  filter(user %in% regular_entrants$user) %>%
+  group_by(round) %>%
+  summarise(Regular = length(unique(user)))
+
+users_per_round <- unique_per_round %>% left_join(regular_per_round) %>%
+  gather(User, entries, Unique:Regular)
+
+ggplot(users_per_round, aes(fill=User, y=entries, x=round)) + 
+    geom_bar(position="dodge", stat="identity") +  
+  theme_classic() + 
+    labs(
+    title = "Breakdown of 2021 AFL Draftstars Entrants By Round",
+    caption = "Regular Entants are those who have entered a team in at least 50% of the rounds",
+    x = "Round",
+    y = "No of Entrants"
+  ) + 
+  geom_text(aes(label = entries), position = position_dodge(width=0.9), hjust=1.25, angle=90, size = 3)
+
+```
+
+# OVERVIEW OF PRIZEMONEY
+
+As the number of Unique Entrants has been trending down, we'd also expect to see the total prize money per round be trending down which is exactly what is happening in the following plot. The recent uptick is purely down to the re-introduction of Thursday night (or Monday) football which provides more slates for entrants. 
+
+So far this season Draftstars have paid out a little over $9,000,000 in prize money.
+
+```{r, echo=FALSE, message=FALSE, warning = FALSE, results = 'asis'}
+
+prize_per_round_guaranteed_plus <- draftstarsData %>%
+  filter(payout_type == "guaranteed_plus") %>%
+  group_by(round) %>%
+  summarise(GPPs = round(sum(prize)),0)
+
+prize_per_round_all <- draftstarsData %>%
+  group_by(round) %>%
+  summarise(ALL = round(sum(prize),0))
+
+prizes_per_round <- prize_per_round_all %>% left_join(prize_per_round_guaranteed_plus) %>%
+  gather(Contest, prizes, GPPs:ALL)
+
+ggplot(prizes_per_round, aes(fill=Contest, y=prizes, x=round)) + 
+    geom_bar(position="dodge", stat="identity") +  
+  theme_classic() + 
+    labs(
+    title = "Breakdown of 2021 AFL Draftstars Prize Money By Round",
+    caption = "",
+    x = "Round",
+    y = "Prizes"
+  ) + 
+  geom_text(aes(label = paste0("$",prizes)), position = position_dodge(width=0.9), hjust=1.25, angle=90, size = 3) + 
+  scale_y_continuous(labels=scales::dollar_format())
+
+```
+
+# USER BREAKDOWN AND PROFITABILITY
+
+Now we get to the important question, how easy is it to be profitable in AFL DFS? 
+
+Firstly, if you haven't tracked your results or think it's too complicated to calculate your overall profits you may be pleasantly surprised that we have a simple tool for you to analyse your performance. It's as simple as downloading your csv history file from Draftstars and uploading to our [Profit Tracker](https://www.dfsaustralia-apps.com/shiny/draftstars-profit-tracker/) tool. Give it a try for free.
+
+Of the 3,532 Regular Entrants there are a total of 566 who have been profitable so far in season 2021. That's good for 16% of the field. Based on that alone if you picture yourself in a pub with 18 other regular DFS players, on average only 3 people in that room would have made money this season. How much would they have made though you ask? Well let's breakdown the results a little further.
+
+```{r, echo=FALSE, message=FALSE, warning = FALSE, results = 'asis'}
+
+paid_users <- draftstarsData %>%
+  group_by(user) %>%
+  summarise(Fees = sum(fee),
+            Winnings = sum(prize),
+            Profit = Winnings - Fees,
+            ROI = (Profit/Fees)) 
+
+unique_profitable <- nrow(paid_users %>% filter(Profit > 0))/nrow(paid_users)
+regular_profitable <- nrow(paid_users %>% filter(Profit > 0, user %in% regular_entrants$user))/nrow(paid_users %>% filter(user %in% regular_entrants$user))
+
+profitable_users <- data.frame(User = c("Unique", "Regular"), Profitable = c(round(100*unique_profitable,1), round(100*regular_profitable,1))) 
+
+ggplot(profitable_users, aes(x = User, y = Profitable, fill = User)) + 
+  geom_bar(stat = "identity") +
+  theme_classic() + 
+  theme(legend.position="none") + 
+  labs(
+    title = "Percentage of Profitable Entrants",
+    caption = "Regular Entrants are those who have entered a team in at least 50% of the rounds",
+    x = "",
+    y = "Percentage of Entrants (%)"
+  ) + 
+  geom_text(aes(label = Profitable), position = position_dodge(width=0.9), vjust=-0.25)
+
+```
+
+The following table breaks down each Regular Entrant's profit into different bands. 
+
+Approximately a third of profitable Regular Entrants have made less than $100. 
+Approximately three quarters of profitable Regular Entrants have made less than $1,000.
+
+Only 4.3% of entrants have profited more than $1,000. Going back to the analogy I had before with people in a room, this equates to being in a room with 22 other people and being the only person who has profited more than $1,000 (18 people would have lost money).
+
+There are a total of 11 entrants that have profited over $20,000 so far this season. The Australian Bureau of Statistics suggests that the average weekly income is ~$1,700. $20,000 over 18 rounds falls short of this ($1,100 per round) but for those who are frugal this would be the lower cut off for living off your winnings. Back to the people in a room analogy this would require you to be in a room with 320 other people and out perform everyone else. 
+
+**So simplistically put if you want to be profitable at AFL DFS you need to be better than 84% of the field. However, if you want to move into that upper bracket of players you need to find a strategy that means you can outperform 98% of entrants. Finding that strategy is the difficult part.**
+
+```{r, echo=FALSE, message=FALSE, warning = FALSE, results = 'asis'}
+
+profit_bands <- draftstarsData %>%
+  filter(user %in% regular_entrants$user) %>%
+  group_by(user) %>%
+  summarise(Fees = sum(fee),
+            Winnings = sum(prize),
+            Profit = Winnings - Fees)
+
+profit_bands_all <- data.frame(totalProfit = c("$100,000+", "$80,000 - $99,999", "$60,000 - $79,999",
+                                                      "$40,000 - $59,999", "$20,000 - $39,999", "$10,000 - $19,999",
+                                                      "$5,000 - $9,999", "$2,500 - $4,999", "$1,000 - $2,499",
+                                                   "$500 - $999", 
+                                                   "$400 - $499", 
+                                                   "$300 - $399", 
+                                                   "$200 - $299", 
+                                                   "$100 - $199", 
+                                                   "$0.01 - $99"),
+                                   ALL = c(nrow(profit_bands %>% filter(Profit >= 100000)),
+                                             nrow(profit_bands %>% filter(Profit >= 80000, Profit < 100000)),
+                                             nrow(profit_bands %>% filter(Profit >= 60000, Profit < 80000)),
+                                             nrow(profit_bands %>% filter(Profit >= 40000, Profit < 60000)),
+                                             nrow(profit_bands %>% filter(Profit >= 20000, Profit < 40000)),
+                                             nrow(profit_bands %>% filter(Profit >= 10000, Profit < 20000)),
+                                             nrow(profit_bands %>% filter(Profit >= 5000, Profit < 10000)),
+                                             nrow(profit_bands %>% filter(Profit >= 2500, Profit < 5000)),
+                                             nrow(profit_bands %>% filter(Profit >= 1000, Profit < 2500)),
+                                             nrow(profit_bands %>% filter(Profit >= 500, Profit < 1000)),
+                                             nrow(profit_bands %>% filter(Profit >= 400, Profit < 500)),
+                                             nrow(profit_bands %>% filter(Profit >= 300, Profit < 400)),
+                                             nrow(profit_bands %>% filter(Profit >= 200, Profit < 300)),
+                                             nrow(profit_bands %>% filter(Profit >= 100, Profit < 200)),
+                                             nrow(profit_bands %>% filter(Profit > 0, Profit < 100))
+                                             )
+                                   )
+
+regular_field <- nrow(paid_users %>% filter(user %in% regular_entrants$user))
+profit_bands_summary <- profit_bands_all %>% mutate(Field = round(100*ALL/regular_field,2))
+
+
+reactable(profit_bands_summary,
+                    pagination = FALSE,
+                    highlight = TRUE,
+                    wrap = FALSE,
+                    compact = TRUE,
+                    searchable = FALSE,
+          fullWidth = FALSE,
+          sortable = FALSE,
+          filterable = FALSE,
+          striped = TRUE,
+          columns = c(
+                        list(
+                          Field = colDef(name = "% of Field",
+                                         format = colFormat(suffix = "%")),
+                          ALL = colDef(name = "No of Users"),
+                          totalProfit = colDef(name = "Profit Band",
+                                               width = 200)
+                        )
+          )
+          )
+
+```
+
+
+
+
+
+
