@@ -3,13 +3,15 @@ title: 'Can You Be Profitable Playing AFL DFS?'
 #banner: img/banners/profit.jpeg
 author: 'Morts'
 date: 2021-07-18
-theme: null
 slug: can-you-be-profitable-playing-afl-dfs
 categories:
   - Draftstars
 tags:
   - AFL
   - Draftstars
+output: 
+  html_document: 
+    theme: null
 ---
 
 ```{r setup, include=FALSE}
