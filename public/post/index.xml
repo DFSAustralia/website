@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Daily Fantasy Sports Australia</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Daily Fantasy Sports Australia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 Oct 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>trial-iframe</title>
+      <link>/post/trial-iframe/</link>
+      <pubDate>Mon, 04 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/trial-iframe/</guid>
+      <description>What is Value? A popular way to try normalise player performance in the Fantasy Sports community is to define it in terms of a multiple of their salary. For example, if Tom Mitchell is priced at $15,000 and scores 105 fantasy points then he’s deemed to have returned 7.00x his salary, e.g. (105 / 15,000) * 1000 = 7.00x.
+ This common strategy gives coaches the ability to compare players across a range of salaries and make a decision on who they think is the best value play for their lineup.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,20 @@
     <description>Recent content on Daily Fantasy Sports Australia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 Oct 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>trial-iframe</title>
+      <link>/post/trial-iframe/</link>
+      <pubDate>Mon, 04 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/trial-iframe/</guid>
+      <description>What is Value? A popular way to try normalise player performance in the Fantasy Sports community is to define it in terms of a multiple of their salary. For example, if Tom Mitchell is priced at $15,000 and scores 105 fantasy points then he’s deemed to have returned 7.00x his salary, e.g. (105 / 15,000) * 1000 = 7.00x.
+ This common strategy gives coaches the ability to compare players across a range of salaries and make a decision on who they think is the best value play for their lineup.</description>
+    </item>
     
     <item>
       <title>Can You Be Profitable Playing AFL DFS?</title>
@@ -46,6 +56,24 @@ This common strategy gives coaches the ability to compare players across a range
       
       <guid>/contact/</guid>
       <description>Get in Touch with Daily Fantasy Sports Australia If you want to get in touch, the best way is to contact us on Twitter at @DFSAustralia.</description>
+    </item>
+    
+    <item>
+      <title>Draftstars Historical Tournaments</title>
+      <link>/historical-tournaments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/historical-tournaments/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Draftstars Profit Tracker</title>
+      <link>/profit-tracker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/profit-tracker/</guid>
+      <description>  </description>
     </item>
     
     <item>

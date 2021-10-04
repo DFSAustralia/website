@@ -27,12 +27,78 @@ paginate = 10
     name = "Blog"
     url  = "/blog/"
     weight = 2
+    
+[[menu.main]]
+    identifier = "menu.tools"
+    name = "Tools"
+    url  = "/img/tools.jpeg"
+    weight = 3
+    
+[[menu.main]]
+    name       = "Advanced (Draftstars)"
+    identifier = "section.advanced"
+    url        = ""
+    weight     = 1
+    parent     = "menu.tools"
+    post       = 1
+    
+[[menu.main]]
+    name       = "Profit Tracker"
+    url        = "/profit-tracker/"
+    weight     = 1
+    parent     = "section.advanced"
+    
+[[menu.main]]
+    name       = "Historical Tournaments"
+    url        = "/historical-tournaments/"
+    weight     = 2
+    parent     = "section.advanced"
+    
+[[menu.main]]
+    name       = "Premium (Draftstars)"
+    identifier = "section.premium"
+    url        = ""
+    weight     = 3
+    parent     = "menu.tools"
+    post       = 1
 
 [[menu.main]]
-    identifier = "tools"
-    name = "Tools"
-    url  = "/tools/"
-    weight = 3
+    name       = "AFL Research"
+    url        = "https://dfsaustralia-apps.com/shiny/premium/afl-dfs-research-tool/"
+    weight     = 1
+    parent     = "section.premium"
+    
+[[menu.main]]
+    name       = "NFL Research"
+    url        = "https://dfsaustralia-apps.com/shiny/premium/nfl-dfs-research-tool-draftstars/"
+    weight     = 2
+    parent     = "section.premium"
+    
+[[menu.main]]
+    name       = "AFL (Draftstars)"
+    identifier = "section.afl"
+    url        = ""
+    weight     = 2
+    parent     = "menu.tools"
+    post       = 2
+    
+[[menu.main]]
+    name       = "Player Stats"
+    url        = "https://www.dfsaustralia-apps.com/shiny/player-team-stats/"
+    weight     = 1
+    parent     = "section.afl"
+
+[[menu.main]]
+    name       = "Slate Analysis"
+    url        = "https://dfsaustralia-apps.com/shiny/draftstars-slate-analysis/"
+    weight     = 2
+    parent     = "section.afl"
+
+[[menu.main]]
+    name       = "Ownership Research"
+    url        = "https://www.dfsaustralia-apps.com/shiny/draftstars-ownership-research"
+    weight     = 3
+    parent     = "section.afl"
 
 #[[menu.main]]
 #    identifier = "about"
@@ -100,7 +166,7 @@ paginate = 10
     #contact_form_ajax = false
 
     about_us = "<p>Daily Fantasy Sports Australia (DFSAustralia) have been providing data driven insights to the Australian DFS Community since 2016.</p>"
-    copyright = "Copyright (c) 2016 - 2020, Daily Fantasy Sports Australia; all rights reserved."
+    copyright = "Copyright (c) 2016 - 2021, Daily Fantasy Sports Australia; all rights reserved."
 
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
@@ -150,20 +216,9 @@ paginate = 10
 [params.see_more] # This is where to add more buttons for more applications
     enable = true
     icon = "fas fa-tools"
-    title = "Do you want AFL DFS tools?"
-    subtitle = "Come check out our AFL DFS Applications powered by RShiny."
-    link_url = "https://www.dfsaustralia-apps.com/shiny/player-team-stats/"
-    link_text = "Player and Team Stats"
-    link_url2 = "https://www.dfsaustralia-apps.com/shiny/draftstars-profit-tracker"
-    link_text2 = "Draftstars Profit Tracker"
-    link_url3 = "https://www.dfsaustralia-apps.com/shiny/draftstars-ownership-research"
-    link_text3 = "Draftstars Ownership Research"
-    link_url4 = "https://dfsaustralia-apps.com/shiny/draftstars-slate-analysis/"
-    link_text4 = "Draftstars Slate Analysis"
-    link_url5 = "https://dfsaustralia-apps.com/shiny/draftstars-tournament-history/"
-    link_text5 = "Draftstars Tournament History"
-    link_url6 = ""
-    link_text6 = "More Coming Soon"
+    title = "Daily Fantasy Sports Applications?"
+    subtitle = "We've got you covered with the most advanced Daily Fantasy Sports Tools available for Draftstars."
+
 
 [params.clients]
     enable = true
@@ -174,6 +229,9 @@ paginate = 10
     subtitle = ""
 
 [params.recent_posts]
-    enable = false
-    title = "Posts"
+    enable = true
+    title = "From our blog"
     subtitle = ""
+
+[params.footer.recent_posts]
+    enable = false

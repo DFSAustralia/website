@@ -55,10 +55,6 @@ button {
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-a i[class^="fa"],
-button i[class^="fa"] {
-  margin: 0 5px;
-}
 .clickable {
   cursor: pointer !important;
 }
@@ -2927,6 +2923,9 @@ fieldset[disabled] .btn-template-primary.active {
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
+}
+.navbar-brand img {
+  max-height: 42px;
 }
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
