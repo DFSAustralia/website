@@ -64,13 +64,13 @@ paginate = 10
 
 [[menu.main]]
     name       = "AFL Research"
-    url        = "https://dfsaustralia-apps.com/shiny/premium/afl-dfs-research-tool/"
+    url        = "/afl-research/"
     weight     = 1
     parent     = "section.premium"
     
 [[menu.main]]
     name       = "NFL Research"
-    url        = "https://dfsaustralia-apps.com/shiny/premium/nfl-dfs-research-tool-draftstars/"
+    url        = "/nfl-research/"
     weight     = 2
     parent     = "section.premium"
     

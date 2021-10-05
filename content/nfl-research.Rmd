@@ -1,0 +1,10 @@
+---
+description: NFL DFS Research
+title: NFL Draftstars Research
+runtime: shiny
+---
+
+<iframe src="https://dfsaustralia-apps.com/shiny/premium/nfl-dfs-research-tool-draftstars/" width="100%" height = "1000" scrolling="yes" frameborder="no"></iframe>
+
+---
+
