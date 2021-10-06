@@ -83,7 +83,8 @@ Optimal lineups are available for completed AFL contests (other sports will foll
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/profit-tracker/</guid>
-      <description>  </description>
+      <description>iframe { min-width: 100%; }  To analyse your performance using this Profit Tracker you need to download your history file (in csv format) direct from Draftstars. This can then be uploaded into the tool and your results will be broken down for you to review. The maximum file size that can be uploaded into the application is 20MB.
+Its recommended that you do not modify the csv file before uploading, the application may not be able to successfully read the data if columns have been modified.</description>
     </item>
     
     <item>
