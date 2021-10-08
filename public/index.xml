@@ -68,6 +68,15 @@ This common strategy gives coaches the ability to compare players across a range
     </item>
     
     <item>
+      <title>Draftstars - Golf Cuts</title>
+      <link>/golf-cuts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/golf-cuts/</guid>
+      <description>   iframe { min-width: 100%; }    iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
+    </item>
+    
+    <item>
       <title>Draftstars Historical Tournaments</title>
       <link>/historical-tournaments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
