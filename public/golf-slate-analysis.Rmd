@@ -1,0 +1,26 @@
+---
+description: Golf Slate Analysis
+title: Draftstars Slate Analysis - Golf
+runtime: shiny
+---
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.16/iframeResizer.min.js"></script>
+<style>
+  iframe {
+    min-width: 100%;
+  }
+</style>
+
+Golfer's performance over their last 5 tournaments is courtesy of [www.datagolf.com](https://datagolf.com/player-trends){target="_blank"}.
+
+Projected ownership of golfers coming off the alternate list are not calculated at this stage.
+
+<iframe src="https://www.dfsaustralia-apps.com/shiny/golf-slate-analysis/" width="100%" scrolling="no" frameborder="no"></iframe>
+
+<script>
+  iFrameResize({
+    heightCalculationMethod: 'taggedElement'
+  });
+</script>
+---
+

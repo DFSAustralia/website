@@ -35,6 +35,12 @@ paginate = 10
     weight = 3
     
 [[menu.main]]
+    identifier = "golf"
+    name = "Golf"
+    url  = "/golf-slate-analysis/"
+    weight = 4
+    
+[[menu.main]]
     name       = "Advanced (Draftstars)"
     identifier = "section.advanced"
     url        = ""
