@@ -35,10 +35,22 @@ paginate = 10
     weight = 3
     
 [[menu.main]]
-    identifier = "golf"
+    identifier = "menu.golf"
     name = "Golf"
-    url  = "/golf-slate-analysis/"
+    url  = "/"
     weight = 4
+    
+[[menu.main]]
+    name       = "Golf Slate Analysis"
+    url        = "/golf-slate-analysis/"
+    weight     = 1
+    parent     = "menu.golf"
+    
+[[menu.main]]
+    name       = "Golfer Cuts"
+    url        = "/golf-cuts/"
+    weight     = 2
+    parent     = "menu.golf"
     
 [[menu.main]]
     name       = "Advanced (Draftstars)"

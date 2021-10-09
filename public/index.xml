@@ -73,7 +73,9 @@ This common strategy gives coaches the ability to compare players across a range
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/golf-cuts/</guid>
-      <description>   iframe { min-width: 100%; }    iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
+      <description>   iframe { min-width: 100%; }  This tool provides a simple way of checking how your Draftstars teams are sitting after the cut. It’s also possible to research slates as far back as September 2020.
+Note that it typically takes 30 seconds for tournament data to load, please be patient.
+  iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
     </item>
     
     <item>
