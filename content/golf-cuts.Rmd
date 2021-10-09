@@ -1,6 +1,6 @@
 ---
 description: Golf Cuts
-title: Draftstars - Golf Cuts
+title: Draftstars - Golfer Cuts
 runtime: shiny
 ---
 
