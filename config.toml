@@ -107,7 +107,7 @@ paginate = 10
     weight = 4
     
 [[menu.main]]
-    name       = "Player Statistics"
+    name       = "Offensive Stats"
     identifier = "section.nfl.player.stats"
     url        = ""
     weight     = 1
@@ -121,14 +121,14 @@ paginate = 10
     parent     = "section.nfl.player.stats"
     
 [[menu.main]]
-    name       = "Target Share"
-    url        = "/nfl-target-share/"
+    name       = "Rushing Breakdown"
+    url        = "/nfl-rushing/"
     weight     = 2
     parent     = "section.nfl.player.stats"
     
 [[menu.main]]
-    name       = "Rushing Breakdown"
-    url        = "/nfl-rushing/"
+    name       = "Target Share"
+    url        = "/nfl-target-share/"
     weight     = 3
     parent     = "section.nfl.player.stats"
 
