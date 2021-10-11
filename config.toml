@@ -141,20 +141,28 @@ paginate = 10
 [[menu.main]]
     identifier = "menu.golf"
     name = "Golf"
-    url  = "/"
+    url  = "/img/golf-tools.jpeg"
     weight = 5
+    
+[[menu.main]]
+    name       = "Draftstars Tools"
+    identifier = "section.golf.draftstars.tools"
+    url        = ""
+    weight     = 1
+    parent     = "menu.golf"
+    post       = 1
     
 [[menu.main]]
     name       = "Golf Slate Analysis"
     url        = "/golf-slate-analysis/"
     weight     = 1
-    parent     = "menu.golf"
+    parent     = "section.golf.draftstars.tools"
     
 [[menu.main]]
     name       = "Golfer Cuts"
     url        = "/golf-cuts/"
     weight     = 2
-    parent     = "menu.golf"
+    parent     = "section.golf.draftstars.tools"
 
 #[[menu.main]]
 #    identifier = "about"
