@@ -137,6 +137,20 @@ paginate = 10
     url        = "/nfl-offensive-snaps/"
     weight     = 4
     parent     = "section.nfl.player.stats"
+    
+[[menu.main]]
+    name       = "Fantasy Stats"
+    identifier = "section.nfl.fantasy.stats"
+    url        = ""
+    weight     = 1
+    parent     = "menu.nfl"
+    post       = 2
+    
+[[menu.main]]
+    name       = "Defense vs Position"
+    url        = "/nfl-dvp/"
+    weight     = 1
+    parent     = "section.nfl.fantasy.stats"
 
 [[menu.main]]
     identifier = "menu.golf"
