@@ -35,24 +35,6 @@ paginate = 10
     weight = 3
     
 [[menu.main]]
-    identifier = "menu.golf"
-    name = "Golf"
-    url  = "/"
-    weight = 4
-    
-[[menu.main]]
-    name       = "Golf Slate Analysis"
-    url        = "/golf-slate-analysis/"
-    weight     = 1
-    parent     = "menu.golf"
-    
-[[menu.main]]
-    name       = "Golfer Cuts"
-    url        = "/golf-cuts/"
-    weight     = 2
-    parent     = "menu.golf"
-    
-[[menu.main]]
     name       = "Advanced (Draftstars)"
     identifier = "section.advanced"
     url        = ""
@@ -117,6 +99,62 @@ paginate = 10
     url        = "https://www.dfsaustralia-apps.com/shiny/draftstars-ownership-research"
     weight     = 3
     parent     = "section.afl"
+
+[[menu.main]]
+    identifier = "menu.nfl"
+    name = "NFL"
+    url  = "/img/nfl-tools.jpeg"
+    weight = 4
+    
+[[menu.main]]
+    name       = "Player Statistics"
+    identifier = "section.nfl.player.stats"
+    url        = ""
+    weight     = 1
+    parent     = "menu.nfl"
+    post       = 1
+    
+[[menu.main]]
+    name       = "Target Breakdown"
+    url        = "/nfl-targets/"
+    weight     = 1
+    parent     = "section.nfl.player.stats"
+    
+[[menu.main]]
+    name       = "Target Share"
+    url        = "/nfl-target-share/"
+    weight     = 2
+    parent     = "section.nfl.player.stats"
+    
+[[menu.main]]
+    name       = "Rushing Breakdown"
+    url        = "/nfl-rushing/"
+    weight     = 3
+    parent     = "section.nfl.player.stats"
+
+[[menu.main]]
+    name       = "Offensive Snaps"
+    url        = "/nfl-offensive-snaps/"
+    weight     = 4
+    parent     = "section.nfl.player.stats"
+
+[[menu.main]]
+    identifier = "menu.golf"
+    name = "Golf"
+    url  = "/"
+    weight = 5
+    
+[[menu.main]]
+    name       = "Golf Slate Analysis"
+    url        = "/golf-slate-analysis/"
+    weight     = 1
+    parent     = "menu.golf"
+    
+[[menu.main]]
+    name       = "Golfer Cuts"
+    url        = "/golf-cuts/"
+    weight     = 2
+    parent     = "menu.golf"
 
 #[[menu.main]]
 #    identifier = "about"
