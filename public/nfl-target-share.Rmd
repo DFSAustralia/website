@@ -11,7 +11,7 @@ runtime: shiny
   }
 </style>
 
-<iframe src="https://dfsaustralia-apps.com/shiny/nfl-player-stats/target-share/" width="100%" scrolling="no" frameborder="no"></iframe>
+<iframe src="https://dfsaustralia-apps.com/shiny/nfl/target-share/" width="100%" scrolling="no" frameborder="no"></iframe>
 
 <script>
   iFrameResize({

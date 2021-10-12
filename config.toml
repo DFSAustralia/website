@@ -185,8 +185,8 @@ paginate = 10
     post       = 2
     
 [[menu.main]]
-    name       = "Game Totals & Lines (COMING SOON)"
-    url        = ""
+    name       = "Game O/U & Lines"
+    url        = "/nfl-odds/"
     weight     = 1
     parent     = "section.nfl.bookmakers"  
 

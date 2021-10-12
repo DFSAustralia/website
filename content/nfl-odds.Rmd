@@ -1,6 +1,6 @@
 ---
-description: NFL Target Share Breakdown
-title: NFL Target Share Breakdown
+description: NFL Bookmaker Lines
+title: NFL Bookmaker Lines
 runtime: shiny
 ---
 
@@ -11,7 +11,9 @@ runtime: shiny
   }
 </style>
 
-<iframe src="https://dfsaustralia-apps.com/shiny/nfl/target-share/" width="100%" scrolling="no" frameborder="no"></iframe>
+Data is courtesy of [DraftKings Sportsbook](https://sportsbook.draftkings.com/){target="_blank"}.
+
+<iframe src="https://dfsaustralia-apps.com/shiny/nfl/odds/" width="100%" scrolling="no" frameborder="no"></iframe>
 
 <script>
   iFrameResize({
