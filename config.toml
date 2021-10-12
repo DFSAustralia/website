@@ -139,18 +139,56 @@ paginate = 10
     parent     = "section.nfl.player.stats"
     
 [[menu.main]]
-    name       = "Fantasy Stats"
-    identifier = "section.nfl.fantasy.stats"
+    name       = "Player Breakdown (COMING SOON)"
+    url        = ""
+    weight     = 5
+    parent     = "section.nfl.player.stats"
+    
+[[menu.main]]
+    name       = "Daily Fantasy"
+    identifier = "section.nfl.fantasy"
     url        = ""
     weight     = 1
     parent     = "menu.nfl"
     post       = 2
     
 [[menu.main]]
+    name       = "Slate Analysis [NFL] (COMING SOON)"
+    url        = ""
+    weight     = 1
+    parent     = "section.nfl.fantasy"    
+
+[[menu.main]]
     name       = "Defense vs Position"
     url        = "/nfl-dvp/"
+    weight     = 2
+    parent     = "section.nfl.fantasy"
+    
+[[menu.main]]
+    name       = "Player Stacks (COMING SOON)"
+    url        = ""
+    weight     = 3
+    parent     = "section.nfl.fantasy"   
+    
+[[menu.main]]
+    name       = "DST Trends (COMING SOON)"
+    url        = ""
+    weight     = 4
+    parent     = "section.nfl.fantasy" 
+    
+[[menu.main]]
+    name       = "Bookmakers"
+    identifier = "section.nfl.bookmakers"
+    url        = ""
+    weight     = 2
+    parent     = "menu.nfl"
+    post       = 2
+    
+[[menu.main]]
+    name       = "Game Totals & Lines (COMING SOON)"
+    url        = ""
     weight     = 1
-    parent     = "section.nfl.fantasy.stats"
+    parent     = "section.nfl.bookmakers"  
 
 [[menu.main]]
     identifier = "menu.golf"
@@ -159,24 +197,24 @@ paginate = 10
     weight = 5
     
 [[menu.main]]
-    name       = "Draftstars Tools"
-    identifier = "section.golf.draftstars.tools"
+    name       = "Daily Fantasy"
+    identifier = "section.golf.fantasy"
     url        = ""
     weight     = 1
     parent     = "menu.golf"
     post       = 1
     
 [[menu.main]]
-    name       = "Golf Slate Analysis"
+    name       = "Slate Analysis [GOLF]"
     url        = "/golf-slate-analysis/"
     weight     = 1
-    parent     = "section.golf.draftstars.tools"
+    parent     = "section.golf.fantasy"
     
 [[menu.main]]
     name       = "Golfer Cuts"
     url        = "/golf-cuts/"
     weight     = 2
-    parent     = "section.golf.draftstars.tools"
+    parent     = "section.golf.fantasy"
 
 #[[menu.main]]
 #    identifier = "about"

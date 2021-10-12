@@ -99,11 +99,19 @@
   </url>
   
   <url>
+    <loc>/nfl-offensive-snaps/</loc>
+  </url>
+  
+  <url>
     <loc>/nfl-rushing/</loc>
   </url>
   
   <url>
     <loc>/nfl-targets/</loc>
+  </url>
+  
+  <url>
+    <loc>/nfl-target-share/</loc>
   </url>
   
   <url>
