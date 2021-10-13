@@ -139,7 +139,7 @@ paginate = 10
     parent     = "section.nfl.player.stats"
     
 [[menu.main]]
-    name       = "Player Stats"
+    name       = "Player Stats [NFL]"
     url        = "/nfl-player-stats/"
     weight     = 5
     parent     = "section.nfl.player.stats"
@@ -190,11 +190,88 @@ paginate = 10
     weight     = 1
     parent     = "section.nfl.bookmakers"  
 
+
+
+
+
+[[menu.main]]
+    identifier = "menu.nba"
+    name = "NBA"
+    url  = "/img/nba-tools.jpeg"
+    weight = 5
+    
+[[menu.main]]
+    name       = "Stats"
+    identifier = "section.nba.player.stats"
+    url        = ""
+    weight     = 1
+    parent     = "menu.nba"
+    post       = 1
+
+[[menu.main]]
+    name       = "Usage Rate (COMING SOON)"
+    url        = ""
+    weight     = 1
+    parent     = "section.nba.player.stats"
+    
+[[menu.main]]
+    name       = "Player Stats [NBA] (COMING SOON)"
+    url        = ""
+    weight     = 2
+    parent     = "section.nba.player.stats"
+    
+[[menu.main]]
+    name       = "Daily Fantasy"
+    identifier = "section.nba.fantasy"
+    url        = ""
+    weight     = 1
+    parent     = "menu.nba"
+    post       = 2
+    
+[[menu.main]]
+    name       = "Slate Analysis [NBA] (COMING SOON)"
+    url        = ""
+    weight     = 1
+    parent     = "section.nba.fantasy"    
+
+[[menu.main]]
+    name       = "Defense vs Position (COMING SOON)"
+    url        = ""
+    weight     = 2
+    parent     = "section.nba.fantasy"
+    
+[[menu.main]]
+    name       = "With / Without (COMING SOON)"
+    url        = ""
+    weight     = 3
+    parent     = "section.nba.fantasy"   
+    
+
+    
+[[menu.main]]
+    name       = "Bookmakers"
+    identifier = "section.nba.bookmakers"
+    url        = ""
+    weight     = 2
+    parent     = "menu.nba"
+    post       = 2
+    
+[[menu.main]]
+    name       = "Game O/U & Lines (COMING SOON)"
+    url        = ""
+    weight     = 1
+    parent     = "section.nba.bookmakers"  
+
+
+
+
+
+
 [[menu.main]]
     identifier = "menu.golf"
     name = "Golf"
     url  = "/img/golf-tools.jpeg"
-    weight = 5
+    weight = 6
     
 [[menu.main]]
     name       = "Daily Fantasy"
