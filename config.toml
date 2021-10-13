@@ -215,8 +215,8 @@ paginate = 10
     parent     = "section.nba.player.stats"
     
 [[menu.main]]
-    name       = "Player Stats [NBA] (COMING SOON)"
-    url        = ""
+    name       = "Player Stats [NBA]"
+    url        = "/nba-player-stats/"
     weight     = 2
     parent     = "section.nba.player.stats"
     

@@ -130,6 +130,15 @@ Projected ownership of golfers coming off the alternate list are not calculated 
     </item>
     
     <item>
+      <title>NBA Player Stats</title>
+      <link>/nba-player-stats/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/nba-player-stats/</guid>
+      <description>   iframe { min-width: 100%; }    iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
+    </item>
+    
+    <item>
       <title>NFL Bookmaker Lines</title>
       <link>/nfl-odds/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
