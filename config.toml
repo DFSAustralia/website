@@ -185,7 +185,7 @@ paginate = 10
     post       = 2
     
 [[menu.main]]
-    name       = "Game O/U & Lines"
+    name       = "Game O/U & Lines [NFL]"
     url        = "/nfl-odds/"
     weight     = 1
     parent     = "section.nfl.bookmakers"  
@@ -257,8 +257,8 @@ paginate = 10
     post       = 2
     
 [[menu.main]]
-    name       = "Game O/U & Lines (COMING SOON)"
-    url        = ""
+    name       = "Game O/U & Lines [NBA]"
+    url        = "/nba-odds/"
     weight     = 1
     parent     = "section.nba.bookmakers"  
 
