@@ -165,8 +165,8 @@ paginate = 10
     parent     = "section.nfl.fantasy"
     
 [[menu.main]]
-    name       = "Player Stacks (COMING SOON)"
-    url        = ""
+    name       = "Player Stacks"
+    url        = "/nfl-stacks/"
     weight     = 3
     parent     = "section.nfl.fantasy"   
     

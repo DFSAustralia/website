@@ -194,6 +194,16 @@ Projected ownership of golfers coming off the alternate list are not calculated 
     </item>
     
     <item>
+      <title>NFL Stacks</title>
+      <link>/nfl-stacks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/nfl-stacks/</guid>
+      <description>   iframe { min-width: 100%; }  Stacks exclude players with the following injury designations - IR, PUP, O. Injury designations match those on Draftstars, we recommend double checking these designations before entering teams.
+  iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
+    </item>
+    
+    <item>
       <title>NFL Target Breakdown</title>
       <link>/nfl-targets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
