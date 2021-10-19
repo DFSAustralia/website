@@ -241,8 +241,8 @@ paginate = 10
     parent     = "section.nba.fantasy"
     
 [[menu.main]]
-    name       = "With / Without (COMING SOON)"
-    url        = ""
+    name       = "With/Without Player Trends"
+    url        = "/nba-with-without/"
     weight     = 3
     parent     = "section.nba.fantasy"   
     
