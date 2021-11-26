@@ -7,7 +7,7 @@
 <meta name="googlebot" content="index,follow,snippet,archive">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Defining Draftstars Player Value</title>
+<title>Kick-In Breakdown</title>
 <meta name="author" content="Morts" />
 
 
@@ -16,7 +16,7 @@
 <meta name="keywords" content="AFL, Fantasy Sports, Daily Fantasy Sports, DFS, AFLDFS, DFSAustralia, Draftstars, Lineup Cruncher, Moneyball, AFL Fantasy, Draftkings, DreamTeam, Fantasy Points">
 
 
-<meta name="description" content="Daily Fantasy Sports Analytics and Data Applications">
+<meta name="description" content="AFL Kick-Ins">
 
 <meta name="generator" content="Hugo 0.74.3" />
 
@@ -66,40 +66,30 @@
 
 <meta property="og:locale" content="en_us">
 <meta property="og:site_name" content="Daily Fantasy Sports Australia">
-<meta property="og:title" content="Defining Draftstars Player Value">
-<meta property="og:type" content="article">
-<meta property="og:url" content="/blog/2020/08/11/defining-draftstars-player-value/" />
-<meta property="og:description" content="Daily Fantasy Sports Analytics and Data Applications">
-<meta property="og:image" content="/img/banners/money.jpg">
-<meta property="og:image:type" content="image/jpg">
+<meta property="og:title" content="Kick-In Breakdown">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/afl-kickins/" />
+<meta property="og:description" content="AFL Kick-Ins">
+<meta property="og:image" content="/img/stadium.png">
+<meta property="og:image:type" content="image/png">
 
 
 
-  <meta property="og:image:width" content="422">
-  <meta property="og:image:height" content="282">
-
-
-<meta property="og:updated_time" content="2020-08-11T00:00:00Z">
-
-  <meta property="article:publisher" content="https://www.facebook.com/DFSAustralia/">
-  
-  <meta property="article:section" content="Draftstars">
-  <meta property="article:tag" content="Draftstars">
-  <meta property="article:tag" content="AFL">
-  
-  
-  <meta property="article:published_time" content="2020-08-11T00:00:00Z">
-  <meta property="article:modified_time" content="2020-08-11T00:00:00Z">
+  <meta property="og:image:width" content="100">
+  <meta property="og:image:height" content="100">
 
 
 
-<meta name="twitter:card" content="summary_large_image">
+
+
+
+<meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@DFSAustralia">
-<meta name="twitter:title" content="Defining Draftstars Player Value">
+<meta name="twitter:title" content="Kick-In Breakdown">
 
-<meta name="twitter:image" content="/img/banners/money.jpg">
+<meta name="twitter:image" content="/img/stadium.png">
 
-<meta name="twitter:description" content="Daily Fantasy Sports Analytics and Data Applications">
+<meta name="twitter:description" content="AFL Kick-Ins">
 
 
     
@@ -115,10 +105,10 @@
             <div class="navbar-header">
                 <a class="navbar-brand home" href="/">
                     
-                      <img src="/img/stadium.png" alt="Defining Draftstars Player Value logo" class="hidden-xs hidden-sm" />
-                      <img src="/img/stadium.png" alt="Defining Draftstars Player Value logo" class="visible-xs visible-sm" />
+                      <img src="/img/stadium.png" alt="Kick-In Breakdown logo" class="hidden-xs hidden-sm" />
+                      <img src="/img/stadium.png" alt="Kick-In Breakdown logo" class="visible-xs visible-sm" />
                     
-                    <span class="sr-only">Defining Draftstars Player Value - go to homepage</span>
+                    <span class="sr-only">Kick-In Breakdown - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -155,13 +145,11 @@
                   
 
                   
-                    
-                  
 
                   
 
                   
-                  <li class="dropdown active">
+                  <li class="dropdown ">
                     <a href="/blog/">Blog</a>
                   </li>
                   
@@ -578,7 +566,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Defining Draftstars Player Value</h1>
+                <h1>Kick-In Breakdown</h1>
             </div>
         </div>
     </div>
@@ -586,570 +574,43 @@
 
 
         <div id="content">
+            
+
             <div class="container">
 
                 <div class="row">
 
-                    
+                    <div class="col-md-12">
 
-                    <div class="col-md-9" id="blog-post">
-
-                        
-                          <p class="text-muted text-uppercase mb-small text-right">
-                            
-                             | 
-                            
-                              
-                              
-                                  
-                              
-                                  
-                              
-                                  
-                              
-                                  
-                              
-                                  
-                              
-                                  
-                              
-                                  
-                              
-                                  
-                              
-                                  
-                              
-                                  
-                              
-                                  
-                              
-                                  
-                              
-                              August 11, 2020
-                            
-                          </p>
-                        
-
-                        <div id="post-content">
+                        <div>
                           
 
 
-<div id="what-is-value" class="section level1">
-<h1>What is Value?</h1>
-<p>A popular way to try normalise player performance in the Fantasy Sports community is to define it in terms of a multiple of their salary. For example, if Tom Mitchell is priced at $15,000 and scores 105 fantasy points then he’s deemed to have returned 7.00x his salary, e.g. (105 / 15,000) * 1000 = 7.00x.</p>
-<p>This common strategy gives coaches the ability to compare players across a range of salaries and make a decision on who they think is the best value play for their lineup. Value play? How many times have you been reading an article or scrolling Twitter and seen some version of “Player A returned value tonight” or “Player B is expected to hit value”, etc? What is a players underlying value in terms of fantasy points?</p>
-<p>In terms of multiples of a player’s salary using one figure across all salaries is fraught with danger. For example, you’d be happy to take 105 (7.00x) from Tom Mitchell at $15,000 but you’d definitely want more than 35 (7.00x) fantasy points from a $5,000 player. Here in lies the conundrum, what is the underlying measure that defines value for an individual player?</p>
-</div>
-<div id="salary-based-expectation" class="section level1">
-<h1>Salary Based Expectation</h1>
-<p>Here at DFSAustralia we’ve historical relied on a measure that we refer to as <b>Salary Based Expectation</b>. Simply put, Salary Based Expectation is the historical score that a player of a given salary has delivered. Any score above this means that a player has exceeded value, anything less and they have underperformed against what you could reasonably expect based on historical average.</p>
-</div>
-<div id="historical-performance" class="section level1">
-<h1>Historical Performance</h1>
-<p>To calculate what the Salary Based Expectation for a given salary is we collated historical player scores from 2019 and plotted them against each player’s historical Draftstars salary. Subsequent to that we ran a linear regression on the data to return the line of best fit. This line of best fit reflects the Salary Based Expectation.</p>
-<p><i>We used a linear regression here which is a simple model however note that regressions of higher orders resulted in similar results so to keep things simple we stayed with the linear model. Also note that all though we only used data from 2019 adding older data would only have a minor effect on the overall end result.</i></p>
-<p><img src="/blog/Defining-Draftstars-Player-Value_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-<p>From the plot above we can straight away see that cheaper players have historically delivered a higher multiple of their salary than more expensive players adding credence to the fact that we shouldn’t be using a single value. The data indicates that a $5,000 player needs to score 41 fantasy points (8.20x) to reach their Salary Based Expectaition whereas someone priced at $15,000 needs only return a multiple of 6.67x (100.1 fantasy points).</p>
-<p>The following table presents this in tabular form for ease of future reference.</p>
-<table class="table table-condensed">
-<thead>
-<tr>
-<th style="text-align:center;">
-Draftstars.Salary
-</th>
-<th style="text-align:center;">
-Salary.Based.Expectation
-</th>
-<th style="text-align:center;">
-Multiple.of.Salary
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center;">
-5000
-</td>
-<td style="text-align:center;">
-41.0
-</td>
-<td style="text-align:center;">
-8.20
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-6000
-</td>
-<td style="text-align:center;">
-46.9
-</td>
-<td style="text-align:center;">
-7.82
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-7000
-</td>
-<td style="text-align:center;">
-52.8
-</td>
-<td style="text-align:center;">
-7.54
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-8000
-</td>
-<td style="text-align:center;">
-58.7
-</td>
-<td style="text-align:center;">
-7.34
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-9000
-</td>
-<td style="text-align:center;">
-64.6
-</td>
-<td style="text-align:center;">
-7.18
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-10000
-</td>
-<td style="text-align:center;">
-70.6
-</td>
-<td style="text-align:center;">
-7.06
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-11000
-</td>
-<td style="text-align:center;">
-76.5
-</td>
-<td style="text-align:center;">
-6.95
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-12000
-</td>
-<td style="text-align:center;">
-82.4
-</td>
-<td style="text-align:center;">
-6.87
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-13000
-</td>
-<td style="text-align:center;">
-88.3
-</td>
-<td style="text-align:center;">
-6.79
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-14000
-</td>
-<td style="text-align:center;">
-94.2
-</td>
-<td style="text-align:center;">
-6.73
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-15000
-</td>
-<td style="text-align:center;">
-100.1
-</td>
-<td style="text-align:center;">
-6.67
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-16000
-</td>
-<td style="text-align:center;">
-106.0
-</td>
-<td style="text-align:center;">
-6.62
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-17000
-</td>
-<td style="text-align:center;">
-111.9
-</td>
-<td style="text-align:center;">
-6.58
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-18000
-</td>
-<td style="text-align:center;">
-117.8
-</td>
-<td style="text-align:center;">
-6.54
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-19000
-</td>
-<td style="text-align:center;">
-123.7
-</td>
-<td style="text-align:center;">
-6.51
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-20000
-</td>
-<td style="text-align:center;">
-129.6
-</td>
-<td style="text-align:center;">
-6.48
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="salary-based-expectation---covid-affected" class="section level1">
-<h1>Salary Based Expectation - COVID Affected</h1>
-<p>Obviously these values need to be adjusted for the current landscape (Season 2020) where we are dealing with reduced quarters. To help with that we’ve collated data for this season between rounds 2 and 10 and re-run the analysis, refer to the table below.</p>
-<table class="table table-condensed">
-<thead>
-<tr>
-<th style="text-align:center;">
-Draftstars.Salary
-</th>
-<th style="text-align:center;">
-Salary.Based.Expectation
-</th>
-<th style="text-align:center;">
-Multiple.of.Salary
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center;">
-5000
-</td>
-<td style="text-align:center;">
-33.1
-</td>
-<td style="text-align:center;">
-6.62
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-6000
-</td>
-<td style="text-align:center;">
-37.6
-</td>
-<td style="text-align:center;">
-6.27
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-7000
-</td>
-<td style="text-align:center;">
-42.1
-</td>
-<td style="text-align:center;">
-6.01
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-8000
-</td>
-<td style="text-align:center;">
-46.6
-</td>
-<td style="text-align:center;">
-5.83
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-9000
-</td>
-<td style="text-align:center;">
-51.2
-</td>
-<td style="text-align:center;">
-5.69
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-10000
-</td>
-<td style="text-align:center;">
-55.7
-</td>
-<td style="text-align:center;">
-5.57
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-11000
-</td>
-<td style="text-align:center;">
-60.2
-</td>
-<td style="text-align:center;">
-5.47
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-12000
-</td>
-<td style="text-align:center;">
-64.7
-</td>
-<td style="text-align:center;">
-5.39
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-13000
-</td>
-<td style="text-align:center;">
-69.2
-</td>
-<td style="text-align:center;">
-5.32
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-14000
-</td>
-<td style="text-align:center;">
-73.8
-</td>
-<td style="text-align:center;">
-5.27
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-15000
-</td>
-<td style="text-align:center;">
-78.3
-</td>
-<td style="text-align:center;">
-5.22
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-16000
-</td>
-<td style="text-align:center;">
-82.8
-</td>
-<td style="text-align:center;">
-5.17
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-17000
-</td>
-<td style="text-align:center;">
-87.3
-</td>
-<td style="text-align:center;">
-5.14
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-18000
-</td>
-<td style="text-align:center;">
-91.8
-</td>
-<td style="text-align:center;">
-5.10
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-19000
-</td>
-<td style="text-align:center;">
-96.4
-</td>
-<td style="text-align:center;">
-5.07
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-20000
-</td>
-<td style="text-align:center;">
-100.9
-</td>
-<td style="text-align:center;">
-5.04
-</td>
-</tr>
-</tbody>
-</table>
-</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.16/iframeResizer.min.js"></script>
+<style>
+  iframe {
+    min-width: 100%;
+  }
+</style>
+<iframe src="https://dfsaustralia-apps.com/shiny/afl/kickins/" width="100%" scrolling="no" frameborder="no">
+</iframe>
+<script>
+  iFrameResize({
+    heightCalculationMethod: 'taggedElement'
+  });
+</script>
+<hr />
 
                         </div>
-                        
-                        
 
                     </div>
-                    
-
-                    
-
-                    
-
-                    <div class="col-md-3">
-
-                        
-
-                        
-
-<div class="panel panel-default sidebar-menu">
-
-    <div class="panel-heading">
-      <h3 class="panel-title">Search</h3>
-    </div>
-
-    <div class="panel-body">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
-            <div class="input-group">
-                <input type="search" name="q" class="form-control" placeholder="Search">
-                <input type="hidden" name="sitesearch" value="/">
-                <span class="input-group-btn">
-                    <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
-                </span>
-            </div>
-        </form>
-    </div>
-</div>
-
-
-
-
-
-
-
-<div class="panel panel-default sidebar-menu">
-
-    <div class="panel-heading">
-        <h3 class="panel-title">Categories</h3>
-    </div>
-
-    <div class="panel-body">
-        <ul class="nav nav-pills nav-stacked">
-            
-            
-            <li>
-                <a href="/categories/draftstars">DRAFTSTARS (2)</a>
-            </li>
-            
-        </ul>
-    </div>
-
-</div>
-
-
-
-
-
-
-
-
-<div class="panel sidebar-menu">
-
-    <div class="panel-heading">
-        <h3 class="panel-title">Tags</h3>
-    </div>
-
-    <div class="panel-body">
-        <ul class="tag-cloud">
-            
-            
-            <li>
-                <a href="/tags/afl"><i class="fas fa-tags"></i> afl</a>
-            </li>
-            
-            <li>
-                <a href="/tags/draftstars"><i class="fas fa-tags"></i> draftstars</a>
-            </li>
-            
-        </ul>
-    </div>
-
-</div>
-
-
-
-
-
-
-                        
-
-                    </div>
-                    
-
-                    
 
                 </div>
                 
 
             </div>
+            
+
             
         </div>
         

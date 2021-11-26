@@ -100,11 +100,54 @@ paginate = 10
     weight     = 3
     parent     = "section.afl"
 
+
+
+
+
+[[menu.main]]
+    identifier = "menu.afl"
+    name = "AFL"
+    url  = "/img/afl-tools.jpeg"
+    weight = 4
+    
+[[menu.main]]
+    name       = "Round by Round Breakdown"
+    identifier = "section.afl.player.stats"
+    url        = ""
+    weight     = 1
+    parent     = "menu.afl"
+    post       = 1
+    
+[[menu.main]]
+    name       = "Centre Bounce Attendances"
+    url        = "/afl-cbas/"
+    weight     = 1
+    parent     = "section.afl.player.stats"
+    
+[[menu.main]]
+    name       = "Kick Ins"
+    url        = "/afl-kickins/"
+    weight     = 2
+    parent     = "section.afl.player.stats"
+    
+[[menu.main]]
+    name       = "Coming Soon"
+    identifier = "section.afl.coming.soon"
+    url        = ""
+    weight     = 1
+    parent     = "menu.afl"
+    post       = 2
+
+
+
+
+
+
 [[menu.main]]
     identifier = "menu.nfl"
     name = "NFL"
     url  = "/img/nfl-tools.jpeg"
-    weight = 4
+    weight = 5
     
 [[menu.main]]
     name       = "Offensive Stats"
@@ -198,7 +241,7 @@ paginate = 10
     identifier = "menu.nba"
     name = "NBA"
     url  = "/img/nba-tools.jpeg"
-    weight = 5
+    weight = 6
     
 [[menu.main]]
     name       = "Stats"
@@ -271,7 +314,7 @@ paginate = 10
     identifier = "menu.golf"
     name = "Golf"
     url  = "/img/golf-tools.jpeg"
-    weight = 6
+    weight = 7
     
 [[menu.main]]
     name       = "Daily Fantasy"
