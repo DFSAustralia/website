@@ -111,7 +111,7 @@ paginate = 10
     weight = 4
     
 [[menu.main]]
-    name       = "Round by Round Breakdown"
+    name       = "Breakdown Per Round"
     identifier = "section.afl.player.stats"
     url        = ""
     weight     = 1
@@ -119,15 +119,33 @@ paginate = 10
     post       = 1
     
 [[menu.main]]
+    name       = "Fantasy Points"
+    url        = "/afl-fantasy-points/"
+    weight     = 1
+    parent     = "section.afl.player.stats"
+    
+[[menu.main]]
+    name       = "Time on Ground"
+    url        = "/afl-tog/"
+    weight     = 2
+    parent     = "section.afl.player.stats"
+    
+[[menu.main]]
     name       = "Centre Bounce Attendances"
     url        = "/afl-cbas/"
-    weight     = 1
+    weight     = 3
     parent     = "section.afl.player.stats"
     
 [[menu.main]]
     name       = "Kick Ins"
     url        = "/afl-kickins/"
-    weight     = 2
+    weight     = 4
+    parent     = "section.afl.player.stats"
+    
+[[menu.main]]
+    name       = "Ruck Contests"
+    url        = "/afl-ruck-contests/"
+    weight     = 5
     parent     = "section.afl.player.stats"
     
 [[menu.main]]

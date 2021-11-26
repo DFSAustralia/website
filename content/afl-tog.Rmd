@@ -1,0 +1,22 @@
+---
+description: AFL Time On Ground
+title: Time On Ground Percentage
+runtime: shiny
+---
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.16/iframeResizer.min.js"></script>
+<style>
+  iframe {
+    min-width: 100%;
+  }
+</style>
+
+<iframe src="https://dfsaustralia-apps.com/shiny/afl/tog/" width="100%" scrolling="no" frameborder="no"></iframe>
+
+<script>
+  iFrameResize({
+    heightCalculationMethod: 'taggedElement'
+  });
+</script>
+---
+
