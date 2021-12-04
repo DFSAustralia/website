@@ -151,6 +151,10 @@
   </url>
   
   <url>
+    <loc>/afl-player-stats/</loc>
+  </url>
+  
+  <url>
     <loc>/afl-ruck-contests/</loc>
   </url>
   

@@ -156,7 +156,19 @@ paginate = 10
     parent     = "menu.afl"
     post       = 2
 
-
+[[menu.main]]
+    name       = "Game Logs & Splits"
+    identifier = "section.afl.player.logs"
+    url        = ""
+    weight     = 2
+    parent     = "menu.afl"
+    post       = 1
+    
+[[menu.main]]
+    name       = "Player Stats"
+    url        = "/afl-player-stats/"
+    weight     = 1
+    parent     = "section.afl.player.logs"
 
 
 
