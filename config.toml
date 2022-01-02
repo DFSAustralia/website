@@ -147,14 +147,6 @@ paginate = 10
     url        = "/afl-ruck-contests/"
     weight     = 5
     parent     = "section.afl.player.stats"
-    
-[[menu.main]]
-    name       = "Coming Soon"
-    identifier = "section.afl.coming.soon"
-    url        = ""
-    weight     = 1
-    parent     = "menu.afl"
-    post       = 2
 
 [[menu.main]]
     name       = "Game Logs & Splits"
@@ -170,8 +162,19 @@ paginate = 10
     weight     = 1
     parent     = "section.afl.player.logs"
 
+[[menu.main]]
+    name       = "Daily Fantasy"
+    identifier = "section.afl.daily.fantasy"
+    url        = ""
+    weight     = 1
+    parent     = "menu.afl"
+    post       = 2
 
-
+[[menu.main]]
+    name       = "With/Without"
+    url        = "/afl-with-without/"
+    weight     = 1
+    parent     = "section.afl.daily.fantasy"
 
 [[menu.main]]
     identifier = "menu.nfl"
