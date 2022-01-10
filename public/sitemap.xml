@@ -3,8 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/tags/aflw/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/2022/01/10/2022-01-10-aflw-extended-stats/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2021-10-04T00:00:00+00:00</lastmod>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -19,11 +39,6 @@
   
   <url>
     <loc>/tags/afl/</loc>
-    <lastmod>2021-07-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/</loc>
     <lastmod>2021-07-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -44,11 +59,6 @@
   
   <url>
     <loc>/categories/draftstars/</loc>
-    <lastmod>2021-07-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2021-07-18T00:00:00+00:00</lastmod>
   </url>
   

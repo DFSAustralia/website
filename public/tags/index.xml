@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Daily Fantasy Sports Australia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Jan 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AFLW</title>
+      <link>/tags/aflw/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/aflw/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>AFL</title>

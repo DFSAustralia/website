@@ -1,0 +1,40 @@
+---
+title: AFLW Extended Stats
+banner: img/banners/AFLW Logo.png
+author: ''
+date: '2022-01-10'
+slug: aflw-extended-stats
+categories: []
+tags:
+  - AFLW
+---
+
+```{r setup, include=FALSE}
+library(tidyverse); library(reactable)
+```
+
+The AFLW season has kicked off for 2022 and people are starting to get interested in AFLW Fantasy. Moreira's Magic have released a great product that everyone should be getting behind [aflwfantasy.com.au](https://aflwfantasy.com.au/).
+
+We don't envisage providing data tools at this stage but to do our little part in building this community we've collated the advanced stats for Round 1 of the AFLW season and made them downloadable [here](/data/blog - AFLW Extended Stats Round 1/Extended ALFW Stats Round 1.csv).
+
+The stats available include ruck contests attended, centre bounce attendances (CBAs), kickins taken and played on from, etc.
+
+Head back over after the completion of each round and get updated data (if we don't get too lazy).
+
+* [Download Round 1 Stats](/data/blog - AFLW Extended Stats Round 1/Extended ALFW Stats Round 1.csv)
+
+```{r, echo=FALSE, message=FALSE}
+stats <- read.csv("../../static/data/blog - AFLW Extended Stats Round 1/Extended ALFW Stats Round 1.csv")
+stats <- stats %>% filter(fantasy > 0)
+reactable(stats,
+          pagination = FALSE,
+          compact = TRUE,
+          highlight = TRUE,
+          wrap = FALSE,
+          height = 500,
+          searchable = TRUE,
+          defaultColDef = colDef(minWidth = 100, align = "center"),
+          columns = list(
+            playerName = colDef(minWidth = 250, align = "left")
+          ))
+```
