@@ -19,10 +19,13 @@ We don't envisage providing data tools at this stage but to do our little part i
 
 The stats available include ruck contests attended, centre bounce attendances (CBAs), kickins taken and played on from, etc.
 
-Head back over after the completion of each round and get updated data (if we don't get too lazy).
+Head back over after the completion of each round and download updated data (if we don't get too lazy).
 
 * [Download Round 1 Stats](/data/blog - AFLW Extended Stats Round 1/Extended ALFW Stats Round 1.csv)
+* [Download Round 2 Stats](/data/blog - AFLW Extended Stats Round 1/Extended AFLW Stats Round 2.csv) *(excludes BL v WB match stats as game has been [postponed](https://www.womens.afl/news/79797){target="_blank"})*
 
+***
+#### Round 1 Extended Stats
 ```{r, echo=FALSE, message=FALSE}
 stats <- read.csv("../../static/data/blog - AFLW Extended Stats Round 1/Extended ALFW Stats Round 1.csv")
 stats <- stats %>% filter(fantasy > 0)
