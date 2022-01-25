@@ -23,6 +23,7 @@ Head back over after the completion of each round and download updated data (if 
 
 * [Download Round 1 Stats](/data/blog - AFLW Extended Stats Round 1/Extended ALFW Stats Round 1.csv)
 * [Download Round 2 Stats](/data/blog - AFLW Extended Stats Round 1/Extended AFLW Stats Round 2.csv) *(excludes BL v WB match stats as game has been [postponed](https://www.womens.afl/news/79797){target="_blank"})*
+* [Download Round 3 Stats](/data/blog - AFLW Extended Stats Round 1/Extended AFLW Stats Round 3.csv)
 
 ***
 #### Round 1 Extended Stats
