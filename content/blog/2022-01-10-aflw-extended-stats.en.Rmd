@@ -25,6 +25,7 @@ Head back over after the completion of each round and download updated data (if 
 * [Download Round 2 Stats](/data/blog - AFLW Extended Stats Round 1/Extended AFLW Stats Round 2.csv) *(excludes BL v WB match stats as game has been [postponed](https://www.womens.afl/news/79797){target="_blank"})*
 * [Download Round 3 Stats](/data/blog - AFLW Extended Stats Round 1/Extended AFLW Stats Round 3.csv) *(excludes GC v WB match stats as game has been [postponed](https://www.womens.afl/news/81199/r3-fixture-update-two-matches-cancelled-tuesday-night-clash-confirmed){target="_blank"})*
 * [Download Round 4 Stats](/data/blog - AFLW Extended Stats Round 1/Extended AFLW Stats Round 4.csv) *(excludes STK v WCE match stats as game has been [postponed](https://www.womens.afl/news/82183/saints-eagles-clash-called-off-due-to-health-and-safety-protocols){target="_blank"})*
+* [Download Round 4.5 Stats](/data/blog - AFLW Extended Stats Round 1/Extended AFLW Stats Round 4.5.csv) *(stats for WB v FRE only, game [brought forward](https://www.womens.afl/news/82357/what-s-in-a-round-footy-s-new-seven-day-schedule-explained){target="_blank"} from Round 10)*
 
 ***
 #### Round 1 Extended Stats
