@@ -171,9 +171,15 @@ paginate = 10
     post       = 2
 
 [[menu.main]]
+    name       = "Draftstars Slate Analysis"
+    url        = "/afl-draftstars-slate-analysis/"
+    weight     = 1
+    parent     = "section.afl.daily.fantasy"
+
+[[menu.main]]
     name       = "With/Without"
     url        = "/afl-with-without/"
-    weight     = 1
+    weight     = 2
     parent     = "section.afl.daily.fantasy"
 
 [[menu.main]]

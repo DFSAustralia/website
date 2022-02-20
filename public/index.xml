@@ -118,6 +118,20 @@ Its recommended that you do not modify the csv file before uploading, the applic
     </item>
     
     <item>
+      <title>Draftstars Slate Analysis</title>
+      <link>/afl-draftstars-slate-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-draftstars-slate-analysis/</guid>
+      <description>iframe { min-width: 100%; }   
+GLOSSARY
+* Next Match: details of next premiership season matchup
+* Last 5: individual fantasy scores over the last 5 rounds
+* Averages: season averages or form averages over last 3, 10, 20 games (excluding games with less than 50% TOG)
+* Last 20 Games: standard deviation, max and min fantasy scores over last 20 games (excluding games with less than 50% TOG)</description>
+    </item>
+    
+    <item>
       <title>Draftstars Slate Analysis - Golf</title>
       <link>/golf-slate-analysis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

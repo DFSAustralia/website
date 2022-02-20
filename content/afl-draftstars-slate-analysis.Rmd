@@ -1,0 +1,31 @@
+---
+description: AFL Draftstars Slate Analysis
+title: Draftstars Slate Analysis
+runtime: shiny
+---
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.16/iframeResizer.min.js"></script>
+<style>
+  iframe {
+    min-width: 100%;
+  }
+</style>
+
+<iframe src="https://dfsaustralia-apps.com/shiny/afl/slate-analysis/" width="100%" scrolling="no" frameborder="no"></iframe>
+
+  
+\
+**GLOSSARY**  
+* **Next Match:** details of next premiership season matchup  
+* **Last 5:** individual fantasy scores over the last 5 rounds  
+* **Averages:** season averages or form averages over last 3, 10, 20 games (excluding games with less than 50% TOG)  
+* **Last 20 Games:** standard deviation, max and min fantasy scores over last 20 games (excluding games with less than 50% TOG)  
+* **Splits:** averages over last 5 games vs opponent, at ground, in wins/losses, at day/night (excluding games with less than 50% TOG)  
+
+<script>
+  iFrameResize({
+    heightCalculationMethod: 'taggedElement'
+  });
+</script>
+---
+
