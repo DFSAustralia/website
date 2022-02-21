@@ -53,56 +53,6 @@ paginate = 10
     url        = "/historical-tournaments/"
     weight     = 2
     parent     = "section.advanced"
-    
-[[menu.main]]
-    name       = "Premium (Draftstars)"
-    identifier = "section.premium"
-    url        = ""
-    weight     = 3
-    parent     = "menu.tools"
-    post       = 1
-
-[[menu.main]]
-    name       = "AFL Research"
-    url        = "/afl-research/"
-    weight     = 1
-    parent     = "section.premium"
-    
-[[menu.main]]
-    name       = "NFL Research"
-    url        = "/nfl-research/"
-    weight     = 2
-    parent     = "section.premium"
-    
-[[menu.main]]
-    name       = "AFL (Draftstars)"
-    identifier = "section.afl"
-    url        = ""
-    weight     = 2
-    parent     = "menu.tools"
-    post       = 2
-    
-[[menu.main]]
-    name       = "Player Stats"
-    url        = "https://www.dfsaustralia-apps.com/shiny/player-team-stats/"
-    weight     = 1
-    parent     = "section.afl"
-
-[[menu.main]]
-    name       = "Slate Analysis"
-    url        = "https://dfsaustralia-apps.com/shiny/draftstars-slate-analysis/"
-    weight     = 2
-    parent     = "section.afl"
-
-[[menu.main]]
-    name       = "Ownership Research"
-    url        = "https://www.dfsaustralia-apps.com/shiny/draftstars-ownership-research"
-    weight     = 3
-    parent     = "section.afl"
-
-
-
-
 
 [[menu.main]]
     identifier = "menu.afl"
@@ -181,6 +131,26 @@ paginate = 10
     url        = "/afl-with-without/"
     weight     = 2
     parent     = "section.afl.daily.fantasy"
+    
+[[menu.main]]
+    name       = "Matchup History"
+    url        = "/afl-matchup-history/"
+    weight     = 3
+    parent     = "section.afl.daily.fantasy"
+    
+[[menu.main]]
+    name       = "Premium tools"
+    identifier = "section.afl.premium.tools"
+    url        = ""
+    weight     = 2
+    parent     = "menu.afl"
+    post       = 2
+    
+[[menu.main]]
+    name       = "Tournament Research"
+    url        = "/afl-research/"
+    weight     = 1
+    parent     = "section.afl.premium.tools"
 
 [[menu.main]]
     identifier = "menu.nfl"
