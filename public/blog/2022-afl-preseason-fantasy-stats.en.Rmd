@@ -1,0 +1,26 @@
+---
+title: 2022 AFL Preseason Fantasy Stats
+banner: img/aami_comm_2022.jpeg
+author: ''
+date: '2022-03-04'
+slug: 2022-afl-preseason-fantasy-stats
+categories: []
+tags: 
+  - AFL
+---
+
+We've collated all the important stats for the 2022 AAMI Community Series to help you prepare your AFL Fantasy Team for season 2022. We'll update these regularly as games finish so come back throughout the weekend and get updated stats.
+
+Stats can be downloaded [here](/data/blog - 2022 AFL Preseason Fantasy Stats/AFL Preseason Fantasy Stats - 2022.csv) in csv form.
+
+**GLOSSARY**
+
+* **Salary:** starting AFL Fantasy Salary
+* **Position:** starting AFL Fantasy Positions
+* **K -> G:** standard AFL stats (e.g. kicks, marks, handballs.......goals)
+* **CBA:** centre bounce attendances
+* **KI:** kick ins taken
+* **PO:** kick ins played on from
+* **FP:** fantasy points
+* **TOG:** time on ground percentage
+* **PPM:** points per minute
