@@ -1,53 +1,102 @@
 "Player","Team","Salary","Position","K","H","M","T","FF","FA","HO","B","G","CBA","KI","PO","FP","TOG","PPM"
+"Jack Macrae","Western Bulldogs",972000,"MID",20,13,6,10,5,2,0,0,0,18,0,0,143,81,1.44
 "Patrick Cripps","Carlton",686000,"MID",12,18,3,8,4,0,0,0,4,26,0,0,141,83,1.3
 "Matthew Kennedy","Carlton",720000,"MID",17,20,9,1,2,1,0,2,2,17,0,0,135,78,1.33
 "Max Gawn","Melbourne",911000,"RUC",15,8,9,1,1,1,28,0,1,20,0,0,124,88,1.08
+"Adam Treloar","Western Bulldogs",731000,"MID/FWD",12,17,6,2,0,0,0,0,2,17,0,0,108,81,1.08
+"Marcus Bontempelli","Western Bulldogs",905000,"MID",15,7,6,6,0,0,0,0,1,15,0,0,107,87,1
+"Tim English","Western Bulldogs",673000,"RUC/FWD",13,8,8,4,2,1,12,0,0,19,0,0,106,79,1.09
+"Lachie Neale","Brisbane Lions",792000,"MID",17,13,4,4,0,2,0,1,1,23,0,0,106,87,0.99
+"Josh Dunkley","Western Bulldogs",767000,"MID/FWD",13,19,3,3,1,0,0,0,1,21,0,0,105,81,1.05
 "Zac Fisher","Carlton",485000,"FWD",14,10,7,1,1,0,0,0,2,4,0,0,100,86,0.89
+"Bailey Smith","Western Bulldogs",733000,"MID",12,10,7,6,0,1,0,1,0,7,0,0,99,82,0.98
 "Christian Petracca","Melbourne",930000,"MID",18,9,7,2,1,3,0,3,0,25,0,0,96,87,0.85
+"Charlie Cameron","Brisbane Lions",522000,"FWD",16,4,7,2,1,1,0,1,2,0,0,0,96,86,0.91
 "Adam Cerra","Carlton",732000,"MID",9,21,2,4,3,0,0,0,0,19,0,0,94,79,0.91
+"Hugh McCluggage","Brisbane Lions",839000,"MID",13,9,5,4,2,1,0,1,1,14,0,0,94,81,0.94
 "Nic Newman","Carlton",725000,"DEF",16,11,7,1,0,1,0,0,0,0,3,3,92,84,0.84
+"Caleb Daniel","Western Bulldogs",729000,"DEF",21,2,5,2,0,0,0,0,0,0,5,4,90,84,0.87
 "Mitch McGovern","Carlton",463000,"FWD",15,4,6,4,2,0,0,0,0,0,2,2,89,62,1.1
 "George Hewett","Carlton",537000,"DEF/MID",12,21,0,2,0,0,0,1,0,24,0,0,87,79,0.84
+"Jarrod Berry","Brisbane Lions",725000,"MID",11,8,6,5,2,1,0,0,0,11,0,0,86,82,0.85
 "Adam Saad","Carlton",586000,"DEF",18,7,1,4,1,1,0,0,0,0,1,1,85,84,0.78
 "Clayton Oliver","Melbourne",912000,"MID",10,18,3,3,2,2,0,0,0,28,0,0,83,89,0.72
+"Bailey Dale","Western Bulldogs",700000,"DEF",17,4,4,1,1,0,0,0,1,0,5,5,82,82,0.81
+"Jarryd Lyons","Brisbane Lions",982000,"MID",11,11,2,5,0,0,0,0,0,8,0,0,81,75,0.88
 "Alex Neal-Bullen","Melbourne",595000,"FWD",12,8,3,4,0,2,0,1,1,3,0,0,78,78,0.77
 "Lochie O'Brien","Carlton",449000,"MID",14,8,4,2,2,3,0,0,1,0,0,0,77,80,0.74
 "Bayley Fritsch","Melbourne",516000,"FWD",10,1,2,1,2,0,0,2,5,0,0,0,76,90,0.65
+"Marcus Adams","Brisbane Lions",514000,"DEF",11,4,5,5,0,0,0,0,0,0,1,1,76,100,0.62
 "Jake Lever","Melbourne",529000,"DEF",9,10,5,2,2,0,0,0,0,0,0,0,72,92,0.6
+"Ed Richards","Western Bulldogs",368000,"DEF",9,6,8,2,1,0,0,0,0,0,3,2,72,80,0.73
+"Laitham Vandermeer","Western Bulldogs",430000,"FWD",10,10,4,2,1,0,0,1,0,0,0,0,72,79,0.74
+"Daniel McStay","Brisbane Lions",548000,"FWD",10,3,7,2,0,3,0,3,2,0,0,0,71,83,0.7
+"Hayden Crozier","Western Bulldogs",550000,"DEF",10,6,6,1,2,1,0,0,1,0,0,0,69,81,0.69
+"Daniel Rich","Brisbane Lions",823000,"DEF",17,1,4,0,1,1,0,0,1,0,5,4,69,62,0.9
 "Tom McDonald","Melbourne",625000,"FWD",11,2,6,2,2,3,0,0,2,0,0,0,68,78,0.67
 "James Harmes","Melbourne",690000,"MID",7,10,1,5,1,1,0,0,1,2,0,0,68,68,0.77
+"Aaron Naughton","Western Bulldogs",560000,"FWD",7,5,6,0,0,0,0,1,3,0,0,0,68,85,0.65
 "Matthew Owies","Carlton",434000,"FWD",5,11,3,4,1,1,0,1,1,0,0,0,67,77,0.67
+"Darcy Fort","Brisbane Lions",383000,"RUC",7,5,2,1,2,0,22,1,0,8,0,0,66,84,0.64
 "Kysaiah Pickett","Melbourne",539000,"FWD",7,3,2,8,0,0,0,0,0,1,0,0,65,81,0.62
 "Ed Langdon","Melbourne",714000,"MID",10,8,3,1,2,1,0,1,1,0,0,0,65,95,0.52
+"Bailey Williams","Western Bulldogs",565000,"DEF",13,6,2,0,1,0,0,0,1,0,0,0,64,80,0.65
+"Josh Schache","Western Bulldogs",408000,"DEF/FWD",13,2,6,0,3,0,0,0,0,0,1,1,64,100,0.52
 "Oscar McDonald","Carlton",343000,"FWD",12,9,4,0,0,1,0,0,0,0,0,0,63,96,0.5
+"Roarke Smith","Western Bulldogs",389000,"MID",11,6,5,2,1,2,0,0,0,0,0,0,63,76,0.67
+"Zac Bailey","Brisbane Lions",610000,"MID/FWD",9,9,1,2,0,2,0,1,2,16,0,0,63,80,0.64
 "Jake Bowey","Melbourne",371000,"DEF",11,11,2,0,0,0,0,0,0,0,2,1,61,83,0.56
+"Harris Andrews","Brisbane Lions",566000,"DEF",10,1,9,2,0,2,0,0,0,0,1,0,61,100,0.5
 "Will Setterfield","Carlton",661000,"MID",10,8,3,2,0,1,0,0,0,0,0,0,60,88,0.52
 "Adam Tomlinson","Melbourne",493000,"DEF",16,5,2,0,2,2,0,0,0,0,3,2,60,95,0.48
+"Cody Weightman","Western Bulldogs",480000,"FWD",8,7,3,3,1,1,0,2,0,0,0,0,59,78,0.62
+"Brandon Starcevich","Brisbane Lions",418000,"DEF",11,6,5,1,1,2,0,0,0,0,4,3,59,84,0.57
 "Jack Viney","Melbourne",740000,"MID",9,8,1,3,3,1,0,0,0,20,0,0,58,72,0.62
 "Marc Pittonet","Carlton",588000,"RUC",5,9,1,1,5,1,14,0,0,24,0,0,56,85,0.51
+"Joe Daniher","Brisbane Lions",605000,"FWD",10,2,7,1,0,2,1,2,0,0,0,0,56,90,0.51
+"Nakia Cockatoo","Brisbane Lions",339000,"FWD",12,1,2,2,0,1,0,1,1,1,0,0,56,77,0.59
 "Lewis Young","Carlton",382000,"DEF/RUC",9,6,4,1,0,0,0,0,0,0,0,0,55,100,0.42
 "Tom Sparrow","Melbourne",421000,"MID/FWD",5,9,1,2,1,1,0,0,2,11,0,0,54,78,0.53
+"Lachie Hunter","Western Bulldogs",714000,"MID",7,7,2,4,0,1,0,0,0,0,0,0,54,84,0.52
 "Luke Jackson","Melbourne",520000,"RUC/FWD",3,9,3,3,0,2,10,0,0,10,0,0,52,69,0.58
+"Noah Answerth","Brisbane Lions",325000,"DEF",8,2,3,3,2,0,0,0,0,0,0,0,51,69,0.6
 "Tom De Koning","Carlton",507000,"RUC",6,3,3,3,2,2,8,0,0,5,0,0,49,83,0.45
+"Callum Ah Chee","Brisbane Lions",347000,"DEF",7,4,3,4,1,2,0,0,0,0,0,0,49,42,0.95
+"Jason Johannisen","Western Bulldogs",404000,"FWD",6,5,2,3,1,2,0,1,1,0,0,0,48,84,0.46
+"Lincoln McCarthy","Brisbane Lions",538000,"FWD",10,4,3,1,0,3,0,0,1,0,0,0,48,84,0.46
 "Zac Williams","Carlton",600000,"DEF",11,7,0,3,0,4,0,0,0,0,3,3,47,82,0.44
 "Ben Brown","Melbourne",505000,"FWD",6,4,3,1,1,0,1,0,1,0,0,0,47,75,0.48
 "Jack Martin","Carlton",527000,"FWD",7,4,4,1,0,0,0,0,0,0,0,0,45,65,0.53
 "Jordan Boyd","Carlton",190000,"DEF",3,6,0,6,0,0,0,0,0,0,0,0,45,80,0.43
+"Oscar McInerney","Brisbane Lions",643000,"RUC",3,3,0,1,2,0,24,0,0,18,0,0,45,82,0.45
+"Mitch Robinson","Brisbane Lions",645000,"MID",7,5,3,1,1,0,0,0,0,0,0,0,45,75,0.49
 "Angus Brayshaw","Melbourne",558000,"MID",7,5,1,2,0,0,0,0,0,0,0,0,42,81,0.4
+"Tom Fullarton","Brisbane Lions",351000,"FWD",6,5,2,2,0,0,0,0,0,0,0,0,42,80,0.43
 "Joel Smith","Melbourne",220000,"DEF",6,4,3,1,0,0,0,0,0,0,0,0,39,94,0.32
 "Charlie Spargo","Melbourne",457000,"FWD",6,7,3,0,0,1,0,0,0,0,0,0,38,74,0.39
 "James Jordon","Melbourne",587000,"MID",10,2,2,0,1,1,0,0,0,0,0,0,38,78,0.37
 "Matthew Cottrell","Carlton",476000,"MID",5,4,3,2,0,1,0,0,0,0,0,0,37,46,0.62
 "Jayden Hunt","Melbourne",457000,"DEF",9,4,0,1,1,1,0,0,0,0,2,2,37,80,0.35
+"Stefan Martin","Western Bulldogs",430000,"RUC",3,3,2,1,0,1,14,1,0,7,0,0,37,63,0.48
+"Deven Robertson","Brisbane Lions",519000,"MID",3,2,0,4,0,0,0,0,1,5,0,0,35,54,0.53
+"Robbie McComb","Western Bulldogs",190000,"MID",5,7,1,2,0,2,0,0,0,0,0,0,34,39,0.71
+"Keidean Coleman","Brisbane Lions",343000,"DEF/FWD",6,1,2,2,0,0,0,0,0,0,1,0,34,30,0.92
 "Harry McKay","Carlton",589000,"FWD",4,0,3,1,1,0,0,1,1,0,0,0,33,50,0.51
 "Ed Curnow","Carlton",746000,"MID",2,4,0,3,0,0,0,0,1,0,0,0,32,34,0.72
 "Tom Williamson","Carlton",394000,"DEF",4,6,4,0,1,2,0,0,0,0,0,0,31,50,0.48
 "Jack Silvagni","Carlton",533000,"FWD",4,1,2,3,0,1,1,0,0,1,0,0,30,39,0.59
+"Mitch Hannan","Western Bulldogs",444000,"FWD",5,2,0,2,1,0,0,0,0,0,0,0,28,78,0.29
 "Corey Durdin","Carlton",190000,"FWD",5,0,0,0,0,1,0,0,2,0,0,0,24,43,0.43
 "Luke Parks","Carlton",238000,"DEF",2,0,2,1,0,0,0,0,1,0,0,0,22,49,0.34
+"James Madden","Brisbane Lions",356000,"DEF",4,2,0,1,0,0,0,0,0,0,0,0,20,64,0.25
 "Oskar Baker","Melbourne",447000,"MID",4,1,2,0,0,1,0,0,0,0,0,0,17,37,0.35
+"Zaine Cordy","Western Bulldogs",373000,"DEF",3,3,1,0,2,1,0,0,0,0,0,0,17,91,0.15
+"Alex Keath","Western Bulldogs",457000,"DEF",3,2,1,0,0,0,0,0,0,0,0,0,16,44,0.3
 "Sam Weideman","Melbourne",350000,"FWD",1,1,2,1,0,0,0,0,0,0,0,0,15,14,0.82
+"Harry Sharp","Brisbane Lions",198000,"MID",2,1,1,1,0,0,0,0,0,0,0,0,15,30,0.41
 "Lachie Plowman","Carlton",403000,"DEF",2,0,2,0,0,1,0,1,0,0,0,0,10,74,0.1
 "Daniel Turner","Melbourne",190000,"DEF",0,0,0,1,0,0,0,0,0,0,0,0,4,25,0.12
+"Jack Payne","Brisbane Lions",446000,"DEF",1,0,0,0,0,0,0,0,0,0,1,0,3,19,0.13
 "Kade Chandler","Melbourne",190000,"FWD",0,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
 "Toby Bedford","Melbourne",202000,"FWD",0,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+"Cody Raak","Western Bulldogs",190000,"DEF",0,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
