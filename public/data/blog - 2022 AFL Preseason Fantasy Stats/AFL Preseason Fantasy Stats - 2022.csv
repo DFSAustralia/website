@@ -2,101 +2,255 @@
 "Jack Macrae","Western Bulldogs",972000,"MID",20,13,6,10,5,2,0,0,0,18,0,0,143,81,1.44
 "Patrick Cripps","Carlton",686000,"MID",12,18,3,8,4,0,0,0,4,26,0,0,141,83,1.3
 "Matthew Kennedy","Carlton",720000,"MID",17,20,9,1,2,1,0,2,2,17,0,0,135,78,1.33
+"Jayden Short","Richmond",783000,"DEF",26,5,8,3,2,0,0,0,0,0,9,6,126,83,1.25
 "Max Gawn","Melbourne",911000,"RUC",15,8,9,1,1,1,28,0,1,20,0,0,124,88,1.08
+"Liam Baker","Richmond",610000,"DEF",10,16,6,4,2,0,0,0,2,3,0,0,110,81,1.12
+"Reilly O'Brien","Adelaide Crows",723000,"RUC",6,9,6,4,6,2,33,0,1,27,0,0,109,82,1.03
+"Ollie Wines","Port Adelaide",938000,"MID",14,23,2,3,3,0,0,0,0,22,0,0,109,83,1.02
 "Adam Treloar","Western Bulldogs",731000,"MID/FWD",12,17,6,2,0,0,0,0,2,17,0,0,108,81,1.08
 "Marcus Bontempelli","Western Bulldogs",905000,"MID",15,7,6,6,0,0,0,0,1,15,0,0,107,87,1
+"Zak Butters","Port Adelaide",639000,"FWD",16,16,8,2,3,5,0,1,1,15,0,0,107,85,0.97
 "Tim English","Western Bulldogs",673000,"RUC/FWD",13,8,8,4,2,1,12,0,0,19,0,0,106,79,1.09
 "Lachie Neale","Brisbane Lions",792000,"MID",17,13,4,4,0,2,0,1,1,23,0,0,106,87,0.99
+"Connor Rozee","Port Adelaide",567000,"FWD",13,10,5,4,3,0,0,1,2,7,0,0,106,79,1.04
 "Josh Dunkley","Western Bulldogs",767000,"MID/FWD",13,19,3,3,1,0,0,0,1,21,0,0,105,81,1.05
+"Riley Bonner","Port Adelaide",576000,"DEF/MID",22,9,7,2,1,3,0,0,0,0,6,5,105,86,0.94
+"Trent Cotchin","Richmond",636000,"MID",12,14,6,5,2,0,0,0,0,16,0,0,104,67,1.28
+"Rowan Marshall","St Kilda",752000,"RUC",17,7,5,0,6,1,18,0,0,18,0,0,101,81,1.04
 "Zac Fisher","Carlton",485000,"FWD",14,10,7,1,1,0,0,0,2,4,0,0,100,86,0.89
+"Darcy Byrne-Jones","Port Adelaide",643000,"DEF",14,10,4,7,1,1,0,0,0,0,1,1,100,85,0.91
 "Bailey Smith","Western Bulldogs",733000,"MID",12,10,7,6,0,1,0,1,0,7,0,0,99,82,0.98
+"Travis Boak","Port Adelaide",819000,"MID",11,15,3,4,1,1,0,0,2,17,0,0,98,83,0.91
+"Jye Caldwell","Essendon",488000,"MID",15,9,4,5,5,1,0,1,0,12,0,0,98,75,1.09
+"Karl Amon","Port Adelaide",828000,"MID",13,10,4,5,3,1,0,0,1,8,0,0,97,80,0.94
 "Christian Petracca","Melbourne",930000,"MID",18,9,7,2,1,3,0,3,0,25,0,0,96,87,0.85
 "Charlie Cameron","Brisbane Lions",522000,"FWD",16,4,7,2,1,1,0,1,2,0,0,0,96,86,0.91
+"Conor Nash","Hawthorn",466000,"MID/FWD",13,11,4,7,0,2,0,1,0,14,0,0,96,77,1.03
+"Ryan Burton","Port Adelaide",616000,"DEF",16,14,5,2,3,2,0,0,0,0,1,1,96,79,0.94
 "Adam Cerra","Carlton",732000,"MID",9,21,2,4,3,0,0,0,0,19,0,0,94,79,0.91
 "Hugh McCluggage","Brisbane Lions",839000,"MID",13,9,5,4,2,1,0,1,1,14,0,0,94,81,0.94
+"Tom Phillips","Hawthorn",613000,"MID",15,7,6,2,2,0,0,0,1,0,0,0,93,82,0.94
+"Noah Balta","Richmond",459000,"DEF",11,8,7,1,1,2,5,1,3,5,0,0,93,73,1.05
 "Nic Newman","Carlton",725000,"DEF",16,11,7,1,0,1,0,0,0,0,3,3,92,84,0.84
+"Josh Ward","Hawthorn",278000,"MID",17,12,4,2,1,2,0,1,0,17,0,0,91,67,1.12
+"Toby Nankervis","Richmond",699000,"RUC",8,12,4,5,2,3,18,0,0,16,0,0,91,76,0.99
 "Caleb Daniel","Western Bulldogs",729000,"DEF",21,2,5,2,0,0,0,0,0,0,5,4,90,84,0.87
+"Joshua Rachele","Adelaide Crows",280000,"MID/FWD",8,4,0,9,4,0,0,0,3,0,0,0,90,78,0.89
+"Dan Houston","Port Adelaide",670000,"DEF",12,13,5,2,1,1,0,1,1,0,0,0,90,86,0.81
 "Mitch McGovern","Carlton",463000,"FWD",15,4,6,4,2,0,0,0,0,0,2,2,89,62,1.1
+"Xavier Duursma","Port Adelaide",586000,"MID",14,7,6,2,0,0,0,1,1,5,0,0,89,74,0.93
+"Peter Wright","Essendon",581000,"RUC/FWD",10,2,6,1,1,1,17,0,3,5,0,0,89,86,0.86
+"Rory Sloane","Adelaide Crows",718000,"MID",15,13,3,3,1,2,0,1,0,20,0,0,88,76,0.9
 "George Hewett","Carlton",537000,"DEF/MID",12,21,0,2,0,0,0,1,0,24,0,0,87,79,0.84
+"Nathan Broad","Richmond",567000,"DEF",14,6,7,3,0,0,0,0,0,0,2,0,87,90,0.8
+"Kamdyn McIntosh","Richmond",516000,"MID",14,11,5,2,0,0,0,0,0,0,0,0,87,81,0.89
+"Daniel Rioli","Richmond",469000,"DEF/FWD",17,6,5,2,1,0,0,0,0,0,1,1,87,79,0.91
 "Jarrod Berry","Brisbane Lions",725000,"MID",11,8,6,5,2,1,0,0,0,11,0,0,86,82,0.85
+"Hugo Ralphsmith","Richmond",258000,"MID/FWD",15,5,10,0,1,0,0,0,0,0,1,1,86,85,0.83
+"Lachie Jones","Port Adelaide",368000,"DEF",9,13,4,5,1,0,0,0,0,0,0,0,86,74,0.9
+"Jack Steele","St Kilda",1018000,"MID",12,8,5,5,1,1,0,1,0,20,0,0,86,82,0.87
+"Bradley Hill","St Kilda",597000,"DEF",18,10,5,0,0,1,0,0,0,0,5,5,86,89,0.8
+"Mason Wood","St Kilda",488000,"FWD",11,2,4,6,1,0,0,0,2,0,0,0,86,78,0.92
 "Adam Saad","Carlton",586000,"DEF",18,7,1,4,1,1,0,0,0,0,1,1,85,84,0.78
+"Dion Prestia","Richmond",769000,"MID",17,7,3,3,1,1,0,0,0,18,0,0,84,70,0.99
+"Brodie Smith","Adelaide Crows",668000,"DEF",16,5,4,4,1,1,0,0,0,0,2,1,84,83,0.78
 "Clayton Oliver","Melbourne",912000,"MID",10,18,3,3,2,2,0,0,0,28,0,0,83,89,0.72
 "Bailey Dale","Western Bulldogs",700000,"DEF",17,4,4,1,1,0,0,0,1,0,5,5,82,82,0.81
 "Jarryd Lyons","Brisbane Lions",982000,"MID",11,11,2,5,0,0,0,0,0,8,0,0,81,75,0.88
+"Jack Ross","Richmond",468000,"MID",13,8,6,3,1,2,0,1,0,4,0,0,81,87,0.77
+"Archie Perkins","Essendon",421000,"FWD",11,6,2,4,1,0,0,1,2,5,0,0,81,83,0.81
+"Darcy Parish","Essendon",885000,"MID",9,16,2,3,0,0,0,2,0,19,0,0,79,77,0.85
 "Alex Neal-Bullen","Melbourne",595000,"FWD",12,8,3,4,0,2,0,1,1,3,0,0,78,78,0.77
+"Josh Battle","St Kilda",517000,"FWD",14,5,6,2,0,0,0,0,0,0,2,2,78,83,0.78
 "Lochie O'Brien","Carlton",449000,"MID",14,8,4,2,2,3,0,0,1,0,0,0,77,80,0.74
+"James Worpel","Hawthorn",661000,"MID",15,8,4,2,1,2,0,1,0,18,0,0,77,84,0.76
+"Dustin Martin","Richmond",682000,"MID/FWD",14,12,3,0,1,0,0,1,0,16,0,0,77,86,0.74
+"Jordan Ridley","Essendon",671000,"DEF",16,3,8,1,1,2,0,0,0,0,5,5,77,86,0.75
+"Andrew McGrath","Essendon",709000,"MID",10,11,5,2,2,0,0,0,0,9,0,0,77,79,0.81
+"Kyle Langford","Essendon",726000,"MID",11,8,4,2,2,0,0,0,1,0,0,0,77,82,0.78
 "Bayley Fritsch","Melbourne",516000,"FWD",10,1,2,1,2,0,0,2,5,0,0,0,76,90,0.65
 "Marcus Adams","Brisbane Lions",514000,"DEF",11,4,5,5,0,0,0,0,0,0,1,1,76,100,0.62
+"Matt Crouch","Adelaide Crows",649000,"MID",10,21,2,0,1,1,0,0,0,22,0,0,76,71,0.83
+"Sebastian Ross","St Kilda",669000,"MID",12,11,4,3,0,2,0,0,0,19,0,0,76,80,0.79
+"Jake Aarts","Richmond",418000,"FWD",6,12,2,7,2,1,0,0,0,10,0,0,75,81,0.76
+"Sam Draper","Essendon",481000,"RUC",7,2,4,5,1,5,24,2,1,19,0,0,75,79,0.79
+"Will Snelling","Essendon",656000,"FWD",5,7,1,10,1,0,0,0,0,12,0,0,73,83,0.73
 "Jake Lever","Melbourne",529000,"DEF",9,10,5,2,2,0,0,0,0,0,0,0,72,92,0.6
 "Ed Richards","Western Bulldogs",368000,"DEF",9,6,8,2,1,0,0,0,0,0,3,2,72,80,0.73
 "Laitham Vandermeer","Western Bulldogs",430000,"FWD",10,10,4,2,1,0,0,1,0,0,0,0,72,79,0.74
+"Willem Drew","Port Adelaide",633000,"MID",6,14,3,6,2,3,0,0,0,19,0,0,72,69,0.81
+"Jack Sinclair","St Kilda",665000,"DEF",12,8,5,2,0,1,0,0,0,0,5,2,72,90,0.67
+"Max King","St Kilda",459000,"FWD",10,2,5,2,3,0,0,0,2,0,0,0,72,83,0.72
 "Daniel McStay","Brisbane Lions",548000,"FWD",10,3,7,2,0,3,0,3,2,0,0,0,71,83,0.7
+"Jack Scrimshaw","Hawthorn",669000,"DEF",12,7,3,3,0,0,0,0,0,0,3,2,71,84,0.7
+"Mitch Georgiades","Port Adelaide",444000,"FWD",9,1,3,3,3,2,0,0,4,0,0,0,71,73,0.75
+"Jeremy Finlayson","Port Adelaide",465000,"FWD",9,2,7,1,1,2,0,1,3,2,0,0,70,81,0.67
+"Nick Hind","Essendon",709000,"DEF",15,4,5,1,1,1,0,0,0,0,2,0,70,85,0.69
 "Hayden Crozier","Western Bulldogs",550000,"DEF",10,6,6,1,2,1,0,0,1,0,0,0,69,81,0.69
 "Daniel Rich","Brisbane Lions",823000,"DEF",17,1,4,0,1,1,0,0,1,0,5,4,69,62,0.9
+"Jai Newcombe","Hawthorn",430000,"MID",13,10,2,2,2,2,0,0,0,21,0,0,69,79,0.72
+"Jason Castagna","Richmond",482000,"FWD",11,7,6,0,0,1,0,1,1,0,0,0,69,76,0.75
 "Tom McDonald","Melbourne",625000,"FWD",11,2,6,2,2,3,0,0,2,0,0,0,68,78,0.67
 "James Harmes","Melbourne",690000,"MID",7,10,1,5,1,1,0,0,1,2,0,0,68,68,0.77
 "Aaron Naughton","Western Bulldogs",560000,"FWD",7,5,6,0,0,0,0,1,3,0,0,0,68,85,0.65
+"Jack Riewoldt","Richmond",539000,"FWD",8,3,7,0,0,1,0,2,3,0,0,0,68,84,0.67
 "Matthew Owies","Carlton",434000,"FWD",5,11,3,4,1,1,0,1,1,0,0,0,67,77,0.67
+"Harry Schoenberg","Adelaide Crows",582000,"MID",14,8,1,3,2,3,0,1,0,13,0,0,67,85,0.61
+"Aliir Aliir","Port Adelaide",556000,"DEF",10,5,8,1,2,1,0,0,0,0,0,0,67,91,0.57
+"Tom Cutler","Essendon",521000,"DEF",16,1,6,1,1,2,0,0,0,0,2,2,67,89,0.63
 "Darcy Fort","Brisbane Lions",383000,"RUC",7,5,2,1,2,0,22,1,0,8,0,0,66,84,0.64
+"James Sicily","Hawthorn",510000,"DEF",16,1,5,1,3,2,0,0,0,0,2,2,66,80,0.68
+"Ben Keays","Adelaide Crows",906000,"MID",10,11,0,3,1,1,0,4,0,15,0,0,66,88,0.58
+"Ben Paton","St Kilda",380000,"DEF",8,10,6,1,0,0,0,0,0,0,1,0,66,86,0.64
 "Kysaiah Pickett","Melbourne",539000,"FWD",7,3,2,8,0,0,0,0,0,1,0,0,65,81,0.62
 "Ed Langdon","Melbourne",714000,"MID",10,8,3,1,2,1,0,1,1,0,0,0,65,95,0.52
+"Hunter Clark","St Kilda",609000,"DEF/MID",11,5,4,2,1,0,0,1,0,10,0,0,65,68,0.8
 "Bailey Williams","Western Bulldogs",565000,"DEF",13,6,2,0,1,0,0,0,1,0,0,0,64,80,0.65
 "Josh Schache","Western Bulldogs",408000,"DEF/FWD",13,2,6,0,3,0,0,0,0,0,1,1,64,100,0.52
+"Tim Membrey","St Kilda",647000,"FWD",8,4,5,0,1,1,0,1,3,0,0,0,64,82,0.65
 "Oscar McDonald","Carlton",343000,"FWD",12,9,4,0,0,1,0,0,0,0,0,0,63,96,0.5
 "Roarke Smith","Western Bulldogs",389000,"MID",11,6,5,2,1,2,0,0,0,0,0,0,63,76,0.67
 "Zac Bailey","Brisbane Lions",610000,"MID/FWD",9,9,1,2,0,2,0,1,2,16,0,0,63,80,0.64
+"Dougal Howard","St Kilda",512000,"DEF",10,3,6,3,0,1,0,0,0,0,2,2,63,91,0.58
+"Ivan Soldo","Richmond",393000,"RUC",7,2,3,3,1,1,11,1,1,5,0,0,62,60,0.85
+"Zach Merrett","Essendon",925000,"MID",9,9,4,1,1,0,0,0,0,11,0,0,62,45,1.15
 "Jake Bowey","Melbourne",371000,"DEF",11,11,2,0,0,0,0,0,0,0,2,1,61,83,0.56
 "Harris Andrews","Brisbane Lions",566000,"DEF",10,1,9,2,0,2,0,0,0,0,1,0,61,100,0.5
+"Chad Wingard","Hawthorn",740000,"MID/FWD",12,3,2,2,2,1,0,0,1,2,0,0,61,67,0.75
+"Chayce Jones","Adelaide Crows",404000,"DEF",11,5,5,2,1,2,0,0,0,0,2,2,61,88,0.54
 "Will Setterfield","Carlton",661000,"MID",10,8,3,2,0,1,0,0,0,0,0,0,60,88,0.52
 "Adam Tomlinson","Melbourne",493000,"DEF",16,5,2,0,2,2,0,0,0,0,3,2,60,95,0.48
+"Lachlan Sholl","Adelaide Crows",564000,"MID",11,10,2,1,0,1,0,0,0,0,0,0,60,90,0.52
+"Callum Wilkie","St Kilda",529000,"DEF",11,1,6,3,1,2,0,0,0,0,0,0,60,82,0.61
 "Cody Weightman","Western Bulldogs",480000,"FWD",8,7,3,3,1,1,0,2,0,0,0,0,59,78,0.62
 "Brandon Starcevich","Brisbane Lions",418000,"DEF",11,6,5,1,1,2,0,0,0,0,4,3,59,84,0.57
+"Blake Hardwick","Hawthorn",683000,"DEF",8,8,5,1,0,0,0,0,0,0,5,4,59,89,0.55
+"Shane Edwards","Richmond",545000,"MID",8,5,5,0,1,1,0,0,2,0,0,0,59,78,0.62
 "Jack Viney","Melbourne",740000,"MID",9,8,1,3,3,1,0,0,0,20,0,0,58,72,0.62
+"Harry Morrison","Hawthorn",561000,"MID/FWD",13,4,2,2,0,1,0,0,0,0,0,0,58,90,0.53
+"Ned McHenry","Adelaide Crows",418000,"FWD",7,6,3,4,2,3,0,1,1,0,0,0,58,82,0.55
+"Connor Macdonald","Hawthorn",240000,"MID",8,8,2,1,0,0,0,1,1,0,0,0,57,71,0.66
+"Nicholas Martin","Essendon",NA,NA,6,10,2,3,0,0,0,1,0,0,0,0,57,42,1.13
+"Brad Crouch","St Kilda",798000,"MID",7,9,1,3,0,1,0,0,1,14,0,0,57,64,0.74
+"Dan Butler","St Kilda",460000,"FWD",7,3,3,2,0,0,0,1,2,0,0,0,57,84,0.57
 "Marc Pittonet","Carlton",588000,"RUC",5,9,1,1,5,1,14,0,0,24,0,0,56,85,0.51
 "Joe Daniher","Brisbane Lions",605000,"FWD",10,2,7,1,0,2,1,2,0,0,0,0,56,90,0.51
 "Nakia Cockatoo","Brisbane Lions",339000,"FWD",12,1,2,2,0,1,0,1,1,1,0,0,56,77,0.59
 "Lewis Young","Carlton",382000,"DEF/RUC",9,6,4,1,0,0,0,0,0,0,0,0,55,100,0.42
+"Dylan Moore","Hawthorn",590000,"FWD",4,8,3,5,0,1,0,1,0,0,0,0,55,85,0.53
+"Joshua Gibcus","Richmond",274000,"DEF",9,4,2,3,2,0,0,0,0,0,1,1,55,81,0.56
 "Tom Sparrow","Melbourne",421000,"MID/FWD",5,9,1,2,1,1,0,0,2,11,0,0,54,78,0.53
 "Lachie Hunter","Western Bulldogs",714000,"MID",7,7,2,4,0,1,0,0,0,0,0,0,54,84,0.52
+"Max Lynch","Hawthorn",392000,"RUC",4,5,2,3,2,0,11,1,0,8,0,0,54,39,1.14
+"Tom J. Lynch","Richmond",519000,"FWD",8,3,4,2,3,4,0,1,2,0,0,0,54,87,0.51
+"Ryan Byrnes","St Kilda",528000,"MID/FWD",10,4,6,1,0,2,0,0,0,0,0,0,54,63,0.71
+"Finn Maginness","Hawthorn",311000,"MID/FWD",7,8,4,1,0,0,0,0,0,4,0,0,53,83,0.53
+"Brayden Ham","Essendon",435000,"MID/FWD",8,9,3,0,1,0,0,1,0,0,0,0,53,80,0.55
+"Jade Gresham","St Kilda",509000,"MID/FWD",12,6,0,2,0,3,0,0,1,5,0,0,53,77,0.57
 "Luke Jackson","Melbourne",520000,"RUC/FWD",3,9,3,3,0,2,10,0,0,10,0,0,52,69,0.58
+"James Stewart","Essendon",408000,"DEF",10,5,6,0,0,2,0,0,0,0,0,0,52,87,0.5
 "Noah Answerth","Brisbane Lions",325000,"DEF",8,2,3,3,2,0,0,0,0,0,0,0,51,69,0.6
+"Tom Jonas","Port Adelaide",510000,"DEF",9,4,6,1,0,2,0,0,0,0,0,0,51,89,0.44
+"Kaine Baldwin","Essendon",190000,"FWD",7,3,3,3,0,1,0,0,1,0,0,0,51,80,0.53
+"Jimmy Webster","St Kilda",518000,"DEF",8,5,4,1,1,0,0,0,0,0,2,0,51,78,0.54
+"Sam Hayes","Port Adelaide",190000,"RUC",5,2,3,1,1,1,19,1,0,12,0,0,50,45,0.86
+"Mason Redman","Essendon",567000,"DEF",7,6,4,2,0,3,0,0,1,0,0,0,50,78,0.53
+"Nik Cox","Essendon",471000,"MID",6,7,4,1,0,0,0,2,0,4,0,0,50,78,0.53
+"Jack Higgins","St Kilda",579000,"FWD",6,7,3,2,2,1,0,2,0,0,0,0,50,78,0.53
 "Tom De Koning","Carlton",507000,"RUC",6,3,3,3,2,2,8,0,0,5,0,0,49,83,0.45
 "Callum Ah Chee","Brisbane Lions",347000,"DEF",7,4,3,4,1,2,0,0,0,0,0,0,49,42,0.95
+"Rory Laird","Adelaide Crows",937000,"MID",7,9,2,4,0,4,0,0,0,12,0,0,49,44,0.86
+"Devon Smith","Essendon",543000,"FWD",7,3,2,3,2,0,0,2,0,0,0,0,49,83,0.49
+"Jack Hayes","St Kilda",190000,"FWD/RUC",8,4,3,1,2,3,4,1,1,6,0,0,49,78,0.52
 "Jason Johannisen","Western Bulldogs",404000,"FWD",6,5,2,3,1,2,0,1,1,0,0,0,48,84,0.46
 "Lincoln McCarthy","Brisbane Lions",538000,"FWD",10,4,3,1,0,3,0,0,1,0,0,0,48,84,0.46
+"Ned Long","Hawthorn",190000,"MID/FWD",6,3,2,4,1,1,0,4,0,2,0,0,48,43,0.92
+"Luke Breust","Hawthorn",513000,"FWD",6,6,2,2,0,1,0,1,1,0,0,0,48,74,0.53
+"Nick Murray","Adelaide Crows",335000,"DEF",9,2,2,4,1,2,0,0,0,0,0,0,48,91,0.41
+"Andrew McPherson","Adelaide Crows",476000,"DEF",9,4,5,0,1,1,0,0,0,0,2,2,48,75,0.49
+"Jake Soligo","Adelaide Crows",220000,"MID",5,4,2,3,1,0,0,0,1,0,0,0,48,66,0.56
 "Zac Williams","Carlton",600000,"DEF",11,7,0,3,0,4,0,0,0,0,3,3,47,82,0.44
 "Ben Brown","Melbourne",505000,"FWD",6,4,3,1,1,0,1,0,1,0,0,0,47,75,0.48
+"Dyson Heppell","Essendon",795000,"DEF",7,6,5,0,2,1,0,0,0,0,0,0,47,66,0.59
+"Mitch Lewis","Hawthorn",504000,"FWD",4,1,4,2,0,0,0,0,2,0,0,0,46,88,0.43
+"Mitchell Hinge","Adelaide Crows",383000,"DEF",6,6,3,0,1,0,0,0,1,0,0,0,46,79,0.45
+"Jed McEntee","Port Adelaide",190000,"MID/FWD",5,8,1,1,1,0,0,1,1,0,0,0,46,80,0.44
 "Jack Martin","Carlton",527000,"FWD",7,4,4,1,0,0,0,0,0,0,0,0,45,65,0.53
 "Jordan Boyd","Carlton",190000,"DEF",3,6,0,6,0,0,0,0,0,0,0,0,45,80,0.43
 "Oscar McInerney","Brisbane Lions",643000,"RUC",3,3,0,1,2,0,24,0,0,18,0,0,45,82,0.45
 "Mitch Robinson","Brisbane Lions",645000,"MID",7,5,3,1,1,0,0,0,0,0,0,0,45,75,0.49
+"Tom Clurey","Port Adelaide",454000,"DEF",8,5,5,0,2,2,0,0,0,0,0,0,45,96,0.36
+"Jack Gunston","Hawthorn",468000,"FWD",6,4,2,2,2,2,0,1,1,0,0,0,43,85,0.42
+"Robbie Tarrant","Richmond",506000,"DEF",5,8,4,2,1,3,0,0,0,0,0,0,43,94,0.38
 "Angus Brayshaw","Melbourne",558000,"MID",7,5,1,2,0,0,0,0,0,0,0,0,42,81,0.4
 "Tom Fullarton","Brisbane Lions",351000,"FWD",6,5,2,2,0,0,0,0,0,0,0,0,42,80,0.43
+"Shai Bolton","Richmond",652000,"MID/FWD",8,7,2,0,1,1,0,0,0,5,0,0,42,73,0.47
+"Jordon Butts","Adelaide Crows",366000,"DEF",9,2,4,0,2,1,0,0,0,0,0,0,42,89,0.36
+"Todd Marshall","Port Adelaide",468000,"FWD",7,2,2,2,0,1,0,0,1,1,0,0,42,74,0.44
+"Scott Lycett","Port Adelaide",718000,"RUC",1,7,1,4,0,4,18,0,0,17,0,0,42,50,0.65
+"Matt Guelfi","Essendon",475000,"MID",5,3,1,4,1,0,0,1,0,0,0,0,42,79,0.44
+"Riley Thilthorpe","Adelaide Crows",429000,"FWD",2,11,0,2,0,0,4,0,0,5,0,0,40,82,0.38
+"Harrison Jones","Essendon",359000,"FWD",5,3,4,2,0,1,1,1,0,0,0,0,40,76,0.44
 "Joel Smith","Melbourne",220000,"DEF",6,4,3,1,0,0,0,0,0,0,0,0,39,94,0.32
 "Charlie Spargo","Melbourne",457000,"FWD",6,7,3,0,0,1,0,0,0,0,0,0,38,74,0.39
 "James Jordon","Melbourne",587000,"MID",10,2,2,0,1,1,0,0,0,0,0,0,38,78,0.37
 "Matthew Cottrell","Carlton",476000,"MID",5,4,3,2,0,1,0,0,0,0,0,0,37,46,0.62
 "Jayden Hunt","Melbourne",457000,"DEF",9,4,0,1,1,1,0,0,0,0,2,2,37,80,0.35
 "Stefan Martin","Western Bulldogs",430000,"RUC",3,3,2,1,0,1,14,1,0,7,0,0,37,63,0.48
+"Luke Brown","Adelaide Crows",462000,"DEF",7,6,1,0,1,0,0,0,0,0,1,0,37,86,0.33
+"Darcy Fogarty","Adelaide Crows",388000,"FWD",4,3,2,2,3,2,0,1,1,0,0,0,36,88,0.32
+"Nasiah Wanganeen-Milera","St Kilda",270000,"DEF/MID",6,1,3,2,1,1,0,1,0,0,0,0,36,33,0.91
 "Deven Robertson","Brisbane Lions",519000,"MID",3,2,0,4,0,0,0,0,1,5,0,0,35,54,0.53
 "Robbie McComb","Western Bulldogs",190000,"MID",5,7,1,2,0,2,0,0,0,0,0,0,34,39,0.71
 "Keidean Coleman","Brisbane Lions",343000,"DEF/FWD",6,1,2,2,0,0,0,0,0,0,1,0,34,30,0.92
+"Liam Shiels","Hawthorn",706000,"MID",4,4,2,2,0,0,0,0,0,0,0,0,34,44,0.64
+"Jackson Mead","Port Adelaide",190000,"MID",4,4,2,2,0,0,0,0,0,3,0,0,34,63,0.42
 "Harry McKay","Carlton",589000,"FWD",4,0,3,1,1,0,0,1,1,0,0,0,33,50,0.51
+"Jayden Laverde","Essendon",484000,"DEF",5,5,2,1,1,1,0,0,0,0,0,0,33,78,0.35
 "Ed Curnow","Carlton",746000,"MID",2,4,0,3,0,0,0,0,1,0,0,0,32,34,0.72
+"Ben McEvoy","Hawthorn",671000,"RUC/FWD",2,5,1,2,2,2,3,0,1,3,0,0,32,87,0.3
+"Daniel McKenzie","St Kilda",501000,"MID",7,3,2,1,1,2,0,0,0,0,0,0,32,54,0.49
 "Tom Williamson","Carlton",394000,"DEF",4,6,4,0,1,2,0,0,0,0,0,0,31,50,0.48
+"Bigoa Nyuon","Richmond",190000,"DEF",5,2,4,0,0,0,0,0,0,0,0,0,31,40,0.64
 "Jack Silvagni","Carlton",533000,"FWD",4,1,2,3,0,1,1,0,0,1,0,0,30,39,0.59
+"Ned Reeves","Hawthorn",492000,"RUC",2,3,1,1,0,2,16,0,0,15,0,0,29,54,0.44
+"Josh Sinn","Port Adelaide",268000,"DEF/MID",4,4,3,0,0,0,0,0,0,0,0,0,29,43,0.52
 "Mitch Hannan","Western Bulldogs",444000,"FWD",5,2,0,2,1,0,0,0,0,0,0,0,28,78,0.29
+"Dylan Grimes","Richmond",495000,"DEF",5,0,3,1,0,0,0,0,0,0,1,1,28,48,0.48
+"Jacob Koschitzke","Hawthorn",412000,"FWD",4,1,2,2,1,3,0,1,1,0,0,0,27,49,0.45
+"Sam Frost","Hawthorn",492000,"DEF",5,0,2,2,1,1,0,0,0,0,0,0,27,90,0.25
+"Mitch Owens","St Kilda",226000,"MID",4,0,1,3,0,0,0,0,0,4,0,0,27,24,0.94
 "Corey Durdin","Carlton",190000,"FWD",5,0,0,0,0,1,0,0,2,0,0,0,24,43,0.43
+"Lachlan Gollant","Adelaide Crows",306000,"FWD",3,1,2,0,0,0,0,0,1,0,0,0,23,78,0.23
 "Luke Parks","Carlton",238000,"DEF",2,0,2,1,0,0,0,0,1,0,0,0,22,49,0.34
+"Jack Billings","St Kilda",699000,"MID",2,3,0,2,1,0,0,0,0,0,0,0,21,42,0.42
 "James Madden","Brisbane Lions",356000,"DEF",4,2,0,1,0,0,0,0,0,0,0,0,20,64,0.25
+"Tom Doedee","Adelaide Crows",538000,"DEF",2,3,2,1,0,1,0,0,0,0,0,0,19,44,0.33
+"Will Martyn","Richmond",268000,"MID",2,0,1,2,1,0,0,0,0,6,0,0,18,23,0.65
 "Oskar Baker","Melbourne",447000,"MID",4,1,2,0,0,1,0,0,0,0,0,0,17,37,0.35
 "Zaine Cordy","Western Bulldogs",373000,"DEF",3,3,1,0,2,1,0,0,0,0,0,0,17,91,0.15
+"Denver Grainger-Barras","Hawthorn",272000,"DEF",4,2,1,0,1,1,0,0,0,0,0,0,17,79,0.18
+"Ben Davis","Adelaide Crows",318000,"DEF/FWD",3,4,1,0,0,1,0,0,0,0,1,1,17,45,0.29
+"Elliott Himmelberg","Adelaide Crows",493000,"FWD",3,3,0,0,2,2,0,0,1,0,0,0,17,55,0.24
 "Alex Keath","Western Bulldogs",457000,"DEF",3,2,1,0,0,0,0,0,0,0,0,0,16,44,0.3
 "Sam Weideman","Melbourne",350000,"FWD",1,1,2,1,0,0,0,0,0,0,0,0,15,14,0.82
 "Harry Sharp","Brisbane Lions",198000,"MID",2,1,1,1,0,0,0,0,0,0,0,0,15,30,0.41
+"Luke Pedlar","Adelaide Crows",210000,"MID/FWD",1,2,0,0,0,0,0,0,1,0,0,0,13,15,0.67
+"Cooper Sharman","St Kilda",463000,"FWD",2,1,1,0,0,0,0,0,0,0,0,0,11,17,0.54
 "Lachie Plowman","Carlton",403000,"DEF",2,0,2,0,0,1,0,1,0,0,0,0,10,74,0.1
+"Tyler Brockman","Hawthorn",360000,"FWD",0,1,0,2,0,0,0,0,0,0,0,0,10,30,0.27
+"Maurice Rioli","Richmond",190000,"MID/FWD",1,2,1,0,0,0,0,0,0,0,0,0,10,17,0.49
+"Sam Berry","Adelaide Crows",359000,"FWD",3,3,0,0,1,2,0,0,0,14,0,0,10,40,0.19
+"Sam Mayes","Port Adelaide",586000,"FWD",1,2,1,0,0,0,0,0,0,0,0,0,10,36,0.21
+"Brandon Zerk-Thatcher","Essendon",310000,"DEF",1,5,0,0,0,1,0,0,0,0,0,0,10,24,0.35
+"Robbie Gray","Port Adelaide",609000,"FWD",0,3,0,0,0,0,0,0,0,0,0,0,6,18,0.26
 "Daniel Turner","Melbourne",190000,"DEF",0,0,0,1,0,0,0,0,0,0,0,0,4,25,0.12
 "Jack Payne","Brisbane Lions",446000,"DEF",1,0,0,0,0,0,0,0,0,0,1,0,3,19,0.13
+"Marcus Windhager","St Kilda",198000,"MID/FWD",0,1,0,1,0,1,0,0,0,0,0,0,3,32,0.08
 "Kade Chandler","Melbourne",190000,"FWD",0,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
 "Toby Bedford","Melbourne",202000,"FWD",0,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
 "Cody Raak","Western Bulldogs",190000,"DEF",0,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+"Emerson Jeka","Hawthorn",201000,"FWD",0,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+"Tom Brown","Richmond",258000,"DEF",0,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+"Ben Hobbs","Essendon",266000,"MID",0,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
+"Nick Bryan","Essendon",410000,"RUC",0,0,0,0,0,0,0,0,0,0,0,0,0,0,NA
