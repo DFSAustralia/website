@@ -33,6 +33,7 @@ Head back over after the completion of each round and download updated data (if 
 * [Download Round 7 Stats](/data/blog - AFLW Extended Stats Round 1/Extended AFLW Stats Round 7.csv)
 * [Download Round 7.5 Stats](/data/blog - AFLW Extended Stats Round 1/Extended AFLW Stats Round 7.5.csv) *(stats for GC v WB postponed from Round 3 and GWS v STK postponed from Round 5)*
 * [Download Round 8 Stats](/data/blog - AFLW Extended Stats Round 1/Extended AFLW Stats Round 8.csv)
+* [Download Round 9 Stats](/data/blog - AFLW Extended Stats Round 1/Extended AFLW Stats Round 9.csv)
 
 Head over to [www.womens.afl](https://www.womens.afl/matches/2022){target="_blank"} for season fixtures.
 
