@@ -15,6 +15,8 @@ runtime: shiny
 
   
 \
+[Click Here](https://dfsaustralia-apps.com/shiny/afl/slate-analysis/){target="_blank"} to enter full screen mode
+
 **GLOSSARY**  
 * **Next Match:** details of next premiership season matchup  
 * **Last 5:** individual fantasy scores over the last 5 rounds  
