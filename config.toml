@@ -133,9 +133,15 @@ paginate = 10
     parent     = "section.afl.daily.fantasy"
     
 [[menu.main]]
+    name       = "Team Stacking"
+    url        = "/afl-team-stacking/"
+    weight     = 3
+    parent     = "section.afl.daily.fantasy"    
+    
+[[menu.main]]
     name       = "Matchup History"
     url        = "/afl-matchup-history/"
-    weight     = 3
+    weight     = 4
     parent     = "section.afl.daily.fantasy"
     
 [[menu.main]]
