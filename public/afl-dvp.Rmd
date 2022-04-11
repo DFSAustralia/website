@@ -1,0 +1,37 @@
+---
+description: AFL Defense vs Position
+title: Defense vs Position
+runtime: shiny
+---
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.16/iframeResizer.min.js"></script>
+<style>
+  iframe {
+    min-width: 100%;
+  }
+</style>
+
+**Defense vs Position (DVP)** is shown in terms of fantasy points conceded above (+) or below (-) a players average. For example, a DVP of +10.0 would indicate that that team allows an opposing player to score 10 points above their season average.
+
+Positions in the DVP table have been classified by using a clustering algorithm similar to that discussed [here](http://127.0.0.1:4321/blog/2020/08/23/2020-08-17-player-clustering-advanced-defence-v-position/){target="_blank"}. Refer to the glossary below for further explanation of each position.
+
+<iframe src="https://dfsaustralia-apps.com/shiny/afl/dvp/" width="100%" scrolling="no" frameborder="no"></iframe>
+
+\
+
+**GLOSSARY**  
+* **KEY FWD:** __Key Forward__ which is fairly explanatory (e.g. Harry McKay, Josh J. Kennedy, etc)  
+* **GEN FWD:** __General Forward__ encompasses small/medium forwards aswell as half forwards that push up the ground from time to time (e.g. Cameron Zurhaar, Charlie Spargo, Matthew Owies, Ned McHenry, etc)  
+* **INS MID:** __Inside Midfielders__ are your centre bounce midfielders (e.g. Brad Crouch, Christian Petracca, Clayton Oliver, Matthew Kennedy, etc)  
+* **RUC:** __Ruck__ needs no further explanation  
+* **WNG DEF:** includes both __Wing__ and __Attacking Defenders__ who push up the ground (e.g. Blake Acres, Daniel Howe, James Jordon, Tom Atkins, Dyson Heppell, Isaac Quaynor, etc)  
+* **GEN DEF:** __General Defender__ includes key defenders and general defenders that aren't classified as Attacking Defenders above or Designated Kickers below (e.g. Darcy Gardiner, Griffin Logue, Luke Brown, Sam Taylor, etc)  
+* **DES KCK:** __Designated Kicker__ refers to players who take the majority of their team's kick-ins after opposition goals (e.g. Bailey Dale, Alex Witherden, Jayden Short, Steven May, etc). These players could also be classified as GEN DEF or WNG DEF but have been given their own classification considering their fantasy scoring is affected by opposition shots on goal.
+
+<script>
+  iFrameResize({
+    heightCalculationMethod: 'taggedElement'
+  });
+</script>
+---
+

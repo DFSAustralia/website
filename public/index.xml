@@ -99,6 +99,16 @@ This common strategy gives coaches the ability to compare players across a range
     </item>
     
     <item>
+      <title>Defense vs Position</title>
+      <link>/afl-dvp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-dvp/</guid>
+      <description>iframe { min-width: 100%; }  Defense vs Position (DVP) is shown in terms of fantasy points conceded above (+) or below (-) a players average. For example, a DVP of +10.0 would indicate that that team allows an opposing player to score 10 points above their season average.
+Positions in the DVP table have been classified by using a clustering algorithm similar to that discussed here. Refer to the glossary below for further explanation of each position.</description>
+    </item>
+    
+    <item>
       <title>Draftstars - Golfer Cuts</title>
       <link>/golf-cuts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
