@@ -21,18 +21,24 @@ paginate = 10
     name = "Home"
     url  = "/"
     weight = 1
+    
+[[menu.main]]
+    identifier="support.us"
+    name = "Support Us"
+    url  = "/support-us/"
+    weight = 2
 
 [[menu.main]]
     identifier="blog"
     name = "Blog"
     url  = "/blog/"
-    weight = 2
+    weight = 3
     
 [[menu.main]]
     identifier = "menu.tools"
     name = "Tools"
     url  = "/img/tools.jpeg"
-    weight = 3
+    weight = 4
     
 [[menu.main]]
     name       = "Advanced (Draftstars)"
@@ -58,7 +64,7 @@ paginate = 10
     identifier = "menu.afl"
     name = "AFL"
     url  = "/img/afl-tools.jpeg"
-    weight = 4
+    weight = 5
     
 [[menu.main]]
     name       = "Breakdown Per Round"
@@ -168,7 +174,7 @@ paginate = 10
     identifier = "menu.nfl"
     name = "NFL"
     url  = "/img/nfl-tools.jpeg"
-    weight = 5
+    weight = 6
     
 [[menu.main]]
     name       = "Offensive Stats"
@@ -262,7 +268,7 @@ paginate = 10
     identifier = "menu.nba"
     name = "NBA"
     url  = "/img/nba-tools.jpeg"
-    weight = 6
+    weight = 7
     
 [[menu.main]]
     name       = "Stats"
@@ -331,31 +337,31 @@ paginate = 10
 
 
 
-[[menu.main]]
-    identifier = "menu.golf"
-    name = "Golf"
-    url  = "/img/golf-tools.jpeg"
-    weight = 7
+#[[menu.main]]
+#    identifier = "menu.golf"
+ #   name = "Golf"
+ #   url  = "/img/golf-tools.jpeg"
+ #   weight = 7
     
-[[menu.main]]
-    name       = "Daily Fantasy"
-    identifier = "section.golf.fantasy"
-    url        = ""
-    weight     = 1
-    parent     = "menu.golf"
-    post       = 1
+#[[menu.main]]
+#    name       = "Daily Fantasy"
+#    identifier = "section.golf.fantasy"
+#    url        = ""
+ #   weight     = 1
+ #   parent     = "menu.golf"
+ #   post       = 1
     
-[[menu.main]]
-    name       = "Slate Analysis [GOLF]"
-    url        = "/golf-slate-analysis/"
-    weight     = 1
-    parent     = "section.golf.fantasy"
+#[[menu.main]]
+#    name       = "Slate Analysis [GOLF]"
+#    url        = "/golf-slate-analysis/"
+ #   weight     = 1
+#   parent     = "section.golf.fantasy"
     
-[[menu.main]]
-    name       = "Golfer Cuts"
-    url        = "/golf-cuts/"
-    weight     = 2
-    parent     = "section.golf.fantasy"
+#[[menu.main]]
+#    name       = "Golfer Cuts"
+ #   url        = "/golf-cuts/"
+ #   weight     = 2
+  #  parent     = "section.golf.fantasy"
 
 #[[menu.main]]
 #    identifier = "about"

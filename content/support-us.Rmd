@@ -1,0 +1,19 @@
+---
+description: Support Us
+title: Support Us
+runtime: shiny
+---
+
+Daily Fantasy Sports Australia provide free statistical analysis and data tools for both season long and daily fantasy players. Many hours have gone into developing the website and maintaining the content for the benefit of the fantasy community. If you use our product or we've helped you win money in a DFS tournament or sports bet consider supporting us by buying us a [coffee](https://ko-fi.com/dfsaustralia){target="_blank"}.
+
+Supporting us helps us to continue to provide the same level of content in the future.
+
+\
+
+<center>
+
+[![](/img/coffee-mug.png){height=30% width=30% }](https://ko-fi.com/dfsaustralia){target="_blank"}
+
+</center>
+---
+
