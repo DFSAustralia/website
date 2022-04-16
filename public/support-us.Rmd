@@ -12,7 +12,7 @@ Supporting us helps us to continue to provide the same level of content in the f
 
 <center>
 
-[![](/img/coffee-mug.png){height=30% width=30% }](https://ko-fi.com/dfsaustralia){target="_blank"}
+<iframe id='kofiframe' src='https://ko-fi.com/dfsaustralia/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='dfsaustralia'></iframe>
 
 </center>
 ---

@@ -1,0 +1,35 @@
+---
+description: AFL Research Tool
+title: AFL Research Tool (Premium)
+runtime: shiny
+---
+
+<center>
+### IF YOU ARE A CURRENT MEMBER <span style="color:red">[CLICK HERE](https://dfsaustralia-apps.com/shiny/premium/afl-dfs-research-tool/)</span> TO SIGN IN
+
+To become a successful daily fantasy player it's important to analyse your own performance but also to dig deep into what your opponents are doing. The best players spend a lot hours analysing their opponents play to get an understanding of how they construct their lineups. 
+
+The ability to do this level of research has to date only been accessible to those with the programming knowledge to build their own applications. Here at DFSAustralia we've been developing our own research tool over the last 18 months which was the cornerstone of our own development to be a successful player. Now we are sharing this tool with you as a <b>PREMIUM</b> offering.
+
+Initially this <b>PREMIUM</b> offering will be limited to <b>25 PLACES</b> (this limited number will be reviewed in future). This <b>PREMIUM</b> content will incur an ongoing monthly fee of <b>$20.00</b>, to sign up click [<b>HERE</b>](https://ko-fi.com/dfsaustralia){target="_blank"}, select the <b>PREMIUM MEMBERSHIP TIER</b> and follow the directions to complete your initial payment.
+
+### AFL RESEARCH TOOL BENEFITS 
+
+<b>
+ACCESS EVERY MAIN/MINI/MICRO LINEUP ENTERED SINCE ROUND 1 2021  
+MULTI ENTRANT LEADERBOARDS FOR EACH SLATE  
+LONGER TERM LEADERBOARDS  
+ANALYSE INDIVIDUAL COACHES INCLUDING:  </b>  
+* REVIEW EACH INDIVIDUAL ENTERED LINEUP  
+* ADVANCED PLAYER OWNERSHIP (INCLUDING SINGLE GAME STACKING OWNERSHIP)  
+* GAME STACKING BREAKDOWN  
+* TEAM STACKING BREAKDOWN  
+<b>
+OVERLAY YOUR MICRO/MINI ENTRIES INTO THE MAIN AND REVIEW THEORETICAL PERFORMANCE  
+OPTIMAL LINEUPS  
+</b> 
+
+![](/img/premium-afl/premium-afl-research.png){height=90% width=90%}
+
+</center>
+---
