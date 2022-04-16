@@ -330,8 +330,8 @@ Projected ownership of golfers coming off the alternate list are not calculated 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/afl-player-stats/</guid>
-      <description>   iframe { min-width: 100%; }  AFL Game Logs are available from 2013, VFL from 2021, SANFL from 2019 and NAB League from 2019 also. No adjustments have been made to 2020 data to account for shorter quarters (COVID season).
-  iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
+      <description>   iframe { min-width: 100%; }  AFL Game Logs are available from 2013, VFL from 2021, SANFL from 2019, WAFL from 2022 and NAB League from 2019. No adjustments have been made to 2020 data to account for shorter quarters (COVID season).
+  kofiwidget2.init(&#39;Support Us by Buying a Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.draw();    iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
     </item>
     
     <item>
