@@ -119,6 +119,16 @@ Positions in the DVP table have been classified by using a clustering algorithm 
     </item>
     
     <item>
+      <title>Download AFL Game Logs</title>
+      <link>/afl-download-stats/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-download-stats/</guid>
+      <description>Wanting to get your hands on AFL game logs to run your own analysis? We’ve opened up access to our database and for a small fee of $10 you can download player game logs from the start of the 2021 season onwards. Stats will be downloaded in a simple csv format, example of output shown below.
+$10 gives you access to the database for one calendar year (until December 31st 2022).</description>
+    </item>
+    
+    <item>
       <title>Draftstars - Golfer Cuts</title>
       <link>/golf-cuts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

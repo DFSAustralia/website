@@ -1,0 +1,31 @@
+---
+description: AFL Download Stats
+title: Download AFL Game Logs
+runtime: shiny
+---
+
+<center>
+
+Wanting to get your hands on AFL game logs to run your own analysis? We've opened up access to our database and for a small fee of $10 you can download player game logs from the start of the 2021 season onwards. Stats will be downloaded in a simple csv format, example of output shown below. 
+
+$10 gives you access to the database for one calendar year (until December 31st 2022). 
+
+Stats are updated each week at the completion of each round.
+
+***
+#### HOW TO GET ACCESS
+STEP 1: Click on the button below and make your $10 payment (Please add **MEMBER: AFL GAME LOGS 2022** to your payment for ease of reference)
+STEP 2: We'll send you an email with your log-in details (email will sent to the email you use when processing payment)  
+
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Click Here to Make $10 Payment', '#29abe0', 'E1E8C5INN');kofiwidget2.draw();</script> 
+***
+### IF YOU HAVE AN EXISTING MEMBERSHIP <span style="color:red">[CLICK HERE](https://dfsaustralia-apps.com/shiny/premium/afl-stats-download/)</span> TO SIGN IN
+
+![](/img/download-afl-stats.PNG){height=60% width=60%} 
+
+</center>
+
+  
+
+---
+
