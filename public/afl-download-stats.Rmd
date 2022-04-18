@@ -21,7 +21,7 @@ STEP 2: We'll send you an email with your log-in details (email will sent to the
 ***
 ### IF YOU HAVE AN EXISTING MEMBERSHIP <span style="color:red">[CLICK HERE](https://dfsaustralia-apps.com/shiny/premium/afl-stats-download/)</span> TO SIGN IN
 
-![](/img/download-afl-stats.PNG){height=60% width=60%} 
+![](/img/download-afl-stats.PNG){height=90% width=90%} 
 
 </center>
 
