@@ -163,12 +163,6 @@ paginate = 10
     weight     = 2
     parent     = "menu.afl"
     post       = 2
-   
-[[menu.main]]
-    name       = "Download AFL Game Logs"
-    url        = "/afl-download-stats/"
-    weight     = 1
-    parent     = "section.afl.premium.tools"
     
 [[menu.main]]
     name       = "Tournament Research"
