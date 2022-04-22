@@ -96,7 +96,8 @@ The ability to do this level of research has to date only been accessible to tho
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/afl-cbas/</guid>
-      <description>   iframe { min-width: 100%; }    iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
+      <description>  If you like our CBA data why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.draw();    iframe { min-width: 100%; }    iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
     </item>
     
     <item>
@@ -200,7 +201,8 @@ Projected ownership of golfers coming off the alternate list are not calculated 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/afl-kickins/</guid>
-      <description>   iframe { min-width: 100%; }    iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
+      <description>  If you like our Kick In data why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.draw();    iframe { min-width: 100%; }    iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
     </item>
     
     <item>
