@@ -117,6 +117,12 @@ paginate = 10
     url        = "/afl-player-stats/"
     weight     = 1
     parent     = "section.afl.player.logs"
+    
+[[menu.main]]
+    name       = "State Leagues"
+    url        = "/afl-state-leagues/"
+    weight     = 2
+    parent     = "section.afl.player.logs"
 
 [[menu.main]]
     name       = "Daily Fantasy"

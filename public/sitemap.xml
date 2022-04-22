@@ -98,10 +98,6 @@
   </url>
   
   <url>
-    <loc>/afl-download-stats/</loc>
-  </url>
-  
-  <url>
     <loc>/golf-cuts/</loc>
   </url>
   
@@ -191,6 +187,10 @@
   
   <url>
     <loc>/afl-ruck-contests/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-state-leagues/</loc>
   </url>
   
   <url>
