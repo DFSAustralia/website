@@ -163,10 +163,24 @@ paginate = 10
     parent     = "section.afl.daily.fantasy"
     
 [[menu.main]]
+    name       = "Betting"
+    identifier = "section.afl.betting"
+    url        = ""
+    weight     = 2
+    parent     = "menu.afl"
+    post       = 2
+    
+[[menu.main]]
+    name       = "Player Lines"
+    url        = "/afl-player-lines/"
+    weight     = 1
+    parent     = "section.afl.betting"
+    
+[[menu.main]]
     name       = "Premium tools"
     identifier = "section.afl.premium.tools"
     url        = ""
-    weight     = 2
+    weight     = 3
     parent     = "menu.afl"
     post       = 2
     

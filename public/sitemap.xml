@@ -182,6 +182,10 @@
   </url>
   
   <url>
+    <loc>/afl-player-lines/</loc>
+  </url>
+  
+  <url>
     <loc>/afl-player-stats/</loc>
   </url>
   
