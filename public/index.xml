@@ -332,7 +332,7 @@ Projected ownership of golfers coming off the alternate list are not calculated 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/afl-player-lines/</guid>
-      <description>iframe { min-width: 100%; }  Theis application gives the user a quick and easy way of reviewing recent player performance (last 20 games) in key statistical categories, helping them make smarter decisions for Player Prop Bets. Games where players have played less than 50% TOG have been removed as to not skew the data. Note: only games from 2021 onwards are included
+      <description>iframe { min-width: 100%; }  This application gives the user a quick and easy way of reviewing recent player performance (last 20 games) in key statistical categories, helping them make smarter decisions for Player Prop Bets. Games where players have played less than 50% TOG have been removed as to not skew the data. Note: only games from 2021 onwards are included
 W% refers to the percentage of games that the given player has reached or exceeded the respective line over their last 20 games.</description>
     </item>
     
