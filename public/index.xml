@@ -6,10 +6,19 @@
     <description>Recent content on Daily Fantasy Sports Australia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 May 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Draftstars Lineup Optimiser</title>
+      <link>/blog/2022/05/08/2022-05-08-draftstars-lineup-optimiser/</link>
+      <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2022/05/08/2022-05-08-draftstars-lineup-optimiser/</guid>
+      <description>If you are serious about your DFS you’ve probably considered building your own Lineup Optimiser (or Cruncher) at some point. After learning that Excel isn’t the greatest tool for this you’ve probably spent 10 minutes or so googling how to build one and decided that it’s way too complicated and decided you’ll stick with the free to use options that are available. Resigned to the fact that personalised optimisers are only for those people with advanced coding skills.</description>
+    </item>
     
     <item>
       <title>2022 AFL Preseason Fantasy Stats</title>
@@ -31,16 +40,6 @@ GLOSSARY
       <guid>/blog/2022/01/10/2022-01-10-aflw-extended-stats/</guid>
       <description>The AFLW season has kicked off for 2022 and people are starting to get interested in AFLW Fantasy. Moreira’s Magic have released a great product that everyone should be getting behind aflwfantasy.com.au.
 We don’t envisage providing data tools at this stage but to do our little part in building this community we’ve collated the advanced stats for Round 1 of the AFLW season and made them downloadable here.</description>
-    </item>
-    
-    <item>
-      <title>trial-iframe</title>
-      <link>/post/trial-iframe/</link>
-      <pubDate>Mon, 04 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/post/trial-iframe/</guid>
-      <description>What is Value? A popular way to try normalise player performance in the Fantasy Sports community is to define it in terms of a multiple of their salary. For example, if Tom Mitchell is priced at $15,000 and scores 105 fantasy points then he’s deemed to have returned 7.00x his salary, e.g. (105 / 15,000) * 1000 = 7.00x.
- This common strategy gives coaches the ability to compare players across a range of salaries and make a decision on who they think is the best value play for their lineup.</description>
     </item>
     
     <item>

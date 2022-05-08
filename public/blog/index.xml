@@ -6,10 +6,19 @@
     <description>Recent content in Blogs on Daily Fantasy Sports Australia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 May 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Draftstars Lineup Optimiser</title>
+      <link>/blog/2022/05/08/2022-05-08-draftstars-lineup-optimiser/</link>
+      <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2022/05/08/2022-05-08-draftstars-lineup-optimiser/</guid>
+      <description>If you are serious about your DFS you’ve probably considered building your own Lineup Optimiser (or Cruncher) at some point. After learning that Excel isn’t the greatest tool for this you’ve probably spent 10 minutes or so googling how to build one and decided that it’s way too complicated and decided you’ll stick with the free to use options that are available. Resigned to the fact that personalised optimisers are only for those people with advanced coding skills.</description>
+    </item>
     
     <item>
       <title>2022 AFL Preseason Fantasy Stats</title>

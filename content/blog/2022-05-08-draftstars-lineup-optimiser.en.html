@@ -1,0 +1,153 @@
+---
+title: 'Draftstars Lineup Optimiser' 
+banner: img/optimiser.jpeg
+author: 'Morts'
+date: 2022-05-08
+slug: draftstars-lineup-optimiser
+categories:
+  - Draftstars
+tags:
+  - AFL
+  - Draftstars
+output: 
+  html_document: 
+    theme: null
+---
+
+
+
+<p>If you are serious about your DFS you’ve probably considered building your own Lineup Optimiser (or Cruncher) at some point. After learning that Excel isn’t the greatest tool for this you’ve probably spent 10 minutes or so googling how to build one and decided that it’s way too complicated and decided you’ll stick with the free to use options that are available. Resigned to the fact that personalised optimisers are only for those people with advanced coding skills.</p>
+<p>I’m here to tell you that it’s not actually that complicated to build your own and below I give you the code (developed in R) for a basic single lineup optimiser on which you can expand and add any number of different criteria, including:</p>
+<ul>
+<li>generate multiple lineups</li>
+<li>unique number of players across lineups</li>
+<li>player locks</li>
+<li>player grouping</li>
+<li>team stacking</li>
+<li>positional stacking</li>
+<li>etc etc</li>
+</ul>
+<p>For the purpose of this example we’ll use the Draftstars player csv file which can be downloaded from the tournament page and optimise for the team with the highest average (FPPG).</p>
+<pre class="r"><code># First we need to load the packages required
+library(lpSolve); library(tidyverse)
+
+# Read the player csv file into R and store into a data.frame called stats (I&#39;ve also filtered the list for players named)
+# This assumes that you have stored the csv file in the same location as the R script
+stats &lt;- read.csv(&quot;players_CBHbFjzX.csv&quot;) %&gt;% 
+  filter(Playing.Status == &quot;NAMED IN TEAM TO PLAY&quot;)</code></pre>
+<p>At this stage you should have a list of players stored in memory that looks like below. This table has all the relevant information to complete the optimiser.</p>
+<pre><code>##   Player.ID Position            Name      Team       Opponent Salary   FPPG
+## 1   8000004      MID  Patrick Cripps   Carlton Adelaide Crows  15520 109.50
+## 2   8000005      FWD  Charlie Curnow   Carlton Adelaide Crows  11290  72.71
+## 3   8000007      DEF    Sam Docherty   Carlton Adelaide Crows  15560 104.29
+## 4   8000022      DEF Jacob Weitering   Carlton Adelaide Crows   8380  56.00
+## 5   8000056       RK        Max Gawn Melbourne       St Kilda  17000 114.14
+## 6   8000058      MID    James Harmes Melbourne       St Kilda  11240  77.29
+##     Form        Playing.Status
+## 1  94.67 NAMED IN TEAM TO PLAY
+## 2  79.00 NAMED IN TEAM TO PLAY
+## 3  97.33 NAMED IN TEAM TO PLAY
+## 4  59.67 NAMED IN TEAM TO PLAY
+## 5 133.33 NAMED IN TEAM TO PLAY
+## 6  72.67 NAMED IN TEAM TO PLAY</code></pre>
+<p>At this point we are ready to set the criteria in our optimiser, for a simple lineup optimiser we only need to define the max salary ($100,000 for Draftstars) and position criteria (2 Defenders/Forwards, 4 Midfielders and 1 Ruck). To do this we assign these values to variables.</p>
+<pre class="r"><code>salary &lt;- 100000 # set maximum allowable team salary to variable &#39;salary&#39;
+defender &lt;- 2 # set number of defenders to variable &#39;defender&#39;
+midfielder &lt;- 4 # set number of midfielders to variable &#39;midfielder&#39;
+ruck &lt;- 1 # set number of rucks to variable &#39;ruck&#39;
+forward &lt;-2 # set number of forwards to variable &#39;forward&#39;</code></pre>
+<p>Next we set up a matrix with a row for each one of these criteria (each column represents 1 player), positional criteria are binary (1 when a player is equal to the nominated position, 0 when they are not). This matrix is stored in memory as criteria_matrix.</p>
+<pre class="r"><code># define optimisation criteria
+criteria_matrix &lt;- rbind(
+  as.numeric(stats$Position == &quot;MID&quot;), 
+  as.numeric(stats$Position == &quot;DEF&quot;), 
+  as.numeric(stats$Position == &quot;RK&quot;), 
+  as.numeric(stats$Position == &quot;FWD&quot;), 
+  stats$Salary)
+
+# print first 10 columns of matrix for info
+print(head(criteria_matrix[,c(1:10)], 6))</code></pre>
+<pre><code>##       [,1]  [,2]  [,3] [,4]  [,5]  [,6] [,7]  [,8]  [,9] [,10]
+## [1,]     1     0     0    0     0     1    0     1     1     1
+## [2,]     0     0     1    1     0     0    0     0     0     0
+## [3,]     0     0     0    0     1     0    0     0     0     0
+## [4,]     0     1     0    0     0     0    1     0     0     0
+## [5,] 15520 11290 15560 8380 17000 11240 6900 16600 12940 16030</code></pre>
+<p>To define the limits for each of these criteria we store the direction (e.g. more than, equal to, less than, etc) in a vector called criteria_direction and the limit in a vector called criteria_limit.</p>
+<pre class="r"><code>criteria_direction &lt;- c(&quot;==&quot;, # midfielders - equal to
+               &quot;==&quot;, # defenders - equal to
+               &quot;==&quot;, # rucks - equal to
+               &quot;==&quot;, # forwards - equal to
+               &quot;&lt;=&quot;) # salary - less than or equal to 
+
+# note that we are using teh variables defined earlier
+criteria_limit &lt;- c(midfielder,
+         defender,
+         ruck,
+         forward,
+         salary)  </code></pre>
+<p>Now we have all the criteria defined we can run the optimiser:</p>
+<pre class="r"><code># set object to optimise, in this case we are looking for maximum FPPG
+obj &lt;- stats$FPPG
+
+# run optimiser and store solution in object &#39;sol&#39;
+sol &lt;- lp(direction = &quot;max&quot;, obj, criteria_matrix, criteria_direction, criteria_limit, all.bin = TRUE)
+
+print(stats[sol$solution==1,])</code></pre>
+<pre><code>##    Player.ID Position           Name           Team       Opponent Salary
+## 1    8000004      MID Patrick Cripps        Carlton Adelaide Crows  15520
+## 5    8000056       RK       Max Gawn      Melbourne       St Kilda  17000
+## 18   8000175      FWD  Taylor Walker Adelaide Crows        Carlton  11310
+## 23   8000394      MID    Jack Newnes        Carlton Adelaide Crows  10250
+## 25   8000399      DEF  Jack Sinclair       St Kilda      Melbourne  13980
+## 43   8000637      FWD  Jack Silvagni        Carlton Adelaide Crows  10230
+## 63   8000970      DEF Harrison Petty      Melbourne       St Kilda   6000
+## 86   8001720      MID      Sam Berry Adelaide Crows        Carlton   7060
+## 88   8001732      MID   Jack Carroll        Carlton Adelaide Crows   8630
+##      FPPG   Form        Playing.Status
+## 1  109.50  94.67 NAMED IN TEAM TO PLAY
+## 5  114.14 133.33 NAMED IN TEAM TO PLAY
+## 18  87.50  86.00 NAMED IN TEAM TO PLAY
+## 23  76.67  76.67 NAMED IN TEAM TO PLAY
+## 25  96.00  87.00 NAMED IN TEAM TO PLAY
+## 43  72.17  66.00 NAMED IN TEAM TO PLAY
+## 63  51.00  51.00 NAMED IN TEAM TO PLAY
+## 86  63.67  63.67 NAMED IN TEAM TO PLAY
+## 88  87.00  87.00 NAMED IN TEAM TO PLAY</code></pre>
+<pre class="r"><code>print(sol)</code></pre>
+<pre><code>## Success: the objective function is 757.65</code></pre>
+<p>Below we’ve combined all the code into one chunk that can be cut and paste and modified for your own use. Note that this does not deal with dual-position players but this can be easily factored in by expanding criteria_matrix to have binary columns for each player with dual position eligibility…..we can’t give you all the answers, you’ll need to give that a go for yourself :-).</p>
+<hr />
+<pre class="r"><code>library(lpSolve); library(tidyverse)
+
+stats &lt;- read.csv(&quot;players_CBHbFjzX.csv&quot;) %&gt;% 
+  filter(Playing.Status == &quot;NAMED IN TEAM TO PLAY&quot;)
+
+salary &lt;- 100000
+defender &lt;- 2
+midfielder &lt;- 4
+ruck &lt;- 1
+forward &lt;-2
+
+criteria_matrix &lt;- rbind(
+  as.numeric(stats$Position == &quot;MID&quot;), 
+  as.numeric(stats$Position == &quot;DEF&quot;), 
+  as.numeric(stats$Position == &quot;RK&quot;), 
+  as.numeric(stats$Position == &quot;FWD&quot;), 
+  stats$Salary)
+
+criteria_direction &lt;- c(&quot;==&quot;,
+               &quot;==&quot;,
+               &quot;==&quot;,
+               &quot;==&quot;,
+               &quot;&lt;=&quot;)
+
+criteria_limit &lt;- c(midfielder,
+         defender,
+         ruck,
+         forward,
+         salary)  
+
+obj &lt;- stats$FPPG
+sol &lt;- lp(direction = &quot;max&quot;, obj, criteria_matrix, criteria_direction, criteria_limit, all.bin = TRUE)</code></pre>
+<hr />

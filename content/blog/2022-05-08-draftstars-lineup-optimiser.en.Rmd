@@ -1,0 +1,151 @@
+---
+title: 'Draftstars Lineup Optimiser' 
+banner: img/optimiser.jpeg
+author: 'Morts'
+date: 2022-05-08
+slug: draftstars-lineup-optimiser
+categories:
+  - Draftstars
+tags:
+  - AFL
+  - Draftstars
+output: 
+  html_document: 
+    theme: null
+---
+
+```{r include = FALSE}
+library(lpSolve); library(tidyverse)
+
+```
+
+If you are serious about your DFS you've probably considered building your own Lineup Optimiser (or Cruncher) at some point. After learning that Excel isn't the greatest tool for this you've probably spent 10 minutes or so googling how to build one and decided that it's way too complicated and decided you'll stick with the free to use options that are available. Resigned to the fact that personalised optimisers are only for those people with advanced coding skills.
+
+I'm here to tell you that it's not actually that complicated to build your own and below I give you the code (developed in R) for a basic single lineup optimiser on which you can expand and add any number of different criteria, including:
+
+* generate multiple lineups 
+* unique number of players across lineups 
+* player locks
+* player grouping 
+* team stacking 
+* positional stacking 
+* etc etc
+
+For the purpose of this example we'll use the Draftstars player csv file which can be downloaded from the tournament page and optimise for the team with the highest average (FPPG). 
+
+```{r include = TRUE, results='hide'}
+# First we need to load the packages required
+library(lpSolve); library(tidyverse)
+
+# Read the player csv file into R and store into a data.frame called stats (I've also filtered the list for players named)
+# This assumes that you have stored the csv file in the same location as the R script
+stats <- read.csv("players_CBHbFjzX.csv") %>% 
+  filter(Playing.Status == "NAMED IN TEAM TO PLAY")
+
+```
+
+At this stage you should have a list of players stored in memory that looks like below. This table has all the relevant information to complete the optimiser.
+
+```{r echo=FALSE}
+print(head(stats, 6))
+```
+
+At this point we are ready to set the criteria in our optimiser, for a simple lineup optimiser we only need to define the max salary ($100,000 for Draftstars) and position criteria (2 Defenders/Forwards, 4 Midfielders and 1 Ruck). To do this we assign these values to variables.
+
+```{r echo=T, results='hide'}
+salary <- 100000 # set maximum allowable team salary to variable 'salary'
+defender <- 2 # set number of defenders to variable 'defender'
+midfielder <- 4 # set number of midfielders to variable 'midfielder'
+ruck <- 1 # set number of rucks to variable 'ruck'
+forward <-2 # set number of forwards to variable 'forward'
+```
+
+Next we set up a matrix with a row for each one of these criteria (each column represents 1 player), positional criteria are binary (1 when a player is equal to the nominated position, 0 when they are not). This matrix is stored in memory as criteria_matrix.
+
+```{r echo=T}
+# define optimisation criteria
+criteria_matrix <- rbind(
+  as.numeric(stats$Position == "MID"), 
+  as.numeric(stats$Position == "DEF"), 
+  as.numeric(stats$Position == "RK"), 
+  as.numeric(stats$Position == "FWD"), 
+  stats$Salary)
+
+# print first 10 columns of matrix for info
+print(head(criteria_matrix[,c(1:10)], 6))
+
+```
+
+To define the limits for each of these criteria we store the direction (e.g. more than, equal to, less than, etc) in a vector called criteria_direction and the limit in a vector called criteria_limit.
+
+```{r echo=T, results='hide'}
+
+criteria_direction <- c("==", # midfielders - equal to
+               "==", # defenders - equal to
+               "==", # rucks - equal to
+               "==", # forwards - equal to
+               "<=") # salary - less than or equal to 
+
+# note that we are using teh variables defined earlier
+criteria_limit <- c(midfielder,
+         defender,
+         ruck,
+         forward,
+         salary)  
+```
+
+Now we have all the criteria defined we can run the optimiser:
+
+```{r echo=T}
+# set object to optimise, in this case we are looking for maximum FPPG
+obj <- stats$FPPG
+
+# run optimiser and store solution in object 'sol'
+sol <- lp(direction = "max", obj, criteria_matrix, criteria_direction, criteria_limit, all.bin = TRUE)
+
+print(stats[sol$solution==1,])
+print(sol)
+
+```
+
+Below we've combined all the code into one chunk that can be cut and paste and modified for your own use. Note that this does not deal with dual-position players but this can be easily factored in by expanding criteria_matrix to have binary columns for each player with dual position eligibility.....we can't give you all the answers, you'll need to give that a go for yourself :-). 
+
+---
+
+```{r echo=T, results='hide'}
+library(lpSolve); library(tidyverse)
+
+stats <- read.csv("players_CBHbFjzX.csv") %>% 
+  filter(Playing.Status == "NAMED IN TEAM TO PLAY")
+
+salary <- 100000
+defender <- 2
+midfielder <- 4
+ruck <- 1
+forward <-2
+
+criteria_matrix <- rbind(
+  as.numeric(stats$Position == "MID"), 
+  as.numeric(stats$Position == "DEF"), 
+  as.numeric(stats$Position == "RK"), 
+  as.numeric(stats$Position == "FWD"), 
+  stats$Salary)
+
+criteria_direction <- c("==",
+               "==",
+               "==",
+               "==",
+               "<=")
+
+criteria_limit <- c(midfielder,
+         defender,
+         ruck,
+         forward,
+         salary)  
+
+obj <- stats$FPPG
+sol <- lp(direction = "max", obj, criteria_matrix, criteria_direction, criteria_limit, all.bin = TRUE)
+
+```
+
+---
