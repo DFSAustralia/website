@@ -1,0 +1,94 @@
+---
+title: 'Post Clearance Fantasy Points' 
+banner: img/ruck-post-clearance.jpg
+author: 'Morts'
+date: 2022-05-12
+slug: ruck-post-clearance-fantasy-points
+categories:
+  - Draftstars
+tags:
+  - AFL
+  - Draftstars
+output: 
+  html_document: 
+    theme: null
+---
+
+```{r include = FALSE}
+library(reactable); library(tidyverse); library(htmltools)
+
+```
+
+It’s no secret that for Daily Fantasy you want to be targeting ruckmen who accrue stats around the ground and not just those who rely on ruck contests and clearance work to get their fantasy points. In the last few years we’ve seen the likes of Max Gawn and Brodie Grundy continually average in excess of 100 fantasy points on the back of their willingness to get around the ground and act as another midfielder or interceptor. At the start of 2022 we’ve seen the continued development of Tim English whose taken his fantasy game to another level after increasing his average stats across the board. Here at Daily Fantasy Sports Australia we thought we’d try and quantify the Post Clearance Fantasy Output of the top ruckman since the start of 2021.
+
+To short list players we only considered those who had accrued 300 or more hit outs since the start of 2021 (up to and including Round 8 Season 2022) and we ignored any matches where players had played less than 50% game time, this was to remove any injury affected performances.
+
+Champion Data do not release all the relevant statistics for us to understand exactly where each possession/statistic was recorded (and in what game situation) so we needed to make some assumptions as to whether a certain statistic was captured during a ruck contest (prior to the clearance occurring) or post clearance. The following is the criteria we used: 
+ 
+* All hit outs are related to a ruck contest and are not post clearance (fairly self-explanatory) 
+* All marks are post clearance (fairly self-explanatory) 
+* For ruckmen it was fair to assume that the majority of the free kicks (both for and against) were going to happen during a ruck contest the ones that weren’t were not going to have a major impact on the end result. Therefore all free kicks are not post clearance 
+* Much the same as free kicks we assumed all tackles occurred at the ruck contest (only a small percentage would be expected to occur outside the contest, especially for ruckmen) 
+* All scoring shots were assumed to be post clearance (granted some scoring shots are a direct result of forward 50 free kicks in ruck contests but that would only be a small percentage and therefore we ignored this) 
+* To determine how many disposals were post clearance we subtracted the total number of clearances from their disposal total (we used ratioed the clearance in line wit the players kick to handball ratio) 
+ 
+In the end the Post Clearance Fantasy Points were calculated as follows and summarised in the table below.
+
+**Post Clearance Fantasy Points = *3x*(kicks – clearance kicks) + *2x*(handballs – clearance handballs) + *3x*marks + *6x*goals + behinds**
+
+There is no surprise to see Gawn, English and Grundy sitting in the top 3 positions, English’s post clearance stats will be inflated somewhat due to the fact he played as a key forward for stints in 2021 (since the start of 2021 he’s only attended 56% of the Dogs ruck contests). Players like Marshall, Ladhams, McEvoy, Blicavs, etc also get a boost from having spent extended periods of time forward or back.
+
+At the bottom of the table are developing ruckman Sam Draper, aging Eagles ruckman Nic Naitanui and Blue Mark Pittonet.
+
+For further context we’ve added some additional metrics to try account for the fact that some players spend more time on the bench than others, see the following list for description of each stat in the table: 
+
+* GMS = number of games since the start of 2021 (ignoring games with <50% TOG) 
+* RC% = percentage of teams ruck contests attended 
+* HO = total hitouts 
+* TOG% = average time on ground percentage 
+* FP = average fantasy points 
+* PC = average post clearance fantasy points 
+* PC% = percentage of fantasy points earned post clearance 
+* PCPM = post clearance fantasy points per minute 
+
+###  
+
+```{r echo=FALSE}
+
+stats <- read.csv("Rucks Fantasy Points Post Clearance.csv") %>%
+  mutate(tog = tog/100) %>%
+  arrange(desc(FP_PC))
+
+reactable(stats,
+          pagination = FALSE,
+          compact = TRUE,
+          highlight = TRUE,
+          wrap = FALSE,
+          searchable = FALSE,
+          striped = TRUE,
+          defaultColDef = colDef(defaultSortOrder = "desc"),
+          columns = list(
+            player_id = colDef(show = FALSE),
+            player_name = colDef(name = "Ruck", minWidth = 110, align = "left",
+                                 cell = function(value, index){
+                                   img_src <- paste0("https://s.afl.com.au/staticfile/AFL%20Tenant/AFL/Players/ChampIDImages/XLarge2022/", sub("CD_I", "", stats$player_id[index]), ".png?i10c=img.resize(width:108)")
+                                   image <- img(src = img_src, height = "22px", alt = value)
+                                         tagList(
+        div(style = list(display = "inline-block", width = "30px"), image),
+        value
+      )
+                                 }),
+            games = colDef(name = "GMS", minWidth = 40, align = "center"),
+            percRC = colDef(name = "RC%", minWidth = 40, align = "center", format = colFormat(percent = TRUE, digits = 0)),
+            hitouts = colDef(name = "HO", minWidth = 40, align = "center"),
+            tog = colDef(name = "TOG%", minWidth = 40, align = "center", format = colFormat(percent = TRUE, digits = 0)),
+            FP = colDef(name = "FP", minWidth = 40, align = "center", format = colFormat(digits = 1)),
+            FP_PC = colDef(name = "PC", minWidth = 40, align = "center", format = colFormat(digits = 1)),
+            FP_PC_perc = colDef(name = "PC%", minWidth = 40, align = "center", format = colFormat(percent = TRUE, digits = 0)),
+            FP_PC_Min = colDef(name = "PCPM", minWidth = 40, align = "center", format = colFormat(digits = 2))
+          ))
+```
+
+
+
+---
