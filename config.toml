@@ -103,6 +103,12 @@ paginate = 10
     url        = "/afl-ruck-contests/"
     weight     = 5
     parent     = "section.afl.player.stats"
+    
+[[menu.main]]
+    name       = "Heatmaps"
+    url        = "/afl-heatmaps/"
+    weight     = 6
+    parent     = "section.afl.player.stats"
 
 [[menu.main]]
     name       = "Game Logs & Splits"

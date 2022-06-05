@@ -335,6 +335,16 @@ Projected ownership of golfers coming off the alternate list are not calculated 
     </item>
     
     <item>
+      <title>Player Heatmaps</title>
+      <link>/afl-heatmaps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-heatmaps/</guid>
+      <description>  If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Support Us&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.draw();    iframe { min-width: 100%; }    iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
+    </item>
+    
+    <item>
       <title>Player Lines</title>
       <link>/afl-player-lines/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
