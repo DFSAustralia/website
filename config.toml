@@ -155,17 +155,23 @@ paginate = 10
     url        = "/afl-dvp/"
     weight     = 3
     parent     = "section.afl.daily.fantasy"
+    
+[[menu.main]]
+    name       = "Player Similarity"
+    url        = "/afl-player-similarity/"
+    weight     = 4
+    parent     = "section.afl.daily.fantasy"
 
 [[menu.main]]
     name       = "Team Stacking"
     url        = "/afl-team-stacking/"
-    weight     = 4
+    weight     = 5
     parent     = "section.afl.daily.fantasy"    
     
 [[menu.main]]
     name       = "Matchup History"
     url        = "/afl-matchup-history/"
-    weight     = 5
+    weight     = 6
     parent     = "section.afl.daily.fantasy"
     
 [[menu.main]]

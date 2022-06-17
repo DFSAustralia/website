@@ -355,6 +355,16 @@ W% refers to the percentage of games that the given player has reached or exceed
     </item>
     
     <item>
+      <title>Player Similarity</title>
+      <link>/afl-player-similarity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-player-similarity/</guid>
+      <description>iframe { min-width: 100%; }  Player Similarity Index is a measure of how similar two players statistical averages over the previous 10 games are, a value of 100 would indicate players are identical. To calculate the similarity index 16 different statistical categories are used, these include but are not limited to disposals, marks, contested vs uncontested, centre bounce attendances, intercepts, inside 50s, rebound 50s, etc.
+This tool supports our Defense vs Position tool and lets you delve deeper into how opposition concede points to certain types of players.</description>
+    </item>
+    
+    <item>
       <title>Player Stats</title>
       <link>/afl-player-stats/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

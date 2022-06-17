@@ -190,6 +190,10 @@
   </url>
   
   <url>
+    <loc>/afl-player-similarity/</loc>
+  </url>
+  
+  <url>
     <loc>/afl-player-stats/</loc>
   </url>
   
