@@ -86,6 +86,78 @@
   </url>
   
   <url>
+    <loc>/afl-cbas-ade/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-cbas-brl/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-cbas-car/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-cbas-col/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-cbas-ess/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-cbas-fre/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-cbas-gcs/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-cbas-gee/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-cbas-gws/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-cbas-haw/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-cbas-mel/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-cbas-nth/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-cbas-pta/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-cbas-ric/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-cbas-stk/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-cbas-syd/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-cbas-wbd/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-cbas-wce/</loc>
+  </url>
+  
+  <url>
     <loc>/afl-cbas/</loc>
   </url>
   

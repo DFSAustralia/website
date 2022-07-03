@@ -88,7 +88,7 @@ paginate = 10
     
 [[menu.main]]
     name       = "Centre Bounce Attendances"
-    url        = "/afl-cbas/"
+    url        = "/afl-cbas-ade/"
     weight     = 3
     parent     = "section.afl.player.stats"
     
