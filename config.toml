@@ -106,7 +106,7 @@ paginate = 10
     
 [[menu.main]]
     name       = "Heatmaps"
-    url        = "/afl-heatmaps/"
+    url        = "/afl-heatmaps-ade/"
     weight     = 6
     parent     = "section.afl.player.stats"
 

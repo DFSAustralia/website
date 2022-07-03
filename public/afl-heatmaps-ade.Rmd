@@ -120,3 +120,5 @@ div(class = "box-score", style = "font-size:75%; white-space:nowrap",
       heatmap_table
   )
 ```
+
+---

@@ -254,6 +254,74 @@
   </url>
   
   <url>
+    <loc>/afl-heatmaps-brl/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-heatmaps-car/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-heatmaps-col/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-heatmaps-ess/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-heatmaps-fre/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-heatmaps-gcs/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-heatmaps-gee/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-heatmaps-gws/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-heatmaps-haw/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-heatmaps-mel/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-heatmaps-nth/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-heatmaps-pta/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-heatmaps-ric/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-heatmaps-stk/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-heatmaps-syd/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-heatmaps-wbd/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-heatmaps-wce/</loc>
+  </url>
+  
+  <url>
     <loc>/afl-heatmaps/</loc>
   </url>
   
