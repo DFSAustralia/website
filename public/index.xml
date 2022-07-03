@@ -279,13 +279,13 @@ The ability to do this level of research has to date only been accessible to tho
     </item>
     
     <item>
-      <title>Centre Bounce Attendances</title>
-      <link>/afl-cbas/</link>
+      <title>Centre Bounce Attendances - Adelaide</title>
+      <link>/afl-heatmaps-ade/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/afl-cbas/</guid>
-      <description>  If you like our CBA data why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
- kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.draw();    iframe { min-width: 100%; }    iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
+      <guid>/afl-heatmaps-ade/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }                    
+Player Heatmaps   {&#34;x&#34;:{&#34;tag&#34;:{&#34;name&#34;:&#34;Reactable&#34;,&#34;attribs&#34;:{&#34;data&#34;:{&#34;player_id&#34;:[&#34;CD_I993946&#34;,&#34;CD_I291748&#34;,&#34;CD_I1006203&#34;,&#34;CD_I999331&#34;,&#34;CD_I1008543&#34;,&#34;CD_I999309&#34;,&#34;CD_I1017109&#34;,&#34;CD_I999316&#34;,&#34;CD_I992242&#34;,&#34;CD_I1004995&#34;,&#34;CD_I1017051&#34;,&#34;CD_I1004863&#34;,&#34;CD_I1008185&#34;,&#34;CD_I1008230&#34;,&#34;CD_I1013153&#34;,&#34;CD_I297523&#34;,&#34;CD_I293222&#34;,&#34;CD_I1012807&#34;,&#34;CD_I298470&#34;,&#34;CD_I280506&#34;,&#34;CD_I1000932&#34;,&#34;CD_I990882&#34;,&#34;CD_I1008159&#34;,&#34;CD_I1000998&#34;,&#34;CD_I297401&#34;,&#34;CD_I1008384&#34;,&#34;CD_I293193&#34;,&#34;CD_I1008752&#34;,&#34;CD_I1006136&#34;,&#34;CD_I1005199&#34;,&#34;CD_I1012218&#34;,&#34;CD_I991773&#34;,&#34;CD_I1018335&#34;,&#34;CD_I1018075&#34;,&#34;CD_I270963&#34;,&#34;CD_I997206&#34;],&#34;Name&#34;:[&#34;Ben Keays&#34;,&#34;Brodie Smith&#34;,&#34;Chayce Jones&#34;,&#34;Darcy Fogarty&#34;,&#34;Harry Schoenberg&#34;,&#34;Jackson Hately&#34;,&#34;Jake Soligo&#34;,&#34;James Rowe&#34;,&#34;Jordan Dawson&#34;,&#34;Jordon Butts&#34;,&#34;Josh Rachele&#34;,&#34;Mitchell Hinge&#34;</description>
     </item>
     
     <item>
