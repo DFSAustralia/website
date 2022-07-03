@@ -1,15 +1,183 @@
 ---
 description: AFL Defense vs Position
 title: Defense vs Position
-runtime: shiny
 ---
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.16/iframeResizer.min.js"></script>
-<style>
-  iframe {
-    min-width: 100%;
-  }
-</style>
+```{css, echo=FALSE}
+.box-score {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+.box-score-title {
+  margin-top: 24px;
+  padding: 8px;
+  background-color: hsl(205, 100%, 36%);
+  color: hsl(0, 0%, 98%);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+```
+
+```{r setup, include=FALSE}
+library(tidyverse); library(reactable); library(shiny)
+
+knitr::opts_chunk$set(echo = TRUE)
+stats <- read.csv(file = '/Users/morts/Dropbox/Github-DFSAustralia-website/database/database-files/afl-database-2022.csv', stringsAsFactors = FALSE)
+
+year_max <- max(stats$year)
+
+make_color_pal <- function(colors, bias = 1) {
+    get_color <- colorRamp(colors, bias = bias)
+    function(x) rgb(get_color(x), maxColorValue = 255)
+}
+
+negative_color <- make_color_pal(c("#ffffff", "#9ae264"), bias = 2)
+positive_color <- make_color_pal(c("#ffffff", "#ff6347"), bias = 2)
+
+dvp_stats <- stats %>%
+    filter(year == year_max) %>%
+    filter(timeOnGroundPercentage >= 50) %>%
+    group_by(player_id) %>%
+    mutate(avgDT = mean(dreamTeamPoints)) %>%
+    ungroup() %>%
+    mutate(PM = dreamTeamPoints - avgDT) %>%
+    group_by(position_group, opponent) %>%
+    summarise(DVP = round(mean(PM),1)) %>%
+    filter(!is.na(position_group))
+
+max_dvp <- max(dvp_stats$DVP, na.rm = TRUE)
+min_dvp <- min(dvp_stats$DVP, na.rm = TRUE)
+
+dvp_stats_table <- dvp_stats %>%
+    pivot_wider(names_from = position_group, values_from = DVP) %>%
+    select(opponent, `Key Forward`, `Small/Medium Forward`, 
+           `Inside Midfielder`, Ruck, `Wing/Attacking Defender`, `General Defender`, `Designated Kicker`)
+
+# Define function for generating table
+
+dvp_table <- reactable(
+    dvp_stats_table,
+    pagination = FALSE,
+    fullWidth = TRUE,
+    defaultSortOrder = "desc",
+    wrap = FALSE,
+    compact = TRUE,
+    sortable = TRUE,
+    striped = TRUE,
+    defaultColDef = colDef(
+        align = "center",
+        minWidth = 80,
+        style = function(value) {
+            if (!is.numeric(value)) return()
+            if(value < 0){
+                list(background = positive_color(value/min_dvp), `font-weight` = "bold",
+                     border =  "solid 1px", `border-color` = "white")
+            } else if(value > 0){
+                list(background = negative_color(value/max_dvp), `font-weight` = "bold",
+                     border =  "solid 1px", `border-color` = "white")
+            } else {list(`font-weight` = "bold", border =  "solid 1px", `border-color` = "white")}
+        }
+    ),
+    columns = c(
+        list(
+            opponent = colDef(name = "Team", style = list(`font-weight` = "bold")),
+            `Key Forward` = colDef(
+                name = "KEY FWD",
+                cell = function(value){
+                    if(value == max(dvp_stats_table$`Key Forward`)){
+                        tagList(value, "  ", icon("trophy"), icon("trophy"), icon("trophy"))
+                    } else if(value == sort(dvp_stats_table$`Key Forward`, TRUE)[2]){
+                        tagList(value, "  ", icon("trophy"), icon("trophy"))
+                    } else if(value == sort(dvp_stats_table$`Key Forward`, TRUE)[3]){
+                        tagList(value, "  ", icon("trophy"))
+                    } else {value}
+                },
+                html = TRUE
+            ),
+            `Small/Medium Forward` = colDef(
+                name = "GEN FWD",
+                cell = function(value){
+                    if(value == max(dvp_stats_table$`Small/Medium Forward`)){
+                        tagList(value, "  ", icon("trophy"), icon("trophy"), icon("trophy"))
+                    } else if(value == sort(dvp_stats_table$`Small/Medium Forward`, TRUE)[2]){
+                        tagList(value, "  ", icon("trophy"), icon("trophy"))
+                    } else if(value == sort(dvp_stats_table$`Small/Medium Forward`, TRUE)[3]){
+                        tagList(value, "  ", icon("trophy"))
+                    } else {value}
+                },
+                html = TRUE
+            ),
+            `Inside Midfielder` = colDef(
+                name = "INS MID",
+                cell = function(value){
+                    if(value == max(dvp_stats_table$`Inside Midfielder`)){
+                        tagList(value, "  ", icon("trophy"), icon("trophy"), icon("trophy"))
+                    } else if(value == sort(dvp_stats_table$`Inside Midfielder`, TRUE)[2]){
+                        tagList(value, "  ", icon("trophy"), icon("trophy"))
+                    } else if(value == sort(dvp_stats_table$`Inside Midfielder`, TRUE)[3]){
+                        tagList(value, "  ", icon("trophy"))
+                    } else {value}
+                },
+                html = TRUE
+            ),
+            Ruck = colDef(
+                name = "RUC",
+                cell = function(value){
+                    if(value == max(dvp_stats_table$Ruck)){
+                        tagList(value, "  ", icon("trophy"), icon("trophy"), icon("trophy"))
+                    } else if(value == sort(dvp_stats_table$Ruck, TRUE)[2]){
+                        tagList(value, "  ", icon("trophy"), icon("trophy"))
+                    } else if(value == sort(dvp_stats_table$Ruck, TRUE)[3]){
+                        tagList(value, "  ", icon("trophy"))
+                    } else {value}
+                },
+                html = TRUE
+            ),
+            `Wing/Attacking Defender` = colDef(
+                name = "WNG DEF",
+                cell = function(value){
+                    if(value == max(dvp_stats_table$`Wing/Attacking Defender`)){
+                        tagList(value, "  ", icon("trophy"), icon("trophy"), icon("trophy"))
+                    } else if(value == sort(dvp_stats_table$`Wing/Attacking Defender`, TRUE)[2]){
+                        tagList(value, "  ", icon("trophy"), icon("trophy"))
+                    } else if(value == sort(dvp_stats_table$`Wing/Attacking Defender`, TRUE)[3]){
+                        tagList(value, "  ", icon("trophy"))
+                    } else {value}
+                },
+                html = TRUE
+            ),
+            `General Defender` = colDef(
+                name = "GEN DEF",
+                cell = function(value){
+                    if(value == max(dvp_stats_table$`General Defender`)){
+                        tagList(value, "  ", icon("trophy"), icon("trophy"), icon("trophy"))
+                    } else if(value == sort(dvp_stats_table$`General Defender`, TRUE)[2]){
+                        tagList(value, "  ", icon("trophy"), icon("trophy"))
+                    } else if(value == sort(dvp_stats_table$`General Defender`, TRUE)[3]){
+                        tagList(value, "  ", icon("trophy"))
+                    } else {value}
+                },
+                html = TRUE
+            ),
+            `Designated Kicker` = colDef(
+                name = "DES KCK",
+                cell = function(value){
+                    if(value == max(dvp_stats_table$`Designated Kicker`)){
+                        tagList(value, "  ", icon("trophy"), icon("trophy"), icon("trophy"))
+                    } else if(value == sort(dvp_stats_table$`Designated Kicker`, TRUE)[2]){
+                        tagList(value, "  ", icon("trophy"), icon("trophy"))
+                    } else if(value == sort(dvp_stats_table$`Designated Kicker`, TRUE)[3]){
+                        tagList(value, "  ", icon("trophy"))
+                    } else {value}
+                },
+                html = TRUE
+            )
+        )
+    )
+)
+  
+```
 
 **Defense vs Position (DVP)** is shown in terms of fantasy points conceded above (+) or below (-) a players average. For example, a DVP of +10.0 would indicate that that team allows an opposing player to score 10 points above their season average.
 
@@ -21,7 +189,12 @@ If you find this useful consider **SUPPORTING US** by buying a coffee from as li
 <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy a $5 Coffee', '#29abe0', 'E1E8C5INN');kofiwidget2.draw();</script> 
 </center>
 
-<iframe src="https://dfsaustralia-apps.com/shiny/afl/dvp/" width="100%" scrolling="no" frameborder="no"></iframe>
+```{r, echo=FALSE}
+  div(class = "box-score", style = "font-size:75%; white-space:nowrap",
+      div(class = "box-score-title", tags$span("Defense vs Position (+/-)")),
+      dvp_table
+  )
+```
 
 \
 
@@ -34,10 +207,5 @@ If you find this useful consider **SUPPORTING US** by buying a coffee from as li
 * **GEN DEF:** __General Defender__ includes key defenders and general defenders that aren't classified as Attacking Defenders above or Designated Kickers below (e.g. Darcy Gardiner, Griffin Logue, Luke Brown, Sam Taylor, etc)  
 * **DES KCK:** __Designated Kicker__ refers to players who take the majority of their team's kick-ins after opposition goals (e.g. Bailey Dale, Alex Witherden, Jayden Short, Steven May, etc). These players could also be classified as GEN DEF or WNG DEF but have been given their own classification considering their fantasy scoring is affected by opposition shots on goal.
 
-<script>
-  iFrameResize({
-    heightCalculationMethod: 'taggedElement'
-  });
-</script>
 ---
 
