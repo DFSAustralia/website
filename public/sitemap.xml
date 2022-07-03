@@ -158,10 +158,6 @@
   </url>
   
   <url>
-    <loc>/afl-heatmaps-ade/</loc>
-  </url>
-  
-  <url>
     <loc>/contact/</loc>
   </url>
   
@@ -251,6 +247,10 @@
   
   <url>
     <loc>/nfl-target-share/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-heatmaps-ade/</loc>
   </url>
   
   <url>
