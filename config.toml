@@ -100,7 +100,7 @@ paginate = 10
     
 [[menu.main]]
     name       = "Ruck Contests"
-    url        = "/afl-ruck-contests/"
+    url        = "/afl-ruck-contests-ade/"
     weight     = 5
     parent     = "section.afl.player.stats"
     
