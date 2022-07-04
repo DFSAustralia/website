@@ -52,7 +52,7 @@ name_fix <- function(x){
     x == 'GWS' ~ 'GWS Giants',  
     x == 'HAW' ~ 'Hawthorn Hawks',
     x == 'MEL' ~ 'Melbourne Demons',
-    x == 'NTH' ~ 'North Melbourne Tigers',
+    x == 'NTH' ~ 'North Melbourne Kangaroos',
     x == 'PTA' ~ 'Port Adelaide Power',
     x == 'RIC' ~ 'Richmond Tigers',
     x == 'STK' ~ 'St Kilda Saints',
