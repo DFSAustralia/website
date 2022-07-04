@@ -194,7 +194,75 @@
   </url>
   
   <url>
-    <loc>/afl-kickins/</loc>
+    <loc>/afl-kickins-ade/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-kickins-brl/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-kickins-car/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-kickins-col/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-kickins-ess/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-kickins-fre/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-kickins-gcs/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-kickins-gee/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-kickins-gws/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-kickins-haw/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-kickins-mel/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-kickins-nth/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-kickins-pta/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-kickins-ric/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-kickins-stk/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-kickins-syd/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-kickins-wbd/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-kickins-wce/</loc>
   </url>
   
   <url>
@@ -319,10 +387,6 @@
   
   <url>
     <loc>/afl-heatmaps-wce/</loc>
-  </url>
-  
-  <url>
-    <loc>/afl-heatmaps/</loc>
   </url>
   
   <url>

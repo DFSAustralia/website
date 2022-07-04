@@ -1,0 +1,144 @@
+---
+description: AFL Kick-Ins
+title: Kick-In Breakdown
+---
+
+```{css, echo=FALSE}
+.box-score {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+.box-score-title {
+  margin-top: 24px;
+  padding: 8px;
+  background-color: hsl(205, 100%, 36%);
+  color: hsl(0, 0%, 98%);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+```
+
+
+```{r setup, include=FALSE}
+library(tidyverse); library(reactable); library(shiny)
+
+team <- "GCS"
+
+knitr::opts_chunk$set(echo = TRUE)
+stats <- read.csv(file = '/Users/morts/Dropbox/Github-DFSAustralia-website/database/database-files/afl-database-2022.csv', stringsAsFactors = FALSE)
+
+stats <- stats %>% filter(player_team == team)
+
+sticky_style <- list(position = "sticky", left = 0, background = "#fff", zIndex = 1, borderRight = "1px solid #eee")
+
+make_color_pal <- function(colors, bias = 1) {
+  get_color <- colorRamp(colors, bias = bias)
+  function(x) rgb(get_color(x), maxColorValue = 255)
+}
+
+negative_color <- make_color_pal(c("#ffffff", "#9ae264"), bias = 2)
+positive_color <- make_color_pal(c("#ffffff", "#ff6347"), bias = 2)
+
+    kickin_table <- stats %>%
+      filter(year >= 2021) %>%
+      group_by(year, round) %>%
+      mutate( KI_total = sum(kickIn, na.rm = TRUE)) %>%
+      ungroup() %>%
+      mutate(KIperc = round(100*kickIn/KI_total,0)) %>%
+      filter(kickIn > 0) %>%
+      group_by(player_id, year) %>%
+      summarise(player_name = head(player_name, 1), KI = sum(kickIn), PO = sum(playOn), `PO%` = round(100*PO/KI)) %>%
+      left_join(
+        stats %>%
+          replace_na(list(kickIn = 0, playOn = 0)) %>% 
+          mutate(KI_data = paste0(kickIn,"/",playOn)) %>%
+          select(player_id, year, round, KI_data) %>%
+          spread(round, KI_data)
+      ) %>%
+      arrange(desc(KI), desc(PO)) %>%
+      rename(Name = player_name) %>%
+      bind_rows(setNames(data.frame(matrix(ncol = 27, nrow = 0)), c(1:27)) %>% mutate(across(everything(), as.character))) %>%
+      select(player_id, Name, year, KI, PO, `PO%`, as.character(c(1:27)))
+
+# Define function for generating table
+plot_ki_table <- function(kickin_table, selected_year){
+  tableOutput <- reactable(
+    kickin_table %>% filter(year == selected_year) %>% select(- year),
+    pagination = FALSE,
+    wrap = FALSE,
+    compact = TRUE,
+    sortable = FALSE,
+    fullWidth = TRUE,
+    defaultSortOrder = "desc",
+    defaultColDef = colDef(
+      minWidth = 42, 
+      align = "center",
+      cell = function(value){
+        if (is.na(value)){"--"} else value
+      }
+    ),
+    columns = c(
+      list(
+        Name = colDef(width = 120, 
+                      align = "left",
+                      style = sticky_style, 
+                      headerStyle = sticky_style,
+                      sortNALast = TRUE),
+        `PO%` = colDef(style = function(value) {
+          if (is.na(value)) return()
+          if(value<=50){
+            list(background = positive_color((value-50)/-50), `font-weight` = "bold",
+                 border =  "solid 1px", `border-color` = "white")
+          } else if(value>50){
+            list(background = negative_color((value-50)/50), `font-weight` = "bold",
+                 border =  "solid 1px", `border-color` = "white")
+          }
+        }
+        ),
+        player_id = colDef(name = "", width = 30,
+                           cell = function(value, index){
+                             img_src <- paste0("https://s.afl.com.au/staticfile/AFL%20Tenant/AFL/Players/ChampIDImages/XLarge2022/", sub("CD_I", "", value), ".png?i10c=img.resize(width:108)")
+                             image <- img(src = img_src, height = "20px", alt = "")
+                             tagList(div(style = list(display = "inline-block", width = "30px"), image))
+                           })
+      )
+    )
+  )
+  
+  div(class = "box-score", style = "font-size:75%; white-space:nowrap",
+      div(class = "box-score-title", tags$span("Kick-In Breakdown")),
+      tableOutput
+  )
+  
+}
+
+```
+
+
+<center>
+If you like our site why not **SUPPORT US** by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy a $5 Coffee', '#29abe0', 'E1E8C5INN');kofiwidget2.draw();</script> 
+</center>
+
+---
+
+<p align="center">
+[![](https://www.zerohanger.com/images/team-flags/adelaide-crows.png){height=30px style="margin-bottom: 3px"}](https://www.dfsaustralia.com/afl-kickins-ade/) [![](https://www.zerohanger.com/images/team-flags/brisbane-lions.png){height=30px style="margin-bottom: 3px"}](https://www.dfsaustralia.com/afl-kickins-brl/) [![](https://www.zerohanger.com/images/team-flags/carlton-blues.png){height=30px style="margin-bottom: 3px"}](https://www.dfsaustralia.com/afl-kickins-car/) [![](https://www.zerohanger.com/images/team-flags/collingwood-magpies.png){height=30px style="margin-bottom: 3px"}](https://www.dfsaustralia.com/afl-kickins-col/) [![](https://www.zerohanger.com/images/team-flags/essendon-bombers.png){height=30px style="margin-bottom: 3px"}](https://www.dfsaustralia.com/afl-kickins-ess/) [![](https://www.zerohanger.com/images/team-flags/fremantle-dockers.png){height=30px style="margin-bottom: 3px"}](https://www.dfsaustralia.com/afl-kickins-fre/) [![](https://www.zerohanger.com/images/team-flags/gold-coast-suns.png){height=30px style="margin-bottom: 3px"}](https://www.dfsaustralia.com/afl-kickins-gcs/) [![](https://www.zerohanger.com/images/team-flags/geelong-cats.png){height=30px style="margin-bottom: 3px"}](https://www.dfsaustralia.com/afl-kickins-gee/) [![](https://www.zerohanger.com/images/team-flags/gws-giants.png){height=30px style="margin-bottom: 3px"}](https://www.dfsaustralia.com/afl-kickins-gws/) [![](https://www.zerohanger.com/images/team-flags/hawthorn-hawks.png){height=30px style="margin-bottom: 3px"}](https://www.dfsaustralia.com/afl-kickins-haw/) [![](https://www.zerohanger.com/images/team-flags/melbourne-demons.png){height=30px style="margin-bottom: 3px"}](https://www.dfsaustralia.com/afl-kickins-mel/) [![](https://www.zerohanger.com/images/team-flags/north-melbourne-kangaroos.png){height=30px style="margin-bottom: 3px"}](https://www.dfsaustralia.com/afl-kickins-nth/) [![](https://www.zerohanger.com/images/team-flags/port-adelaide-power.png){height=30px style="margin-bottom: 3px"}](https://www.dfsaustralia.com/afl-kickins-pta/) [![](https://www.zerohanger.com/images/team-flags/richmond-tigers.png){height=30px style="margin-bottom: 3px"}](https://www.dfsaustralia.com/afl-kickins-ric/) [![](https://www.zerohanger.com/images/team-flags/st-kilda-saints.png){height=30px style="margin-bottom: 3px"}](https://www.dfsaustralia.com/afl-kickins-stk/) [![](https://www.zerohanger.com/images/team-flags/sydney-swans.png){height=30px style="margin-bottom: 3px"}](https://www.dfsaustralia.com/afl-kickins-syd/) [![](https://www.zerohanger.com/images/team-flags/western-bulldogs.png){height=30px style="margin-bottom: 3px"}](https://www.dfsaustralia.com/afl-kickins-wbd/) [![](https://www.zerohanger.com/images/team-flags/west-coast-eagles.png){height=30px style="margin-bottom: 3px"}](https://www.dfsaustralia.com/afl-kickins-wce/)
+</p>
+
+<br />
+
+#### 2022 Gold Coast Suns
+```{r, echo=FALSE}
+plot_ki_table(kickin_table, 2022)
+```
+
+#### 2021 Gold Coast Suns
+```{r, echo=FALSE}
+plot_ki_table(kickin_table, 2021)
+```
+
+---
+

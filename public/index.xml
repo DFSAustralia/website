@@ -374,12 +374,182 @@ Projected ownership of golfers coming off the alternate list are not calculated 
     
     <item>
       <title>Kick-In Breakdown</title>
-      <link>/afl-kickins/</link>
+      <link>/afl-kickins-ade/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/afl-kickins/</guid>
-      <description>  If you like our Kick In data why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
- kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.draw();    iframe { min-width: 100%; }    iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
+      <guid>/afl-kickins-ade/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>Kick-In Breakdown</title>
+      <link>/afl-kickins-brl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-kickins-brl/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>Kick-In Breakdown</title>
+      <link>/afl-kickins-car/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-kickins-car/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>Kick-In Breakdown</title>
+      <link>/afl-kickins-col/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-kickins-col/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>Kick-In Breakdown</title>
+      <link>/afl-kickins-ess/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-kickins-ess/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>Kick-In Breakdown</title>
+      <link>/afl-kickins-fre/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-kickins-fre/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>Kick-In Breakdown</title>
+      <link>/afl-kickins-gcs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-kickins-gcs/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>Kick-In Breakdown</title>
+      <link>/afl-kickins-gee/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-kickins-gee/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>Kick-In Breakdown</title>
+      <link>/afl-kickins-gws/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-kickins-gws/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>Kick-In Breakdown</title>
+      <link>/afl-kickins-haw/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-kickins-haw/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>Kick-In Breakdown</title>
+      <link>/afl-kickins-mel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-kickins-mel/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>Kick-In Breakdown</title>
+      <link>/afl-kickins-nth/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-kickins-nth/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>Kick-In Breakdown</title>
+      <link>/afl-kickins-pta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-kickins-pta/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>Kick-In Breakdown</title>
+      <link>/afl-kickins-ric/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-kickins-ric/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>Kick-In Breakdown</title>
+      <link>/afl-kickins-stk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-kickins-stk/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>Kick-In Breakdown</title>
+      <link>/afl-kickins-syd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-kickins-syd/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>Kick-In Breakdown</title>
+      <link>/afl-kickins-wbd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-kickins-wbd/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>Kick-In Breakdown</title>
+      <link>/afl-kickins-wce/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-kickins-wce/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
     </item>
     
     <item>
@@ -663,16 +833,6 @@ Projected ownership of golfers coming off the alternate list are not calculated 
       
       <guid>/afl-heatmaps-wce/</guid>
       <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site please consider SUPPORTING US by buying us a coffee. All money received goes to offsetting server costs and other overheads and enables us to continue offering our tools for free.</description>
-    </item>
-    
-    <item>
-      <title>Player Heatmaps</title>
-      <link>/afl-heatmaps/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/afl-heatmaps/</guid>
-      <description>  If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
- kofiwidget2.init(&#39;Support Us&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.draw();    iframe { min-width: 100%; }    iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
     </item>
     
     <item>

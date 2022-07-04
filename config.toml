@@ -94,7 +94,7 @@ paginate = 10
     
 [[menu.main]]
     name       = "Kick Ins"
-    url        = "/afl-kickins/"
+    url        = "/afl-kickins-ade/"
     weight     = 4
     parent     = "section.afl.player.stats"
     
