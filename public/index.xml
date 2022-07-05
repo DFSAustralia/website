@@ -1070,7 +1070,8 @@ Supporting us helps us to continue to provide the same level of content in the f
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/afl-team-stacking/</guid>
-      <description>   iframe { min-width: 100%; }    iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you find this useful consider SUPPORTING US by buying a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.draw();  Team Fantasy Points For/Against (Last 10)   {&#34;</description>
     </item>
     
     <item>

@@ -1,22 +1,126 @@
 ---
 description: AFL Team Stacking
 title: Team Stacking
-runtime: shiny
 ---
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.16/iframeResizer.min.js"></script>
-<style>
-  iframe {
-    min-width: 100%;
-  }
-</style>
+```{css, echo=FALSE}
+.box-score {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
 
-<iframe src="https://dfsaustralia-apps.com/shiny/afl/team-stacking/" width="100%" scrolling="no" frameborder="no"></iframe>
+.box-score-title {
+  margin-top: 24px;
+  padding: 8px;
+  background-color: hsl(205, 100%, 36%);
+  color: hsl(0, 0%, 98%);
+  font-size: 15px;
+  font-weight: 400;
+}
 
-<script>
-  iFrameResize({
-    heightCalculationMethod: 'taggedElement'
-  });
-</script>
+```
+
+```{r setup, include=FALSE}
+library(tidyverse); library(reactable); library(shiny); library(reactablefmtr)
+
+knitr::opts_chunk$set(echo = TRUE)
+stats <- read.csv(file = '/Users/morts/Dropbox/Github-DFSAustralia-website/database/database-files/afl-database-2022.csv', stringsAsFactors = FALSE)
+no_of_rounds <- 10
+
+stack_stats <- stats %>%
+  group_by(player_team, opponent, year, round, date) %>%
+  summarise(total = sum(dreamTeamPoints)) %>%
+  ungroup() %>%
+  left_join(
+    stats %>%
+      group_by(opponent, year, round, date) %>%
+      summarise(totalOpp = sum(dreamTeamPoints)) %>%
+      ungroup() %>%
+      rename(player_team = opponent) 
+  ) %>%
+  mutate(diff = total-totalOpp) %>%
+  arrange(desc(date)) %>%
+  group_by(player_team) %>%
+  filter(row_number() <= no_of_rounds) %>%
+  mutate(avg = mean(total),
+         meanOpp = mean(totalOpp),
+         won = sum(diff > 0)/no_of_rounds,
+         diffAvg = mean(diff),
+         counter = row_number()) %>%
+  ungroup() %>%
+  select(-total, -totalOpp, -year, -round, -date) %>%
+  pivot_wider(names_from = counter, values_from = c(diff, opponent)) %>%
+  arrange(desc(diffAvg))
+
+stacking <- reactable(
+  stack_stats,
+  pagination = FALSE,
+  fullWidth = TRUE,
+  defaultSortOrder = "desc",
+  wrap = FALSE,
+  compact = TRUE,
+  sortable = FALSE,
+  striped = TRUE,
+  defaultColDef = colDef(
+    align = "center",
+    minWidth = 50
+  ),
+  columns = c(
+    list(
+      player_team = colDef(name = "Team", style = list(`font-weight` = "bold")),
+      avg = colDef(name = "Avg", format = colFormat(digits = 0), style = color_scales(stack_stats, colors = c("#ff6347", "#9ae264"), bold_text = TRUE)),
+      meanOpp = colDef(name = "Opp", format = colFormat(digits = 0), style = color_scales(stack_stats, colors = c("#ff6347", "#9ae264"), bold_text = TRUE)),
+      diffAvg = colDef(name = "+/-", format = colFormat(digits = 0), style = color_scales(stack_stats, colors = c("#ff6347", "#9ae264"), bold_text = TRUE)),
+      won = colDef(name = "Win%", format = colFormat(percent = TRUE, digits = 0), style = color_scales(stack_stats, colors = c("#ff6347", "#9ae264"), bold_text = TRUE)),
+      diff_1 = colDef(name = "G1", cell = function(value, index) {div( div(style = list(`font-weight` = "bold", color = ifelse(value < 0, "red", "green")), value), 
+                                                                       div(style = list(fontSize = 9), stack_stats$opponent_1[index]))}),
+      diff_2 = colDef(name = "G2", cell = function(value, index) {div( div(style = list(`font-weight` = "bold", color = ifelse(value < 0, "red", "green")), value), 
+                                                                       div(style = list(fontSize = 9), stack_stats$opponent_2[index]))}),
+      diff_3 = colDef(name = "G3", cell = function(value, index) {div( div(style = list(`font-weight` = "bold", color = ifelse(value < 0, "red", "green")), value), 
+                                                                       div(style = list(fontSize = 9), stack_stats$opponent_3[index]))}),
+      diff_4 = colDef(name = "G4", cell = function(value, index) {div( div(style = list(`font-weight` = "bold", color = ifelse(value < 0, "red", "green")), value), 
+                                                                       div(style = list(fontSize = 9), stack_stats$opponent_4[index]))}),
+      diff_5 = colDef(name = "G5", cell = function(value, index) {div( div(style = list(`font-weight` = "bold", color = ifelse(value < 0, "red", "green")), value), 
+                                                                       div(style = list(fontSize = 9), stack_stats$opponent_5[index]))}),
+      diff_6 = colDef(name = "G6", cell = function(value, index) {div( div(style = list(`font-weight` = "bold", color = ifelse(value < 0, "red", "green")), value), 
+                                                                       div(style = list(fontSize = 9), stack_stats$opponent_6[index]))}),
+      diff_7 = colDef(name = "G7", cell = function(value, index) {div( div(style = list(`font-weight` = "bold", color = ifelse(value < 0, "red", "green")), value), 
+                                                                       div(style = list(fontSize = 9), stack_stats$opponent_7[index]))}),
+      diff_8 = colDef(name = "G8", cell = function(value, index) {div( div(style = list(`font-weight` = "bold", color = ifelse(value < 0, "red", "green")), value), 
+                                                                       div(style = list(fontSize = 9), stack_stats$opponent_8[index]))}),
+      diff_9 = colDef(name = "G9", cell = function(value, index) {div( div(style = list(`font-weight` = "bold", color = ifelse(value < 0, "red", "green")), value), 
+                                                                       div(style = list(fontSize = 9), stack_stats$opponent_9[index]))}),
+      diff_10 = colDef(name = "G10", cell = function(value, index) {div( div(style = list(`font-weight` = "bold", color = ifelse(value < 0, "red", "green")), value), 
+                                                                         div(style = list(fontSize = 9), stack_stats$opponent_10[index]))}),
+      opponent_1 = colDef(show = FALSE),
+      opponent_2 = colDef(show = FALSE),
+      opponent_3 = colDef(show = FALSE),
+      opponent_4 = colDef(show = FALSE),
+      opponent_5 = colDef(show = FALSE),
+      opponent_6 = colDef(show = FALSE),
+      opponent_7 = colDef(show = FALSE),
+      opponent_8 = colDef(show = FALSE),
+      opponent_9 = colDef(show = FALSE),
+      opponent_10 = colDef(show = FALSE)
+    )
+  )
+)
+  
+```
+
+<center>
+If you find this useful consider **SUPPORTING US** by buying a coffee from as little as $5. This allows us to continue providing this great content for free.
+
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy a Coffee', '#29abe0', 'E1E8C5INN');kofiwidget2.draw();</script> 
+</center>
+
+---
+
+```{r, echo=FALSE}
+  div(class = "box-score", style = "font-size:75%; white-space:nowrap",
+      div(class = "box-score-title", tags$span("Team Fantasy Points For/Against (Last 10)")),
+      stacking
+  )
+```
+
 ---
 
