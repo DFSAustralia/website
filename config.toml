@@ -126,7 +126,7 @@ paginate = 10
     
 [[menu.main]]
     name       = "State Leagues"
-    url        = "/afl-state-leagues/"
+    url        = "/afl-state-leagues-vfl/"
     weight     = 2
     parent     = "section.afl.player.logs"
 

@@ -1047,11 +1047,42 @@ This tool supports our Defense vs Position tool and lets you delve deeper into h
     
     <item>
       <title>State Leagues</title>
-      <link>/afl-state-leagues/</link>
+      <link>/afl-state-leagues-nab/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/afl-state-leagues/</guid>
-      <description>   iframe { min-width: 100%; }    iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
+      <guid>/afl-state-leagues-nab/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>State Leagues</title>
+      <link>/afl-state-leagues-sanfl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-state-leagues-sanfl/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>State Leagues</title>
+      <link>/afl-state-leagues-vfl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-state-leagues-vfl/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
+    </item>
+    
+    <item>
+      <title>State Leagues</title>
+      <link>/afl-state-leagues-wafl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-state-leagues-wafl/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site why not SUPPORT US by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+ kofiwidget2.init(&#39;Buy a $5 Coffee&#39;, &#39;#29abe0&#39;, &#39;E1E8C5INN&#39;);kofiwidget2.</description>
     </item>
     
     <item>

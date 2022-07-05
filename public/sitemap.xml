@@ -474,7 +474,19 @@
   </url>
   
   <url>
-    <loc>/afl-state-leagues/</loc>
+    <loc>/afl-state-leagues-nab/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-state-leagues-sanfl/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-state-leagues-vfl/</loc>
+  </url>
+  
+  <url>
+    <loc>/afl-state-leagues-wafl/</loc>
   </url>
   
   <url>

@@ -1,0 +1,178 @@
+---
+description: AFL State Leagues
+title: State Leagues
+---
+
+```{css, echo=FALSE}
+.box-score {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+.box-score-title {
+  margin-top: 24px;
+  padding: 8px;
+  background-color: hsl(205, 100%, 36%);
+  color: hsl(0, 0%, 98%);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+```
+
+```{r setup, include=FALSE}
+library(tidyverse); library(reactable); library(shiny)
+
+league <- "vfl" # use lower case
+
+rounds <- ifelse(league == "nab", 19, ifelse(league == "sanfl", 23, 26))
+
+knitr::opts_chunk$set(echo = TRUE)
+stats <- read.csv(file = '/Users/morts/Dropbox/Github-DFSAustralia-website/database/database-files/afl-database-2022.csv', stringsAsFactors = FALSE)
+
+year_max <- max(stats$year)
+
+state_stats <- read.csv(file = paste0('/Users/morts/Dropbox/Github-DFSAustralia-website/database/database-files/', league, '-database-2022.csv'), stringsAsFactors = FALSE) %>%
+  mutate(player_name = ifelse(player_name == "Massimo D'Ambrossio", "Massimo D'Ambrosio", player_name))
+
+current_players <- jsonlite::fromJSON("https://tds-afl-data.s3-ap-southeast-2.amazonaws.com/data/afl/players.json", simplifyDataFrame = TRUE) %>%
+  select(id, first_name, last_name, squad_id) %>%
+  mutate(id = paste0("CD_I",id))
+
+sticky_style <- list(position = "sticky", left = 0, background = "#fff", zIndex = 1, borderRight = "1px solid #eee")
+
+make_color_pal <- function(colors, bias = 1) {
+  get_color <- colorRamp(colors, bias = bias)
+  function(x) rgb(get_color(x), maxColorValue = 255)
+}
+
+negative_color <- make_color_pal(c("#ffffff", "#9ae264"), bias = 2)
+positive_color <- make_color_pal(c("#ffffff", "#ff6347"), bias = 2)
+
+    state_table <- state_stats %>%
+      filter(year == year_max) %>%
+      group_by(player_id) %>%
+      summarise(Avg = round(mean(dreamTeamPoints),1)) %>%
+      left_join(
+        state_stats %>%
+          filter(year == year_max) %>%
+          select(player_id, player_name, round, dreamTeamPoints) %>%
+          mutate(dreamTeamPoints = as.numeric(as.character(dreamTeamPoints))) %>%
+          spread(round, dreamTeamPoints)
+      ) %>%
+      arrange(desc(Avg)) %>%
+      rename(Name = player_name) %>%
+      bind_rows(setNames(data.frame(matrix(ncol = rounds, nrow = 0)), c(1:rounds))) %>%
+      select(player_id, Name, Avg, as.character(c(1:rounds)))
+
+    state_rnds_colDef <- list()
+    for(i in 1:rounds){
+      state_rnds_colDef[[as.character(i)]] <- colDef(style = function(value) {
+                                                 if (is.na(value)) return()
+                                                 if(value == ""){
+                                                   list()
+                                                 } else if(as.numeric(value) >= 125){
+                                                   list(background = "#fff547", `font-weight` = "bold", border =  "solid 1px", `border-color` = "white")
+                                                 } else if(as.numeric(value) >= 100){
+                                                   list(background = "#9ae264", `font-weight` = "bold", border =  "solid 1px", `border-color` = "white")
+                                                 } else if(as.numeric(value) >= 80){
+                                                   list(background = "#47d5ff", `font-weight` = "bold", border =  "solid 1px", `border-color` = "white")
+                                                 } else if(as.numeric(value) <= 50){
+                                                   list(background = "tomato", `font-weight` = "bold", border =  "solid 1px", `border-color` = "white", color = "white")
+                                                 } else{list(`font-weight` = "bold")}
+                                               })
+    }
+
+
+    state_current_players <- reactable(
+    state_table %>% filter(player_id %in% current_players$id),
+    pagination = FALSE,
+    fullWidth = TRUE,
+    defaultSortOrder = "desc",
+    searchable = FALSE,
+    height = min(550, 50 + 30*nrow(state_table %>% filter(player_id %in% current_players$id))),
+    wrap = FALSE,
+    compact = TRUE,
+    sortable = FALSE,
+    defaultColDef = colDef(
+      align = "center",
+      minWidth = 35
+    ),
+    columns = c(
+      list(
+        Name = colDef(width = 120, style = sticky_style, align = "left", headerStyle = sticky_style),
+        Avg = colDef(format = colFormat(digits = 1), minWidth = 42),
+        player_id = colDef(name = "", width = 30,
+                           cell = function(value, index){
+                             img_src <- paste0("https://s.afl.com.au/staticfile/AFL%20Tenant/AFL/Players/ChampIDImages/XLarge2022/", sub("CD_I", "", value), ".png?i10c=img.resize(width:108)")
+                             image <- img(src = img_src, height = "20px", alt = "")
+                             tagList(div(style = list(display = "inline-block", width = "30px"), image))
+                           })
+      ),
+      state_rnds_colDef
+    )
+  )
+
+    state_non_current_players <- reactable(
+    state_table %>% filter(!player_id %in% current_players$id),
+    pagination = FALSE,
+    fullWidth = TRUE,
+    defaultSortOrder = "desc",
+    searchable = FALSE,
+    height = 550,
+    wrap = FALSE,
+    compact = TRUE,
+    sortable = FALSE,
+    defaultColDef = colDef(
+      align = "center",
+      minWidth = 35
+    ),
+    columns = c(
+      list(
+        Name = colDef(width = 120, style = sticky_style, align = "left", headerStyle = sticky_style),
+        Avg = colDef(format = colFormat(digits = 1), minWidth = 42),
+        player_id = colDef(name = "", width = 30,
+                           cell = function(value, index){
+                             img_src <- paste0("https://s.afl.com.au/staticfile/AFL%20Tenant/AFL/Players/ChampIDImages/XLarge2022/", sub("CD_I", "", value), ".png?i10c=img.resize(width:108)")
+                             image <- img(src = img_src, height = "20px", alt = "")
+                             tagList(div(style = list(display = "inline-block", width = "30px"), image))
+                           })
+      ),
+      state_rnds_colDef
+    )
+  )
+
+```
+
+<center>
+If you like our site why not **SUPPORT US** by buying us a coffee from as little as $5. This allows us to continue providing this great content for free.
+
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy a $5 Coffee', '#29abe0', 'E1E8C5INN');kofiwidget2.draw();</script> 
+</center>
+
+---
+
+<p align="center">
+[![](https://upload.wikimedia.org/wikipedia/en/thumb/3/34/VFL_Football_Logo.svg/320px-VFL_Football_Logo.svg.png){height=60px style="margin-right: 10px"}](https://www.dfsaustralia.com/afl-state-leagues-vfl/)
+[![](https://upload.wikimedia.org/wikipedia/en/0/06/NAB_League_vertical_2019.png){height=60px style="margin-right: 3px"}](https://www.dfsaustralia.com/afl-state-leagues-nab/)
+[![](https://upload.wikimedia.org/wikipedia/en/thumb/7/7d/SANFL_logo.svg/380px-SANFL_logo.svg.png){height=60px style="margin-right: 15px"}](https://www.dfsaustralia.com/afl-state-leagues-sanfl/)
+[![](https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/WAFL_logo.svg/360px-WAFL_logo.svg.png){height=60px}](https://www.dfsaustralia.com/afl-state-leagues-wafl/)
+</p>
+
+<br />
+
+```{r, echo=FALSE}
+  div(class = "box-score", style = "font-size:75%; white-space:nowrap",
+      div(class = "box-score-title", tags$span(paste0(toupper(league), " - Fantasy Points (Players on Current AFL List)"))),
+      state_current_players
+  )
+```
+
+```{r, echo=FALSE}
+  div(class = "box-score", style = "font-size:75%; white-space:nowrap",
+      div(class = "box-score-title", tags$span(paste0(toupper(league), " - Fantasy Points (Non AFL Listed Players)"))),
+      state_non_current_players
+  )
+```
+
+---
+
