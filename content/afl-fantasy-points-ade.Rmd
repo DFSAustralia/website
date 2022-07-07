@@ -115,11 +115,12 @@ for(i in 1:27){
       list(background = "tomato", `font-weight` = "bold", border =  "solid 1px", `border-color` = "white", color = "white")
     } else{list(`font-weight` = "bold")}
     
-  },
-  cell = function(value, index, name) {
-      if(is.na(value)) return()
-      with_tooltip(value, name, index, selected_year, fp_table_filtered, stats)
-    })
+  }
+  # cell = function(value, index, name) {
+  #     if(is.na(value)) return()
+  #     with_tooltip(value, name, index, selected_year, fp_table_filtered, stats)
+  #   }
+  )
 }
 
   tableOutput <- reactable(
