@@ -22,7 +22,7 @@ title: Fantasy Points
 ```{r setup, include=FALSE}
 library(tidyverse); library(reactable); library(shiny); library(tippy)
 
-team <- "ADE"
+team <- "BRL"
 
 knitr::opts_chunk$set(echo = TRUE)
 stats <- read.csv(file = '/Users/morts/Dropbox/Github-DFSAustralia-website/database/database-files/afl-database-2022.csv', stringsAsFactors = FALSE)

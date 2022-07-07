@@ -364,6 +364,15 @@ Projected ownership of golfers coming off the alternate list are not calculated 
     
     <item>
       <title>Fantasy Points</title>
+      <link>/afl-fantasy-points-brl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-fantasy-points-brl/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site please consider SUPPORTING US by buying us a coffee. All money received goes to offsetting server costs and other overheads and enables us to continue offering our tools for free.</description>
+    </item>
+    
+    <item>
+      <title>Fantasy Points</title>
       <link>/afl-fantasy-points/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
