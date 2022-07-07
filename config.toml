@@ -76,7 +76,7 @@ paginate = 10
     
 [[menu.main]]
     name       = "Fantasy Points"
-    url        = "/afl-fantasy-points/"
+    url        = "/afl-fantasy-points-ade/"
     weight     = 1
     parent     = "section.afl.player.stats"
     

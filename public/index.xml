@@ -373,11 +373,146 @@ Projected ownership of golfers coming off the alternate list are not calculated 
     
     <item>
       <title>Fantasy Points</title>
-      <link>/afl-fantasy-points/</link>
+      <link>/afl-fantasy-points-car/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/afl-fantasy-points/</guid>
-      <description>   iframe { min-width: 100%; }    iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
+      <guid>/afl-fantasy-points-car/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site please consider SUPPORTING US by buying us a coffee. All money received goes to offsetting server costs and other overheads and enables us to continue offering our tools for free.</description>
+    </item>
+    
+    <item>
+      <title>Fantasy Points</title>
+      <link>/afl-fantasy-points-col/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-fantasy-points-col/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site please consider SUPPORTING US by buying us a coffee. All money received goes to offsetting server costs and other overheads and enables us to continue offering our tools for free.</description>
+    </item>
+    
+    <item>
+      <title>Fantasy Points</title>
+      <link>/afl-fantasy-points-ess/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-fantasy-points-ess/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site please consider SUPPORTING US by buying us a coffee. All money received goes to offsetting server costs and other overheads and enables us to continue offering our tools for free.</description>
+    </item>
+    
+    <item>
+      <title>Fantasy Points</title>
+      <link>/afl-fantasy-points-fre/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-fantasy-points-fre/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site please consider SUPPORTING US by buying us a coffee. All money received goes to offsetting server costs and other overheads and enables us to continue offering our tools for free.</description>
+    </item>
+    
+    <item>
+      <title>Fantasy Points</title>
+      <link>/afl-fantasy-points-gcs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-fantasy-points-gcs/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site please consider SUPPORTING US by buying us a coffee. All money received goes to offsetting server costs and other overheads and enables us to continue offering our tools for free.</description>
+    </item>
+    
+    <item>
+      <title>Fantasy Points</title>
+      <link>/afl-fantasy-points-gee/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-fantasy-points-gee/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site please consider SUPPORTING US by buying us a coffee. All money received goes to offsetting server costs and other overheads and enables us to continue offering our tools for free.</description>
+    </item>
+    
+    <item>
+      <title>Fantasy Points</title>
+      <link>/afl-fantasy-points-gws/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-fantasy-points-gws/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site please consider SUPPORTING US by buying us a coffee. All money received goes to offsetting server costs and other overheads and enables us to continue offering our tools for free.</description>
+    </item>
+    
+    <item>
+      <title>Fantasy Points</title>
+      <link>/afl-fantasy-points-haw/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-fantasy-points-haw/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site please consider SUPPORTING US by buying us a coffee. All money received goes to offsetting server costs and other overheads and enables us to continue offering our tools for free.</description>
+    </item>
+    
+    <item>
+      <title>Fantasy Points</title>
+      <link>/afl-fantasy-points-mel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-fantasy-points-mel/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site please consider SUPPORTING US by buying us a coffee. All money received goes to offsetting server costs and other overheads and enables us to continue offering our tools for free.</description>
+    </item>
+    
+    <item>
+      <title>Fantasy Points</title>
+      <link>/afl-fantasy-points-nth/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-fantasy-points-nth/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site please consider SUPPORTING US by buying us a coffee. All money received goes to offsetting server costs and other overheads and enables us to continue offering our tools for free.</description>
+    </item>
+    
+    <item>
+      <title>Fantasy Points</title>
+      <link>/afl-fantasy-points-pta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-fantasy-points-pta/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site please consider SUPPORTING US by buying us a coffee. All money received goes to offsetting server costs and other overheads and enables us to continue offering our tools for free.</description>
+    </item>
+    
+    <item>
+      <title>Fantasy Points</title>
+      <link>/afl-fantasy-points-ric/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-fantasy-points-ric/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site please consider SUPPORTING US by buying us a coffee. All money received goes to offsetting server costs and other overheads and enables us to continue offering our tools for free.</description>
+    </item>
+    
+    <item>
+      <title>Fantasy Points</title>
+      <link>/afl-fantasy-points-stk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-fantasy-points-stk/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site please consider SUPPORTING US by buying us a coffee. All money received goes to offsetting server costs and other overheads and enables us to continue offering our tools for free.</description>
+    </item>
+    
+    <item>
+      <title>Fantasy Points</title>
+      <link>/afl-fantasy-points-syd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-fantasy-points-syd/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site please consider SUPPORTING US by buying us a coffee. All money received goes to offsetting server costs and other overheads and enables us to continue offering our tools for free.</description>
+    </item>
+    
+    <item>
+      <title>Fantasy Points</title>
+      <link>/afl-fantasy-points-wbd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-fantasy-points-wbd/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site please consider SUPPORTING US by buying us a coffee. All money received goes to offsetting server costs and other overheads and enables us to continue offering our tools for free.</description>
+    </item>
+    
+    <item>
+      <title>Fantasy Points</title>
+      <link>/afl-fantasy-points-wce/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/afl-fantasy-points-wce/</guid>
+      <description>.box-score { font-family: &#39;Roboto&#39;, Helvetica, Arial, sans-serif; } .box-score-title { margin-top: 24px; padding: 8px; background-color: hsl(205, 100%, 36%); color: hsl(0, 0%, 98%); font-size: 15px; font-weight: 400; }   If you like our site please consider SUPPORTING US by buying us a coffee. All money received goes to offsetting server costs and other overheads and enables us to continue offering our tools for free.</description>
     </item>
     
     <item>
