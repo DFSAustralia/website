@@ -1,0 +1,101 @@
+---
+title: "Player Stats"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(vroom); library(reactable); library(tidyverse); library(shiny)
+
+path <- "/Users/morts/Dropbox/Github-DFSAustralia-website/database/database-files/" #desktop
+players <- vroom(file = paste0(path, 'current-afl-players-2022.csv'))
+
+```
+
+```{r functions, include=FALSE}
+team_image <- function(x){
+  case_when(
+    x == 'ADE' ~ 'https://www.zerohanger.com/images/team-flags/adelaide-crows.png',
+    x == 'BRL' ~ 'https://www.zerohanger.com/images/team-flags/brisbane-lions.png',
+    x == 'CAR' ~ 'https://www.zerohanger.com/images/team-flags/carlton-blues.png',
+    x == 'COL' ~ 'https://www.zerohanger.com/images/team-flags/collingwood-magpies.png',
+    x == 'ESS' ~ 'https://www.zerohanger.com/images/team-flags/essendon-bombers.png',
+    x == 'FRE' ~ 'https://www.zerohanger.com/images/team-flags/fremantle-dockers.png',
+    x == 'GCS' ~ 'https://www.zerohanger.com/images/team-flags/gold-coast-suns.png',
+    x == 'GEE' ~ 'https://www.zerohanger.com/images/team-flags/geelong-cats.png',
+    x == 'GWS' ~ 'https://www.zerohanger.com/images/team-flags/gws-giants.png',
+    x == 'HAW' ~ 'https://www.zerohanger.com/images/team-flags/hawthorn-hawks.png',
+    x == 'MEL' ~ 'https://www.zerohanger.com/images/team-flags/melbourne-demons.png',
+    x == 'NTH' ~ 'https://www.zerohanger.com/images/team-flags/north-melbourne-kangaroos.png',
+    x == 'PTA' ~ 'https://www.zerohanger.com/images/team-flags/port-adelaide-power.png',
+    x == 'RIC' ~ 'https://www.zerohanger.com/images/team-flags/richmond-tigers.png',
+    x == 'STK' ~ 'https://www.zerohanger.com/images/team-flags/st-kilda-saints.png',
+    x == 'SYD' ~ 'https://www.zerohanger.com/images/team-flags/sydney-swans.png',
+    x == 'WBD' ~ 'https://www.zerohanger.com/images/team-flags/western-bulldogs.png',
+    x == 'WCE' ~ 'https://www.zerohanger.com/images/team-flags/west-coast-eagles.png',
+    TRUE ~ as.character(x)
+  )
+}
+```
+
+
+```{r players, echo=FALSE}
+
+players_arranged <- players %>% arrange(surname, givenName) %>% arrange(teamAbbr) %>% select(player_id, Name, teamAbbr, jumperNumber, heightCm, weightKg, draftYear) %>% 
+  mutate(career = 1, grid22 = 2, grid21 = 2, opponent = 3, ground = 4)
+
+reactable(players_arranged,
+          compact = TRUE, sortable = FALSE, fullWidth = TRUE, searchable = TRUE,
+          defaultColDef = colDef(
+            align = "center"
+          ),
+          columns = list(
+            player_id = colDef(name = "", width = 30,
+                           cell = function(value, index){
+                             img_src <- paste0("https://s.afl.com.au/staticfile/AFL%20Tenant/AFL/Players/ChampIDImages/XLarge2022/", sub("CD_I", "", players_arranged$player_id[index]), ".png?i10c=img.resize(width:108)")
+                             image <- shiny::img(src = img_src, height = "20px", alt = "")
+                             shiny::tagList(
+                               shiny::div(style = list(display = "inline-block", width = "30px"), image),
+                             )
+                           }),
+            Name = colDef(minWidth = 120, align = "left"),
+            teamAbbr = colDef(name = "Tm", width = 65,
+                              cell = function(value){
+                                image <- img(src = team_image(value), height = "14", alt = "", style = "border-radius:50%")
+                                tagList(div(style = list(display = "inline-block"), image))
+                              }),
+            jumperNumber = colDef(name = "NO", minWidth = 50),
+            heightCm = colDef(name = "CM", minWidth = 50),
+            weightKg = colDef(name = "KG", minWidth = 50),
+            draftYear = colDef(name = "Draft", minWidth = 70),
+            career = colDef(name = "Career", minWidth = 80,
+                            cell = function(value, index){
+              url <- sprintf("http://128.199.156.76:8000/career?id=%s", players_arranged[index, "player_id"]) 
+              htmltools::tags$a(href = url, target = "_blank", shiny::icon(name = "play", lib = "glyphicon"))
+              }),
+            grid22 = colDef(name = "2022", minWidth = 70,
+                            cell = function(value, index){
+              url <- sprintf("http://128.199.156.76:8000/scoregrid?id=%s&yr=2022", players_arranged[index, "player_id"]) 
+              htmltools::tags$a(href = url, target = "_blank", shiny::tags$b(2022))
+              }),
+            grid21 = colDef(name = "2021", minWidth = 70,
+                            cell = function(value, index){
+              url <- sprintf("http://128.199.156.76:8000/scoregrid?id=%s&yr=2021", players_arranged[index, "player_id"]) 
+              htmltools::tags$a(href = url, target = "_blank", shiny::tags$b(2021))
+              }),
+            opponent = colDef(name = "Opponent", minWidth = 80,
+                              cell = function(value, index){
+              url <- sprintf("http://128.199.156.76:8000/opp?id=%s", players_arranged[index, "player_id"]) 
+              htmltools::tags$a(href = url, target = "_blank", shiny::icon(name = "eye-open", lib = "glyphicon"))
+              }),
+            ground = colDef(name = "Ground", minWidth = 80, cell = function(index){shiny::tags$a(href="", shiny::icon(name = "globe", lib = "glyphicon"))})
+          ),
+          columnGroups = list(
+            colGroup(name = "Score Grids", columns = c("grid22", "grid21")),
+            colGroup(name = "Splits", columns = c("opponent", "ground"))
+          ),
+          defaultPageSize = 15
+          )
+
+```

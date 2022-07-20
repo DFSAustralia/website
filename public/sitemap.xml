@@ -466,6 +466,10 @@
   </url>
   
   <url>
+    <loc>/afl-player-details/</loc>
+  </url>
+  
+  <url>
     <loc>/afl-player-stats/</loc>
   </url>
   
