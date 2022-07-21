@@ -1,7 +1,23 @@
 ---
-title: "Player Stats"
+title: "Player Stats (BETA)"
 output: html_document
 ---
+
+```{css, echo=FALSE}
+.box-score {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+.box-score-title {
+  margin-top: 24px;
+  padding: 8px;
+  background-color: hsl(205, 100%, 36%);
+  color: hsl(0, 0%, 98%);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -39,13 +55,12 @@ team_image <- function(x){
 }
 ```
 
-
 ```{r players, echo=FALSE}
 
 players_arranged <- players %>% arrange(surname, givenName) %>% arrange(teamAbbr) %>% select(player_id, Name, teamAbbr, jumperNumber, heightCm, weightKg, draftYear) %>% 
   mutate(career = 1, grid22 = 2, grid21 = 2, opponent = 3, ground = 4)
 
-reactable(players_arranged,
+final_player_table <- reactable(players_arranged,
           compact = TRUE, sortable = FALSE, fullWidth = TRUE, searchable = TRUE,
           defaultColDef = colDef(
             align = "center"
@@ -72,7 +87,7 @@ reactable(players_arranged,
             career = colDef(name = "Career", minWidth = 80,
                             cell = function(value, index){
               url <- sprintf("http://128.199.156.76:8000/career?id=%s", players_arranged[index, "player_id"]) 
-              htmltools::tags$a(href = url, target = "_blank", shiny::icon(name = "play", lib = "glyphicon"))
+              htmltools::tags$a(href = url, target = "_blank", tagList(shiny::icon(name = "play", lib = "glyphicon"), shiny::icon(name = "play", lib = "glyphicon")))
               }),
             grid22 = colDef(name = "2022", minWidth = 70,
                             cell = function(value, index){
@@ -87,9 +102,12 @@ reactable(players_arranged,
             opponent = colDef(name = "Opponent", minWidth = 80,
                               cell = function(value, index){
               url <- sprintf("http://128.199.156.76:8000/opp?id=%s", players_arranged[index, "player_id"]) 
-              htmltools::tags$a(href = url, target = "_blank", shiny::icon(name = "eye-open", lib = "glyphicon"))
+              htmltools::tags$a(href = url, target = "_blank", tagList(shiny::icon(name = "user", lib = "glyphicon"), shiny::icon(name = "user", lib = "glyphicon")))
               }),
-            ground = colDef(name = "Ground", minWidth = 80, cell = function(index){shiny::tags$a(href="", shiny::icon(name = "globe", lib = "glyphicon"))})
+            ground = colDef(name = "Ground", minWidth = 80, cell = function(value, index){
+              url <- sprintf("http://128.199.156.76:8000/venue?id=%s", players_arranged[index, "player_id"]) 
+              htmltools::tags$a(href = url, target = "_blank", shiny::tagList(shiny::icon(name = "plane", lib = "glyphicon"), shiny::icon(name = "globe", lib = "glyphicon")))
+              })
           ),
           columnGroups = list(
             colGroup(name = "Score Grids", columns = c("grid22", "grid21")),
@@ -97,5 +115,12 @@ reactable(players_arranged,
           ),
           defaultPageSize = 15
           )
+
+    tagList(div(class = "box-score", style = "font-size:75%; white-space:nowrap",
+              div(class = "box-score-title", tags$span("Player Stats & Splits")),
+              final_player_table
+          ),
+          br()
+  )
 
 ```
